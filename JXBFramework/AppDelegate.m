@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginParser.h"
+#import "testVC.h"
+#import "UIImage+RenderedImage.h"
 
-@interface AppDelegate ()
+
+
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -16,7 +21,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    NSString* url = @"http://11.23.11.98:9090/tzs/version/get";
+//    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
+//    
+//    
+//    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(NSObject* result){
+//        LoginParser* lm = [[LoginParser alloc] initWithDictionary:(NSDictionary*)result];
+//        NSLog(@"%@",lm);
+//    } failure:^(NSError* error){
+//        NSLog(@"%@",error);
+//    }];
+ 
+    
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    
+    UIViewController *rootViewController = [self setupRootViewController];
+    [[self window] setRootViewController:rootViewController];
+    
+    // set  backgroundColor
+    [[self window] setBackgroundColor:[UIColor whiteColor]];
+    // set  makeKeyAndVisible
+    [[self window] makeKeyAndVisible];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
@@ -41,5 +70,62 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (UITabBarController *)setupRootViewController{
+    
+    testVC *homeVC = [[testVC alloc] init];
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    UIImage *unselectedImage = [UIImage imageNamed:@"tab_search"];
+    UIImage *selectedImage = [UIImage imageNamed:@"tab_search_s"];
+    
+    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"aaa"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    homeVC.tabBarItem.tag = 0;
+    
+    testVC * mineVc = [[testVC alloc] init];
+    UINavigationController * mineNav = [[UINavigationController alloc] initWithRootViewController:mineVc];
+    unselectedImage = [UIImage imageNamed:@"tab_more1"];
+    selectedImage = [UIImage imageNamed:@"tab_more1_s"];
+    
+    mineNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"bbb"
+                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    mineNav.tabBarItem.tag = 1;
+
+    
+    testVC * moreVc = [[testVC alloc] init];
+    UINavigationController * moreNav = [[UINavigationController alloc] initWithRootViewController:moreVc];
+    unselectedImage = [UIImage imageNamed:@"tab_more"];
+    selectedImage = [UIImage imageNamed:@"tab_more_s"];
+    
+    moreNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"ccc"
+                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    moreNav.tabBarItem.tag = 2;
+    
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[homeNav,mineNav, moreNav];
+    tabBarController.delegate = self;
+    
+    
+    // customise TabBar UI Effect
+    [UITabBar appearance].tintColor = [UIColor redColor];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
+    
+    // customise NavigationBar UI Effect
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithRenderColor:[UIColor blueColor] renderSize:CGSizeMake(10., 10.)] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16.],NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+    
+    UITabBar *tabBar = tabBarController.tabBar;
+    tabBar.backgroundColor = [UIColor greenColor];
+    
+    return tabBarController;
+}
+
 
 @end
