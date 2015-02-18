@@ -24,15 +24,14 @@
     
 //    NSString* url = @"http://11.23.11.98:9090/tzs/version/get";
 //    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
-//    
-//    
-//    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(NSObject* result){
+    
+    
+//    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(AFHTTPRequestOperation* operation,NSObject* result){
 //        LoginParser* lm = [[LoginParser alloc] initWithDictionary:(NSDictionary*)result];
 //        NSLog(@"%@",lm);
 //    } failure:^(NSError* error){
 //        NSLog(@"%@",error);
 //    }];
- 
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     

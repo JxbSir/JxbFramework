@@ -42,7 +42,7 @@
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict
                   type:(XBHttpResponseType)type
-               success:(void(^)(NSObject *resultObject))success
+               success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure
 {
     [http requestWithURL:url paras:parasDict type:type success:success failure:failure];

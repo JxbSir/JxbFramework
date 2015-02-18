@@ -19,7 +19,7 @@
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict
                   type:(XBHttpResponseType)type
-               success:(void(^)(NSObject *resultObject))success
+               success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure
 {
     /*
@@ -83,7 +83,7 @@
         /*if (allowSaveCache == OTHttpCacheMemory || allowSaveCache == OTHttpCacheDisk) {
             [[OTHttpCache sharedInstance] storeResponse:responseObject forUrl:requestURL byParam:transferParas toDisk:allowSaveCache == OTHttpCacheMemory? NO:YES];
         }*/
-       success(responseObject);
+       success(operation, responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(error);
     }];
