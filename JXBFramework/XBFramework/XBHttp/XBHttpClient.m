@@ -7,6 +7,7 @@
 //
 
 #import "XBHttpClient.h"
+#import "XBHttpCache.h"
 
 @interface XBHttpClient()
 {
@@ -22,11 +23,11 @@
                success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure
 {
-    /*
+    
     // 加入允许读缓存则
     if ([[parasDict objectForKey:kHttpAllowFetchCache] boolValue]) {
         // check cache
-        id cacheObj = [[OTHttpCache sharedInstance]fetchResponseForUrl:url byParam:parasDict];
+        id cacheObj = [[XBHttpCache sharedInstance]fetchResponseForUrl:url byParam:parasDict];
         if (cacheObj) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 success(nil,cacheObj);
@@ -35,7 +36,7 @@
         }
     }
     int allowSaveCache = [[parasDict objectForKey:kHttpAllowSaveCache] intValue];
-     */
+
     // 检查是否是xml解析
     // 已指定何种格式解析，无需重复相同实例化，否则http多线程会引起内存问题
     if (type == XBHttpResponseType_XML) {
@@ -59,6 +60,12 @@
             self.responseSerializer = httpParserSerializer;
         }
     }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kXBCookie])
+    {
+        [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:kXBCookie] forHTTPHeaderField:@"Cookie"];
+    }
+    
     NSMutableDictionary *transferParas = [NSMutableDictionary dictionaryWithDictionary:parasDict];
     // 检查BaseURL
     NSString *requestURL = url;
@@ -67,26 +74,38 @@
     if (baseParas && baseParas.allKeys.count > 0) {
         [transferParas setValuesForKeysWithDictionary:baseParas];
     }
+    
     // 开始请求
     __weak typeof(self) wSelf = self;
-   [self POST:requestURL parameters:transferParas success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    void (^successBlock)(AFHTTPRequestOperation *operation, id responseObject) = ^(AFHTTPRequestOperation *operation, id responseObject){
         if (!wSelf) {
             return ;
         }
 #ifdef DEBUG
-       if(type == XBHttpResponseType_Common)
-       {
-           responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-       }
+        if(type == XBHttpResponseType_Common)
+        {
+            responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        }
         NSLog(@"url:%@\r\nbody:%@", url, responseObject);
 #endif
-        /*if (allowSaveCache == OTHttpCacheMemory || allowSaveCache == OTHttpCacheDisk) {
-            [[OTHttpCache sharedInstance] storeResponse:responseObject forUrl:requestURL byParam:transferParas toDisk:allowSaveCache == OTHttpCacheMemory? NO:YES];
-        }*/
-       success(operation, responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failure(error);
-    }];
+        if (allowSaveCache == XBHttpCacheMemory || allowSaveCache == XBHttpCacheDisk) {
+         [[XBHttpCache sharedInstance] storeResponse:responseObject forUrl:requestURL byParam:transferParas toDisk:allowSaveCache == XBHttpCacheMemory? NO:YES];
+         }
+        success(operation, responseObject);
+    };
+    
+    if(parasDict)
+    {
+       [self POST:requestURL parameters:transferParas success:successBlock failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            failure(error);
+        }];
+    }
+    else
+    {
+        [self GET:requestURL parameters:nil success:successBlock failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            failure(error);
+        }];
+    }
 }
 
 
