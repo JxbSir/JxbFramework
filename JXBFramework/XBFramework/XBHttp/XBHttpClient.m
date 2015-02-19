@@ -9,6 +9,7 @@
 #import "XBHttpClient.h"
 #import "XBHttpCache.h"
 #import "XBGlobal.h"
+#import "TouchJSON/NSDictionary_JSONExtensions.h"
 
 @interface XBHttpClient()
 {
@@ -82,11 +83,24 @@
         if (!wSelf) {
             return ;
         }
-#ifdef DEBUG
+        
         if(type == XBHttpResponseType_Common)
         {
             responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         }
+        else if (type == XBHttpResponseType_JqueryJson)
+        {
+            NSError* error = nil;
+            NSString* result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSRange r1 = [result rangeOfString:@"("];
+            NSString* r = [result substringFromIndex:r1.location+1];
+            NSRange r2 = [r rangeOfString:@")"];
+            r = [r substringToIndex:r2.location];
+            responseObject = [NSDictionary dictionaryWithJSONString:r error:&error];
+            
+        }
+        
+#ifdef DEBUG
         NSLog(@"url:%@\r\nbody:%@", url, responseObject);
 #endif
         if (allowSaveCache == XBHttpCacheMemory || allowSaveCache == XBHttpCacheDisk) {

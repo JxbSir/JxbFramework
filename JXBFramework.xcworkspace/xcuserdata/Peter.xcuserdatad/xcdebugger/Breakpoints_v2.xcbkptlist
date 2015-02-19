@@ -26,22 +26,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JXBFramework/XBFramework/XBHttp/XBHttpClient.m"
-            timestampString = "446013883.490301"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-requestWithURL:paras:type:success:failure:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JXBFramework/XBFramework/XBHttp/XBHttpClient.m"
             timestampString = "446013885.56966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

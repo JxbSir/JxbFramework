@@ -12,6 +12,7 @@
 typedef enum
 {
     XBHttpResponseType_Json,
+    XBHttpResponseType_JqueryJson,
     XBHttpResponseType_XML,
     XBHttpResponseType_Common
 }XBHttpResponseType;
