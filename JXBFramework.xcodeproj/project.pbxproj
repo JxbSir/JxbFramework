@@ -52,6 +52,7 @@
 		D07DC37F1A95A2E100852F5C /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		D07DC3811A95A2F200852F5C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		D07DC3821A95A2F200852F5C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		D07DC3841A95A4B400852F5C /* XBGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBGlobal.h; sourceTree = "<group>"; };
 		D0C8E1491A89FD5D006F2A4E /* JXBFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXBFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C8E14D1A89FD5D006F2A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C8E14E1A89FD5D006F2A4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 				D0C8E1731A89FD8C006F2A4E /* XBApi */,
 				D0C8E1761A89FD8C006F2A4E /* XBCategory */,
 				D0C8E1861A89FD8C006F2A4E /* XBFramework.h */,
+				D07DC3841A95A4B400852F5C /* XBGlobal.h */,
 				D0C8E1871A89FD8C006F2A4E /* XBHttp */,
 				D0C8E1921A89FD8C006F2A4E /* XBUi */,
 			);

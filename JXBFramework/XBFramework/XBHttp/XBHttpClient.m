@@ -8,6 +8,7 @@
 
 #import "XBHttpClient.h"
 #import "XBHttpCache.h"
+#import "XBGlobal.h"
 
 @interface XBHttpClient()
 {
