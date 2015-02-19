@@ -11,6 +11,8 @@
 		D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37C1A95A1F500852F5C /* XBHttpCache.m */; };
 		D07DC3801A95A2E100852F5C /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37F1A95A2E100852F5C /* NSString+Size.m */; };
 		D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC3821A95A2F200852F5C /* NSString+MD5.m */; };
+		D07DC3A21A95CBD400852F5C /* UITableViewCell+SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */; };
+		D07DC3A31A95CBD400852F5C /* UIView+StringTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC3A11A95CBD400852F5C /* UIView+StringTag.m */; };
 		D0C8E14F1A89FD5D006F2A4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E14E1A89FD5D006F2A4E /* main.m */; };
 		D0C8E1521A89FD5D006F2A4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1511A89FD5D006F2A4E /* AppDelegate.m */; };
 		D0C8E1551A89FD5D006F2A4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1541A89FD5D006F2A4E /* ViewController.m */; };
@@ -53,6 +55,10 @@
 		D07DC3811A95A2F200852F5C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		D07DC3821A95A2F200852F5C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		D07DC3841A95A4B400852F5C /* XBGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBGlobal.h; sourceTree = "<group>"; };
+		D07DC39E1A95CBD400852F5C /* UITableViewCell+SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SeparatorLine.h"; sourceTree = "<group>"; };
+		D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SeparatorLine.m"; sourceTree = "<group>"; };
+		D07DC3A01A95CBD400852F5C /* UIView+StringTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+StringTag.h"; sourceTree = "<group>"; };
+		D07DC3A11A95CBD400852F5C /* UIView+StringTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+StringTag.m"; sourceTree = "<group>"; };
 		D0C8E1491A89FD5D006F2A4E /* JXBFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXBFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C8E14D1A89FD5D006F2A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C8E14E1A89FD5D006F2A4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -222,6 +228,10 @@
 		D0C8E1761A89FD8C006F2A4E /* XBCategory */ = {
 			isa = PBXGroup;
 			children = (
+				D07DC39E1A95CBD400852F5C /* UITableViewCell+SeparatorLine.h */,
+				D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */,
+				D07DC3A01A95CBD400852F5C /* UIView+StringTag.h */,
+				D07DC3A11A95CBD400852F5C /* UIView+StringTag.m */,
 				D07DC3811A95A2F200852F5C /* NSString+MD5.h */,
 				D07DC3821A95A2F200852F5C /* NSString+MD5.m */,
 				D07DC37E1A95A2E100852F5C /* NSString+Size.h */,
@@ -440,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07DC3A31A95CBD400852F5C /* UIView+StringTag.m in Sources */,
 				D0C8E1551A89FD5D006F2A4E /* ViewController.m in Sources */,
 				D0C8E1521A89FD5D006F2A4E /* AppDelegate.m in Sources */,
 				D0C8E19E1A89FD8C006F2A4E /* XBHttpClient.m in Sources */,
@@ -448,6 +459,7 @@
 				D0C8E1A21A89FD8C006F2A4E /* XBBaseVC.m in Sources */,
 				D0C8E1961A89FD8C006F2A4E /* XBApi.m in Sources */,
 				D0C8E1981A89FD8C006F2A4E /* RIButtonItem.m in Sources */,
+				D07DC3A21A95CBD400852F5C /* UITableViewCell+SeparatorLine.m in Sources */,
 				D0C8E1991A89FD8C006F2A4E /* UIAlertView+Blocks.m in Sources */,
 				D0C8E14F1A89FD5D006F2A4E /* main.m in Sources */,
 				D0C8E1A61A89FFF5006F2A4E /* XBParser.m in Sources */,
