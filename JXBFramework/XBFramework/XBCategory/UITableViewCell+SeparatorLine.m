@@ -2,7 +2,6 @@
 //  UITableViewCell+SeparatorLine.m
 //  QuicklyShop
 //
-//  Created by 宋涛 on 14/7/12.
 //  Copyright (c) 2014年 com. All rights reserved.
 //
 

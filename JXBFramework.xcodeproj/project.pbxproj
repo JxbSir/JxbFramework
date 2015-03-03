@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B6B8FC0B0612A4B4038F3009 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1BD23E9E12E6996D31E73 /* libPods.a */; };
+		D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */; };
+		D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */; };
+		D04FB62E1AA5A41300E38C30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */; };
 		D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37C1A95A1F500852F5C /* XBHttpCache.m */; };
 		D07DC3801A95A2E100852F5C /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37F1A95A2E100852F5C /* NSString+Size.m */; };
 		D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC3821A95A2F200852F5C /* NSString+MD5.m */; };
@@ -48,6 +51,12 @@
 		182CDE848E102BB206799DFD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		63A1BD23E9E12E6996D31E73 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759E3FF9FF2A7DBBF73E771D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D04FB6261AA5A2F000E38C30 /* XBDbHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbHandler.h; sourceTree = "<group>"; };
+		D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDbHandler.m; sourceTree = "<group>"; };
+		D04FB6281AA5A2F000E38C30 /* XBDbMigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbMigration.h; sourceTree = "<group>"; };
+		D04FB6291AA5A2F000E38C30 /* XBDbVersionTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbVersionTable.h; sourceTree = "<group>"; };
+		D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDbVersionTable.m; sourceTree = "<group>"; };
+		D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D07DC37B1A95A1F500852F5C /* XBHttpCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBHttpCache.h; sourceTree = "<group>"; };
 		D07DC37C1A95A1F500852F5C /* XBHttpCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBHttpCache.m; sourceTree = "<group>"; };
 		D07DC37E1A95A2E100852F5C /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
@@ -105,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04FB62E1AA5A41300E38C30 /* libsqlite3.dylib in Frameworks */,
 				B6B8FC0B0612A4B4038F3009 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +132,7 @@
 		032CE62D23F08693E5E8E74C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */,
 				63A1BD23E9E12E6996D31E73 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -134,6 +145,18 @@
 				759E3FF9FF2A7DBBF73E771D /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D04FB6251AA5A2F000E38C30 /* XBDbHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D04FB6261AA5A2F000E38C30 /* XBDbHandler.h */,
+				D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */,
+				D04FB6281AA5A2F000E38C30 /* XBDbMigration.h */,
+				D04FB6291AA5A2F000E38C30 /* XBDbVersionTable.h */,
+				D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */,
+			);
+			path = XBDbHelper;
 			sourceTree = "<group>";
 		};
 		D0C8E1401A89FD5D006F2A4E = {
@@ -204,6 +227,7 @@
 		D0C8E1721A89FD8C006F2A4E /* XBFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D04FB6251AA5A2F000E38C30 /* XBDbHelper */,
 				D0C8E1A31A89FFD2006F2A4E /* XBParser */,
 				D0C8E1731A89FD8C006F2A4E /* XBApi */,
 				D0C8E1761A89FD8C006F2A4E /* XBCategory */,
@@ -457,6 +481,7 @@
 				D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */,
 				D07DC3801A95A2E100852F5C /* NSString+Size.m in Sources */,
 				D0C8E1A21A89FD8C006F2A4E /* XBBaseVC.m in Sources */,
+				D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */,
 				D0C8E1961A89FD8C006F2A4E /* XBApi.m in Sources */,
 				D0C8E1981A89FD8C006F2A4E /* RIButtonItem.m in Sources */,
 				D07DC3A21A95CBD400852F5C /* UITableViewCell+SeparatorLine.m in Sources */,
@@ -466,6 +491,7 @@
 				D0C8E19B1A89FD8C006F2A4E /* UIColor+hexColor.m in Sources */,
 				D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */,
 				D0C8E1AB1A8A00C8006F2A4E /* LoginParser.m in Sources */,
+				D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */,
 				D0C8E1B01A8A04F2006F2A4E /* testVC.m in Sources */,
 				D0C8E19C1A89FD8C006F2A4E /* UIImage+RenderedImage.m in Sources */,
 				D0C8E19A1A89FD8C006F2A4E /* UIButton+StringTag.m in Sources */,
@@ -599,6 +625,7 @@
 					"-all_load",
 					"-l\"Pods-AFNetworking\"",
 					"-l\"Pods-jastor\"",
+					"-l\"Pods-FMDB\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -616,6 +643,7 @@
 					"-all_load",
 					"-l\"Pods-AFNetworking\"",
 					"-l\"Pods-jastor\"",
+					"-l\"Pods-FMDB\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
