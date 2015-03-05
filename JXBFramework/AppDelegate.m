@@ -26,6 +26,8 @@
 //    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
     
     
+    [[XBApi SharedXBApi] requestSyncWithURL:@"http://json.1yyg.com/android/index?action=getADListForPage&sortID=13" paras:nil type:XBHttpResponseType_Json];
+    
 //    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(AFHTTPRequestOperation* operation,NSObject* result){
 //        LoginParser* lm = [[LoginParser alloc] initWithDictionary:(NSDictionary*)result];
 //        NSLog(@"%@",lm);

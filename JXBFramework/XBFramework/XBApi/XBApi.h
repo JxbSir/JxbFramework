@@ -19,4 +19,8 @@
                   type:(XBHttpResponseType)type
                success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure ;
+
+- (NSObject*)requestSyncWithURL:(NSString *)url
+                     paras:(NSDictionary *)parasDict
+                      type:(XBHttpResponseType)type;
 @end
