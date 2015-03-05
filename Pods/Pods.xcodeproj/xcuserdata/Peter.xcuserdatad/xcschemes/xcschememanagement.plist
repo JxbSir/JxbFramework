@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TouchJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08FAD703DB336B021962A2FF</key>
+		<key>2C1B7D5B83C6CE83D1E0D444</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B84666C05F9F38AA31DD75E</key>
+		<key>6D55742CB9EA827812A841D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E52834396E84EC6AD4A10B3</key>
+		<key>7611CE6A99EDAA97F8D2F03E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DEBBD27AFDB1C30766B3ABD8</key>
+		<key>80D5E36BDA3709539E22D952</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3AD53F067F3B1CC1C2B6E4F</key>
+		<key>A765EFE81809ED5F046EC2F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6C9B57CF52D440E31AFDDB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

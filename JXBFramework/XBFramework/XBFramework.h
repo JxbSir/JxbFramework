@@ -11,6 +11,7 @@
 #import "XBGlobal.h"
 
 #import "XBBaseVC.h"
+#import "XBCommon.h"
 #import "UIColor+hexColor.h"
 #import "UIView+StringTag.h"
 #import "NSString+Size.h"

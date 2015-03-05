@@ -35,6 +35,8 @@
 		D0C8E1A61A89FFF5006F2A4E /* XBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1A51A89FFF5006F2A4E /* XBParser.m */; };
 		D0C8E1AB1A8A00C8006F2A4E /* LoginParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1AA1A8A00C8006F2A4E /* LoginParser.m */; };
 		D0C8E1B01A8A04F2006F2A4E /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1AF1A8A04F2006F2A4E /* testVC.m */; };
+		D0CAD9B01AA7FD5200D6605B /* XBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAD9AD1AA7FD5200D6605B /* XBCommon.m */; };
+		D0CAD9B11AA7FD5200D6605B /* XBToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		D0C8E1AA1A8A00C8006F2A4E /* LoginParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginParser.m; path = model/LoginParser.m; sourceTree = "<group>"; };
 		D0C8E1AE1A8A04F2006F2A4E /* testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testVC.h; path = vc/testVC.h; sourceTree = "<group>"; };
 		D0C8E1AF1A8A04F2006F2A4E /* testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testVC.m; path = vc/testVC.m; sourceTree = "<group>"; };
+		D0CAD9AC1AA7FD5200D6605B /* XBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBCommon.h; path = XBUtils/XBCommon.h; sourceTree = "<group>"; };
+		D0CAD9AD1AA7FD5200D6605B /* XBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBCommon.m; path = XBUtils/XBCommon.m; sourceTree = "<group>"; };
+		D0CAD9AE1AA7FD5200D6605B /* XBToastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBToastManager.h; path = XBUtils/XBToastManager.h; sourceTree = "<group>"; };
+		D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBToastManager.m; path = XBUtils/XBToastManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,7 @@
 		D0C8E1721A89FD8C006F2A4E /* XBFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D0CAD9AB1AA7FD3800D6605B /* XBUtils */,
 				D04FB6251AA5A2F000E38C30 /* XBDbHelper */,
 				D0C8E1A31A89FFD2006F2A4E /* XBParser */,
 				D0C8E1731A89FD8C006F2A4E /* XBApi */,
@@ -337,6 +344,17 @@
 				D0C8E1AF1A8A04F2006F2A4E /* testVC.m */,
 			);
 			name = vc;
+			sourceTree = "<group>";
+		};
+		D0CAD9AB1AA7FD3800D6605B /* XBUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D0CAD9AC1AA7FD5200D6605B /* XBCommon.h */,
+				D0CAD9AD1AA7FD5200D6605B /* XBCommon.m */,
+				D0CAD9AE1AA7FD5200D6605B /* XBToastManager.h */,
+				D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */,
+			);
+			name = XBUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +494,8 @@
 			files = (
 				D07DC3A31A95CBD400852F5C /* UIView+StringTag.m in Sources */,
 				D0C8E1551A89FD5D006F2A4E /* ViewController.m in Sources */,
+				D0CAD9B01AA7FD5200D6605B /* XBCommon.m in Sources */,
+				D0CAD9B11AA7FD5200D6605B /* XBToastManager.m in Sources */,
 				D0C8E1521A89FD5D006F2A4E /* AppDelegate.m in Sources */,
 				D0C8E19E1A89FD8C006F2A4E /* XBHttpClient.m in Sources */,
 				D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */,
@@ -626,6 +646,7 @@
 					"-l\"Pods-AFNetworking\"",
 					"-l\"Pods-jastor\"",
 					"-l\"Pods-FMDB\"",
+					"-l\"Pods-MBProgressHUD\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -644,6 +665,7 @@
 					"-l\"Pods-AFNetworking\"",
 					"-l\"Pods-jastor\"",
 					"-l\"Pods-FMDB\"",
+					"-l\"Pods-MBProgressHUD\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

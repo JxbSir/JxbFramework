@@ -26,18 +26,21 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - jastor (0.2.1)
+  - MBProgressHUD (0.9)
   - TouchJSON (1.1)
 
 DEPENDENCIES:
   - AFNetworking
   - fmdb
   - jastor
+  - MBProgressHUD
   - TouchJSON
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
   jastor: 38c8cd3670b362123d824ee48a3056dca2037857
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   TouchJSON: b40940e40e53bb9b1ad60c63e01ed83bff93d53e
 
 COCOAPODS: 0.35.0
