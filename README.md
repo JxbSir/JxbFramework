@@ -9,9 +9,16 @@
 `XBParser：can get object from dic`
 
 #  cocoapods
-platform :ios, "7.0"
-pod 'AFNetworking'
-pod 'MBProgressHUD'
-pod 'FMDB'
-pod 'Jastor'
-pod 'TouchJSON'
+
+
+`platform :ios, "7.0"`
+
+`pod 'AFNetworking'`
+
+`pod 'MBProgressHUD'`
+
+`pod 'FMDB'`
+
+`pod 'Jastor'`
+
+`pod 'TouchJSON'`
