@@ -6,6 +6,7 @@
 
 #import "AppDelegate.h"
 #import "XBToastManager.h"
+#import "UIColor+hexColor.h"
 
 #define minshowtime   0.5
 #define progesswidth  5.

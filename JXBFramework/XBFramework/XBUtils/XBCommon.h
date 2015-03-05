@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 Peter Jin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface XBCommon : NSObject
 
