@@ -11,3 +11,8 @@
 
 #define kHttpAllowSaveCache    @"http_a_s_c"
 #define kHttpAllowFetchCache   @"http_a_f_c"
+
+
+#define mainHeight     [[UIScreen mainScreen] bounds].size.height
+#define mainWidth      [[UIScreen mainScreen] bounds].size.width
+#define navBarHeight   self.navigationController.navigationBar.frame.size.height
