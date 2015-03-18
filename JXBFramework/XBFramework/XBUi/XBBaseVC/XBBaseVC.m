@@ -7,12 +7,17 @@
 //
 
 #import "XBBaseVC.h"
-
+#import "XBBaseLoadView.h"
+#import "UIColor+hexColor.h"
 #import <objc/runtime.h>
 
-#import "UIColor+hexColor.h"
-
 static char *btnClickAction;
+
+@interface XBBaseVC ()
+{
+    XBBaseLoadView  *vLoadView;
+}
+@end
 
 @implementation XBBaseVC
 @synthesize showBackBtn;
@@ -54,10 +59,23 @@ static char *btnClickAction;
     self.navigationController.navigationBar.titleTextAttributes = dict;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - loading view
+- (void)showLoadingView
+{
+    if (vLoadView)
+        vLoadView = nil;
+    vLoadView = [[XBBaseLoadView alloc] initWithFrame:self.view.bounds];
+    vLoadView.backgroundColor = [UIColor hexFloatColor:@"f8f8f8"];
+    [self.view addSubview:vLoadView];
 }
+
+- (void)hideLoadingView
+{
+    if (vLoadView)
+        [vLoadView removeFromSuperview];
+}
+
 
 #pragma mark -actionCustomLeftBtnWithNrlImage
 - (void)actionCustomLeftBtnWithNrlImage:(NSString *)nrlImage htlImage:(NSString *)hltImage
