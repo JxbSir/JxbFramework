@@ -13,7 +13,7 @@
 
 static char *btnClickAction;
 
-@interface XBBaseVC ()
+@interface XBBaseVC ()<UIGestureRecognizerDelegate>
 {
     XBBaseLoadView  *vLoadView;
 }
@@ -40,8 +40,20 @@ static char *btnClickAction;
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSInteger count = self.navigationController.viewControllers.count;
+    self.navigationController.interactivePopGestureRecognizer.enabled = count > 1;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.view.backgroundColor = [UIColor hexFloatColor:@"f8f8f8"];
     
     CGRect rect = CGRectMake(0, 0, 1, 1);
     UIGraphicsBeginImageContext(rect.size);
@@ -57,6 +69,19 @@ static char *btnClickAction;
     
     NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     self.navigationController.navigationBar.titleTextAttributes = dict;
+}
+
+#pragma mark - gesture delegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (self.navigationController.viewControllers.count == 1)//关闭主界面的右滑返回
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 
 
