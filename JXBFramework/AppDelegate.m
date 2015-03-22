@@ -10,6 +10,10 @@
 #import "LoginParser.h"
 #import "testVC.h"
 #import "UIImage+RenderedImage.h"
+#import "firstVC.h"
+#import "secondVC.h"
+#import "ThirdVC.h"
+#import "XBBaseTabVC.h"
 
 
 
@@ -26,7 +30,7 @@
 //    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
     
     
-    [[XBApi SharedXBApi] requestSyncWithURL:@"http://json.1yyg.com/android/index?action=getADListForPage&sortID=13" paras:nil type:XBHttpResponseType_Json];
+//    [[XBApi SharedXBApi] requestSyncWithURL:@"http://json.1yyg.com/android/index?action=getADListForPage&sortID=13" paras:nil type:XBHttpResponseType_Json];
     
 //    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(AFHTTPRequestOperation* operation,NSObject* result){
 //        LoginParser* lm = [[LoginParser alloc] initWithDictionary:(NSDictionary*)result];
@@ -37,8 +41,33 @@
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     
-    UIViewController *rootViewController = [self setupRootViewController];
-    [[self window] setRootViewController:rootViewController];
+    //UIViewController *rootViewController = [self setupRootViewController];
+    
+    firstVC* v1 = [[firstVC alloc] init];
+    XBBaseTabItem* item1 = [[XBBaseTabItem alloc]init];
+    item1.title = @"首页";
+    item1.selectedImage = @"tab-home-s";
+    item1.unselectedImage = @"tab-home";
+    item1.rootVC = v1;
+    
+    secondVC* v2 = [[secondVC alloc] init];
+    XBBaseTabItem* item2 = [[XBBaseTabItem alloc]init];
+    item2.title = @"购物车";
+    item2.selectedImage = @"tab-cart-s";
+    item2.unselectedImage = @"tab-cart";
+    item2.rootVC = v2;
+    
+    ThirdVC* v3 = [[ThirdVC alloc] init];
+    XBBaseTabItem* item3 = [[XBBaseTabItem alloc]init];
+    item3.title = @"我的";
+    item3.selectedImage = @"tab-mine-s";
+    item3.unselectedImage = @"tab-mine";
+    item3.rootVC = v3;
+    
+    XBBaseTabVC* tab = [[XBBaseTabVC alloc] initWithItems:@[item1,item2,item3]];
+    
+    
+    [[self window] setRootViewController:tab];
     
     // set  backgroundColor
     [[self window] setBackgroundColor:[UIColor whiteColor]];
@@ -71,62 +100,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-- (UITabBarController *)setupRootViewController{
-    
-    testVC *homeVC = [[testVC alloc] init];
-    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
-    UIImage *unselectedImage = [UIImage imageNamed:@"tab_search"];
-    UIImage *selectedImage = [UIImage imageNamed:@"tab_search_s"];
-    
-    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"aaa"
-                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    homeVC.tabBarItem.tag = 0;
-    
-    testVC * mineVc = [[testVC alloc] init];
-    UINavigationController * mineNav = [[UINavigationController alloc] initWithRootViewController:mineVc];
-    unselectedImage = [UIImage imageNamed:@"tab_more1"];
-    selectedImage = [UIImage imageNamed:@"tab_more1_s"];
-    
-    mineNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"bbb"
-                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    mineNav.tabBarItem.tag = 1;
-
-    
-    testVC * moreVc = [[testVC alloc] init];
-    UINavigationController * moreNav = [[UINavigationController alloc] initWithRootViewController:moreVc];
-    unselectedImage = [UIImage imageNamed:@"tab_more"];
-    selectedImage = [UIImage imageNamed:@"tab_more_s"];
-    
-    moreNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"ccc"
-                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    moreNav.tabBarItem.tag = 2;
-    
-    
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[homeNav,mineNav, moreNav];
-    tabBarController.delegate = self;
-    
-    
-    // customise TabBar UI Effect
-    [UITabBar appearance].tintColor = [UIColor redColor];
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
-    
-    // customise NavigationBar UI Effect
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithRenderColor:[UIColor blueColor] renderSize:CGSizeMake(10., 10.)] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16.],NSForegroundColorAttributeName:[UIColor blackColor]}];
-    
-    
-    UITabBar *tabBar = tabBarController.tabBar;
-    tabBar.backgroundColor = [UIColor greenColor];
-    
-    return tabBarController;
-}
-
 
 @end

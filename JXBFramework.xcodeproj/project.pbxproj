@@ -11,6 +11,10 @@
 		D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */; };
 		D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */; };
 		D04FB62E1AA5A41300E38C30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */; };
+		D064737D1ABE5F33001DDF47 /* XBBaseTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D064737C1ABE5F33001DDF47 /* XBBaseTabVC.m */; };
+		D06473801ABE6567001DDF47 /* firstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D064737F1ABE6567001DDF47 /* firstVC.m */; };
+		D06473831ABE6578001DDF47 /* secondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D06473821ABE6578001DDF47 /* secondVC.m */; };
+		D06473861ABE6586001DDF47 /* ThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D06473851ABE6586001DDF47 /* ThirdVC.m */; };
 		D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37C1A95A1F500852F5C /* XBHttpCache.m */; };
 		D07DC3801A95A2E100852F5C /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC37F1A95A2E100852F5C /* NSString+Size.m */; };
 		D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DC3821A95A2F200852F5C /* NSString+MD5.m */; };
@@ -60,6 +64,14 @@
 		D04FB6291AA5A2F000E38C30 /* XBDbVersionTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbVersionTable.h; sourceTree = "<group>"; };
 		D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDbVersionTable.m; sourceTree = "<group>"; };
 		D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D064737B1ABE5F33001DDF47 /* XBBaseTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBBaseTabVC.h; path = XBBaseTabVC/XBBaseTabVC.h; sourceTree = "<group>"; };
+		D064737C1ABE5F33001DDF47 /* XBBaseTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBBaseTabVC.m; path = XBBaseTabVC/XBBaseTabVC.m; sourceTree = "<group>"; };
+		D064737E1ABE6567001DDF47 /* firstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = firstVC.h; path = vc/firstVC.h; sourceTree = "<group>"; };
+		D064737F1ABE6567001DDF47 /* firstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = firstVC.m; path = vc/firstVC.m; sourceTree = "<group>"; };
+		D06473811ABE6578001DDF47 /* secondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = secondVC.h; path = vc/secondVC.h; sourceTree = "<group>"; };
+		D06473821ABE6578001DDF47 /* secondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = secondVC.m; path = vc/secondVC.m; sourceTree = "<group>"; };
+		D06473841ABE6586001DDF47 /* ThirdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdVC.h; path = vc/ThirdVC.h; sourceTree = "<group>"; };
+		D06473851ABE6586001DDF47 /* ThirdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdVC.m; path = vc/ThirdVC.m; sourceTree = "<group>"; };
 		D07DC37B1A95A1F500852F5C /* XBHttpCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBHttpCache.h; sourceTree = "<group>"; };
 		D07DC37C1A95A1F500852F5C /* XBHttpCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBHttpCache.m; sourceTree = "<group>"; };
 		D07DC37E1A95A2E100852F5C /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
@@ -166,6 +178,15 @@
 				D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */,
 			);
 			path = XBDbHelper;
+			sourceTree = "<group>";
+		};
+		D064737A1ABE5F06001DDF47 /* XBBaseTabVC */ = {
+			isa = PBXGroup;
+			children = (
+				D064737B1ABE5F33001DDF47 /* XBBaseTabVC.h */,
+				D064737C1ABE5F33001DDF47 /* XBBaseTabVC.m */,
+			);
+			name = XBBaseTabVC;
 			sourceTree = "<group>";
 		};
 		D0C8E1401A89FD5D006F2A4E = {
@@ -308,6 +329,7 @@
 		D0C8E1921A89FD8C006F2A4E /* XBUi */ = {
 			isa = PBXGroup;
 			children = (
+				D064737A1ABE5F06001DDF47 /* XBBaseTabVC */,
 				D0C8E1931A89FD8C006F2A4E /* XBBaseVC */,
 			);
 			path = XBUi;
@@ -346,6 +368,12 @@
 			children = (
 				D0C8E1AE1A8A04F2006F2A4E /* testVC.h */,
 				D0C8E1AF1A8A04F2006F2A4E /* testVC.m */,
+				D064737E1ABE6567001DDF47 /* firstVC.h */,
+				D064737F1ABE6567001DDF47 /* firstVC.m */,
+				D06473811ABE6578001DDF47 /* secondVC.h */,
+				D06473821ABE6578001DDF47 /* secondVC.m */,
+				D06473841ABE6586001DDF47 /* ThirdVC.h */,
+				D06473851ABE6586001DDF47 /* ThirdVC.m */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -512,19 +540,23 @@
 				D0C8E1521A89FD5D006F2A4E /* AppDelegate.m in Sources */,
 				D0C8E19E1A89FD8C006F2A4E /* XBHttpClient.m in Sources */,
 				D07DC37D1A95A1F500852F5C /* XBHttpCache.m in Sources */,
+				D064737D1ABE5F33001DDF47 /* XBBaseTabVC.m in Sources */,
 				D07DC3801A95A2E100852F5C /* NSString+Size.m in Sources */,
 				D0C8E1A21A89FD8C006F2A4E /* XBBaseVC.m in Sources */,
 				D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */,
 				D0C8E1961A89FD8C006F2A4E /* XBApi.m in Sources */,
 				D0EF6B9F1AB95DC400D30639 /* XBBaseLoadView.m in Sources */,
 				D0C8E1981A89FD8C006F2A4E /* RIButtonItem.m in Sources */,
+				D06473831ABE6578001DDF47 /* secondVC.m in Sources */,
 				D07DC3A21A95CBD400852F5C /* UITableViewCell+SeparatorLine.m in Sources */,
 				D0C8E1991A89FD8C006F2A4E /* UIAlertView+Blocks.m in Sources */,
 				D0C8E14F1A89FD5D006F2A4E /* main.m in Sources */,
 				D0C8E1A61A89FFF5006F2A4E /* XBParser.m in Sources */,
 				D0C8E19B1A89FD8C006F2A4E /* UIColor+hexColor.m in Sources */,
+				D06473861ABE6586001DDF47 /* ThirdVC.m in Sources */,
 				D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */,
 				D0C8E1AB1A8A00C8006F2A4E /* LoginParser.m in Sources */,
+				D06473801ABE6567001DDF47 /* firstVC.m in Sources */,
 				D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */,
 				D0C8E1B01A8A04F2006F2A4E /* testVC.m in Sources */,
 				D0C8E19C1A89FD8C006F2A4E /* UIImage+RenderedImage.m in Sources */,

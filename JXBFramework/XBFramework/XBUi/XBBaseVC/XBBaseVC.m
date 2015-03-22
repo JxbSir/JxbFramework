@@ -59,7 +59,7 @@ static char *btnClickAction;
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context,
-                                   [[UIColor hexFloatColor:@"3385ff"] CGColor]);
+                                   [mainColor CGColor]);
     CGContextFillRect(context, rect);
     UIImage * imge = [[UIImage alloc] init];
     imge = UIGraphicsGetImageFromCurrentImageContext();
@@ -91,7 +91,7 @@ static char *btnClickAction;
     if (vLoadView)
         vLoadView = nil;
     vLoadView = [[XBBaseLoadView alloc] initWithFrame:self.view.bounds];
-    vLoadView.backgroundColor = [UIColor hexFloatColor:@"f8f8f8"];
+    vLoadView.backgroundColor = self.view.backgroundColor;
     [self.view addSubview:vLoadView];
 }
 
