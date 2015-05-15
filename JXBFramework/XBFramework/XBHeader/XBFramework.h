@@ -12,6 +12,7 @@
 
 #import "XBBaseVC.h"
 #import "XBCommon.h"
+#import "XBToastManager.h"
 #import "UIColor+hexColor.h"
 #import "UIView+StringTag.h"
 #import "NSString+Size.h"
