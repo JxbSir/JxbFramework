@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   s.ios.deployment_target = '6.0'
   s.source                = { :git => "https://github.com/JxbSir/JxbFramework.git"  }
-  s.public_header_files   = 'JXBFramework/XBFramework/XBFramework.h'
+  s.public_header_files   = 'JXBFramework/XBFramework/XBHeader/XBFramework.h'
 
   s.subspec 'XBHeader' do |ss|
     ss.source_files = 'JXBFramework/XBFramework/XBHeader/*.{h,m}'
@@ -33,6 +33,10 @@ Pod::Spec.new do |s|
 
   s.subspec 'XBCategory' do |ss|
     ss.source_files = 'JXBFramework/XBFramework/XBCategory/*.{h,m}'
+  end
+
+  s.subspec 'XBCategory/UIAlertView' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBCategory/UIAlertView/*.{h,m}'
   end
 
   s.subspec 'XBHttp' do |ss|
