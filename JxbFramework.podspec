@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "JXBFramework"
+  s.name         = "JxbFramework"
   s.version      = "1.0"
   s.summary      = "It is an iOS Framework for developer."
   s.homepage     = "https://github.com/JxbSir"
