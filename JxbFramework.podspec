@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.source_files = "JXBFramework/XBFramework/*/*.{h,m}"
   s.public_header_files = 'JXBFramework/XBFramework/XBFramework.h'
   s.frameworks   = 'UIKit'
-  s.dependency   = 'AFNetworking'
-  s.dependency   = 'jastor'
-  s.dependency   = 'TouchJSON'
-  s.dependency   = 'fmdb'
-  s.dependency   = 'MBProgressHUD'
+  s.dependency  'AFNetworking'
+  s.dependency  'jastor'
+  s.dependency  'TouchJSON'
+  s.dependency  'fmdb'
+  s.dependency  'MBProgressHUD'
 end
