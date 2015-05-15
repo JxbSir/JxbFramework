@@ -7,11 +7,12 @@ Pod::Spec.new do |s|
   s.license               = "Peter"
   s.author                = { "Peter" => "i@jxb.name" }
   s.requires_arc          = true
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '6.0'
   s.source                = { :git => "https://github.com/JxbSir/JxbFramework.git"  }
   s.source_files          = "JXBFramework/XBFramework/*/*.{h,m}"
   s.public_header_files   = 'JXBFramework/XBFramework/XBFramework.h'
   s.frameworks            = 'UIKit'
+  s.dependency            'AFNetworking'
   s.dependency            'jastor'
   s.dependency            'TouchJSON'
   s.dependency            'MBProgressHUD'
