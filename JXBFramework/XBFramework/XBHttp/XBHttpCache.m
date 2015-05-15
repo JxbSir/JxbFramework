@@ -43,10 +43,10 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24;
 
 - (id)initWithNamespace:(NSString *)ns {
     if ((self = [super init])) {
-        NSString *fullNamespace = [@"com.ouer.OTFramework" stringByAppendingString:ns];
+        NSString *fullNamespace = [@"com.jxb.XBFramework" stringByAppendingString:ns];
         
         // Create IO serial queue
-        _ioQueue = dispatch_queue_create("com.ouer.OTFramework", DISPATCH_QUEUE_SERIAL);
+        _ioQueue = dispatch_queue_create("com.jxb.XBFramework", DISPATCH_QUEUE_SERIAL);
         
         // Init default values
         _maxCacheAge = kDefaultCacheMaxCacheAge;
