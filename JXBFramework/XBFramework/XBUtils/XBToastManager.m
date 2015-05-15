@@ -4,7 +4,6 @@
 //
 //
 
-#import "AppDelegate.h"
 #import "XBToastManager.h"
 #import "UIColor+hexColor.h"
 
@@ -92,8 +91,7 @@ static XBToastManager *toastManager;
 
 #pragma mark -keyWindow
 + (UIWindow *)keyWindow {
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIWindow *keywindow = delegate.window;
+    UIWindow *keywindow = [[UIApplication sharedApplication].delegate window];
     return keywindow;
 }
 

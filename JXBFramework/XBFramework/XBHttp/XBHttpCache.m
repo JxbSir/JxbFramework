@@ -18,7 +18,11 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24;
 @property (strong, nonatomic) NSCache *memCache;
 @property (strong, nonatomic) NSString *diskCachePath;
 @property (strong, nonatomic) NSMutableArray *customPaths;
+#if OS_OBJECT_HAVE_OBJC_SUPPORT
 @property (strong, nonatomic) dispatch_queue_t ioQueue;
+#else
+@property (assign, nonatomic) dispatch_queue_t ioQueue;
+#endif
 
 @end
 
