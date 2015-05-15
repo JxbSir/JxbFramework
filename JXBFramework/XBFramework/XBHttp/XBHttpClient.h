@@ -19,6 +19,7 @@ typedef enum
 
 @interface XBHttpClient : AFHTTPRequestOperationManager
 
+@property(nonatomic,copy)AFHTTPResponseSerializer* myRespnse;
 
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict

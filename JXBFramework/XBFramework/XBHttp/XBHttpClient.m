@@ -44,22 +44,37 @@
     if (type == XBHttpResponseType_XML) {
         if (![self.responseSerializer isMemberOfClass:[AFXMLParserResponseSerializer class]])
         {
-            AFXMLParserResponseSerializer *xmlParserSerializer = [[AFXMLParserResponseSerializer alloc] init];
-            self.responseSerializer = xmlParserSerializer;
+            if(_myRespnse)
+                self.responseSerializer = _myRespnse;
+            else
+            {
+                AFXMLParserResponseSerializer *xmlParserSerializer = [[AFXMLParserResponseSerializer alloc] init];
+                self.responseSerializer = xmlParserSerializer;
+            }
         }
     }
     else if (type == XBHttpResponseType_Json) {
         if(![self.responseSerializer isMemberOfClass:[AFJSONResponseSerializer class]])
         {
-            AFJSONResponseSerializer *jsonParserSerializer = [[AFJSONResponseSerializer alloc] init];
-            self.responseSerializer = jsonParserSerializer;
+            if(_myRespnse)
+                self.responseSerializer = _myRespnse;
+            else
+            {
+                AFJSONResponseSerializer *jsonParserSerializer = [[AFJSONResponseSerializer alloc] init];
+                self.responseSerializer = jsonParserSerializer;
+            }
         }
     }
     else {
         if (![self.responseSerializer isMemberOfClass:[AFHTTPResponseSerializer class]])
         {
-            AFHTTPResponseSerializer *httpParserSerializer = [[AFHTTPResponseSerializer alloc] init];
-            self.responseSerializer = httpParserSerializer;
+            if(_myRespnse)
+                self.responseSerializer = _myRespnse;
+            else
+            {
+                AFHTTPResponseSerializer *httpParserSerializer = [[AFHTTPResponseSerializer alloc] init];
+                self.responseSerializer = httpParserSerializer;
+            }
         }
     }
     

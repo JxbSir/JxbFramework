@@ -21,30 +21,42 @@
 
 @implementation XBApi
 
-+ (instancetype)SharedXBApi
++ (instancetype)SharedXBApi:(AFHTTPResponseSerializer*)respone
 {
     static XBApi* xb = nil;
     static dispatch_once_t once ;
     dispatch_once(&once, ^{
-        xb = [[XBApi alloc] init];
+        xb = [[XBApi alloc] initWithRespone:respone];
     });
     return xb;
 }
 
-- (instancetype)init
-{
+- (instancetype)initWithRespone:(AFHTTPResponseSerializer*)respone {
+    self = [super init];
+    if (self) {
+        [self initialHttp:respone];
+    }
+    return self;
+}
+
+- (instancetype)init {
     self = [super init];
     if (self)
     {
-        http_json = [[XBHttpClient alloc] init];
-        AFJSONRequestSerializer* request_json = [[AFJSONRequestSerializer alloc] init];
-        [http_json setRequestSerializer:request_json];
-        
-        http_common = [[XBHttpClient alloc] init];
-        AFHTTPRequestSerializer* request_common = [[AFHTTPRequestSerializer alloc] init];
-        [http_common setRequestSerializer:request_common];
+        [self initialHttp:nil];
     }
     return self;
+}
+
+- (void)initialHttp:(AFHTTPResponseSerializer*)respone {
+    http_json = [[XBHttpClient alloc] init];
+    
+    AFJSONRequestSerializer* request_json = respone ? (AFJSONRequestSerializer*)respone : [[AFJSONRequestSerializer alloc] init];
+    [http_json setRequestSerializer:request_json];
+    
+    http_common = [[XBHttpClient alloc] init];
+    AFHTTPRequestSerializer* request_common = respone ? (AFHTTPRequestSerializer*)respone : [[AFHTTPRequestSerializer alloc] init];
+    [http_common setRequestSerializer:request_common];
 }
 
 - (void)requestWithURL:(NSString *)url
