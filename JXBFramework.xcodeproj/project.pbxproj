@@ -78,7 +78,6 @@
 		D07DC37F1A95A2E100852F5C /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		D07DC3811A95A2F200852F5C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		D07DC3821A95A2F200852F5C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
-		D07DC3841A95A4B400852F5C /* XBGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBGlobal.h; sourceTree = "<group>"; };
 		D07DC39E1A95CBD400852F5C /* UITableViewCell+SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SeparatorLine.h"; sourceTree = "<group>"; };
 		D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SeparatorLine.m"; sourceTree = "<group>"; };
 		D07DC3A01A95CBD400852F5C /* UIView+StringTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+StringTag.h"; sourceTree = "<group>"; };
@@ -110,7 +109,6 @@
 		D0C8E1831A89FD8C006F2A4E /* UIImage+RenderedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RenderedImage.m"; sourceTree = "<group>"; };
 		D0C8E1841A89FD8C006F2A4E /* UIImageView+DotLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DotLine.h"; sourceTree = "<group>"; };
 		D0C8E1851A89FD8C006F2A4E /* UIImageView+DotLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DotLine.m"; sourceTree = "<group>"; };
-		D0C8E1861A89FD8C006F2A4E /* XBFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBFramework.h; sourceTree = "<group>"; };
 		D0C8E1881A89FD8C006F2A4E /* XBHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBHttpClient.h; sourceTree = "<group>"; };
 		D0C8E1891A89FD8C006F2A4E /* XBHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBHttpClient.m; sourceTree = "<group>"; };
 		D0C8E1941A89FD8C006F2A4E /* XBBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBBaseVC.h; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		D0CAD9AD1AA7FD5200D6605B /* XBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBCommon.m; path = XBUtils/XBCommon.m; sourceTree = "<group>"; };
 		D0CAD9AE1AA7FD5200D6605B /* XBToastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBToastManager.h; path = XBUtils/XBToastManager.h; sourceTree = "<group>"; };
 		D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBToastManager.m; path = XBUtils/XBToastManager.m; sourceTree = "<group>"; };
+		D0D9C5181B05CBBD00748274 /* XBFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBFramework.h; sourceTree = "<group>"; };
+		D0D9C5191B05CBBD00748274 /* XBGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBGlobal.h; sourceTree = "<group>"; };
 		D0EF6B9D1AB95DC400D30639 /* XBBaseLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBBaseLoadView.h; path = BaseView/XBBaseLoadView.h; sourceTree = "<group>"; };
 		D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBBaseLoadView.m; path = BaseView/XBBaseLoadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,13 +257,12 @@
 		D0C8E1721A89FD8C006F2A4E /* XBFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D0D9C5171B05CBBD00748274 /* XBHeader */,
 				D0CAD9AB1AA7FD3800D6605B /* XBUtils */,
 				D04FB6251AA5A2F000E38C30 /* XBDbHelper */,
 				D0C8E1A31A89FFD2006F2A4E /* XBParser */,
 				D0C8E1731A89FD8C006F2A4E /* XBApi */,
 				D0C8E1761A89FD8C006F2A4E /* XBCategory */,
-				D0C8E1861A89FD8C006F2A4E /* XBFramework.h */,
-				D07DC3841A95A4B400852F5C /* XBGlobal.h */,
 				D0C8E1871A89FD8C006F2A4E /* XBHttp */,
 				D0C8E1921A89FD8C006F2A4E /* XBUi */,
 			);
@@ -387,6 +386,15 @@
 				D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */,
 			);
 			name = XBUtils;
+			sourceTree = "<group>";
+		};
+		D0D9C5171B05CBBD00748274 /* XBHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9C5181B05CBBD00748274 /* XBFramework.h */,
+				D0D9C5191B05CBBD00748274 /* XBGlobal.h */,
+			);
+			path = XBHeader;
 			sourceTree = "<group>";
 		};
 		D0EF6B9C1AB95D8B00D30639 /* BaseView */ = {
