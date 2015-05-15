@@ -33,11 +33,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'XBCategory' do |ss|
     ss.source_files = 'JXBFramework/XBFramework/XBCategory/*.{h,m}'
+    ss.subspec 'UIAlertView' do |sss|
+      sss.source_files = 'JXBFramework/XBFramework/XBCategory/UIAlertView/*.{h,m}'
+    end
   end
 
-  ss.subspec 'UIAlertView' do |ss|
-    sss.source_files = 'JXBFramework/XBFramework/XBCategory/UIAlertView/*.{h,m}'
-  end
+
 
   s.subspec 'XBHttp' do |ss|
     ss.source_files = 'JXBFramework/XBFramework/XBHttp/*.{h,m}'
