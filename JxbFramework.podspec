@@ -38,14 +38,20 @@ Pod::Spec.new do |s|
     end
   end
 
-
-
   s.subspec 'XBHttp' do |ss|
     ss.source_files = 'JXBFramework/XBFramework/XBHttp/*.{h,m}'
   end
 
   s.subspec 'XBUi' do |ss|
-    ss.source_files = 'JXBFramework/XBFramework/XBUi/*/*.{h,m}'
+    ss.subspec 'XBBaseTabVC' do |sss|
+      sss.source_files = 'JXBFramework/XBFramework/XBUi/XBBaseTabVC/*.{h,m}'
+    end
+    ss.subspec 'XBBaseVC' do |sss|
+      sss.source_files = 'JXBFramework/XBFramework/XBUi/XBBaseVC/*.{h,m}'
+      sss.subspec 'XBBaseVC' do |ssss|
+        ssss.source_files = 'JXBFramework/XBFramework/XBUi/XBBaseVC/BaseView/*.{h,m}'
+      end
+    end
   end
 
   s.frameworks            = 'UIKit'
