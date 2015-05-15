@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
   s.dependency  'AFNetworking'
   s.dependency  'jastor'
   s.dependency  'TouchJSON'
-  s.dependency  'fmdb'
   s.dependency  'MBProgressHUD'
 end
