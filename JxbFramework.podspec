@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "Peter" => "i@jxb.name" }
   s.requires_arc = true
   s.source       = { :git => "https://github.com/JxbSir/JxbFramework.git"  }
-  s.source_files = "JXBFramework/XBFramework/*.{h,m}"
+  s.source_files = "JXBFramework/XBFramework/*/*.{h,m}”
   s.public_header_files = 'JXBFramework/XBFramework/XBFramework.h'
   s.frameworks   = 'UIKit'
 end
