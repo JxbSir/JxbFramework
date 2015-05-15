@@ -59,5 +59,5 @@ Pod::Spec.new do |s|
   s.dependency            'jastor'
   s.dependency            'TouchJSON'
   s.dependency            'MBProgressHUD'
-  s.dependency            'fmdb'
+  s.dependency            'FMDB'
 end
