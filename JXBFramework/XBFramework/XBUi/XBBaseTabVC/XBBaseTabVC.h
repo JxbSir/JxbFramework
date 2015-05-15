@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XBBaseVC.h"
 
 @interface XBBaseTabItem : NSObject
 @property(nonatomic,copy)NSString   *title;

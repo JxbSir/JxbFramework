@@ -9,6 +9,7 @@
 #import "XBBaseVC.h"
 #import "XBBaseLoadView.h"
 #import "UIColor+hexColor.h"
+#import "XBGlobal.h"
 #import <objc/runtime.h>
 
 static char *btnClickAction;

@@ -7,6 +7,8 @@
 //
 
 #import "XBBaseLoadView.h"
+#import "XBGlobal.h"
+#import "UIColor+hexColor.h"
 
 @implementation XBBaseLoadView
 

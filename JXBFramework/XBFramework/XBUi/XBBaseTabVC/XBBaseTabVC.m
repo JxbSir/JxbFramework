@@ -7,6 +7,9 @@
 //
 
 #import "XBBaseTabVC.h"
+#import "UIColor+hexColor.h"
+#import "UIImage+RenderedImage.h"
+#import "XBGlobal.h"
 
 @implementation XBBaseTabItem
 @end

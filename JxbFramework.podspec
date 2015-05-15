@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
     end
     ss.subspec 'XBBaseVC' do |sss|
       sss.source_files = 'JXBFramework/XBFramework/XBUi/XBBaseVC/*.{h,m}'
-      sss.subspec 'XBBaseVC' do |ssss|
+      sss.subspec 'BaseView' do |ssss|
         ssss.source_files = 'JXBFramework/XBFramework/XBUi/XBBaseVC/BaseView/*.{h,m}'
       end
     end

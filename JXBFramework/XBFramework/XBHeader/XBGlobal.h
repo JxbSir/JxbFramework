@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 Peter. All rights reserved.
 //
 
-
 #define kXBCookie   @"kXBCookie"
 
 #define kHttpAllowSaveCache    @"http_a_s_c"
