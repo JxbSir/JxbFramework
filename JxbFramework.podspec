@@ -9,8 +9,40 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   s.ios.deployment_target = '6.0'
   s.source                = { :git => "https://github.com/JxbSir/JxbFramework.git"  }
-  s.source_files          = "JXBFramework/XBFramework/*/*.{h,m}"
   s.public_header_files   = 'JXBFramework/XBFramework/XBFramework.h'
+
+  s.subspec 'XBHeader' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBHeader/*.{h,m}'
+  end
+
+  s.subspec 'XBUtils' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBUtils/*.{h,m}'
+  end
+
+  s.subspec 'XBDbHelper' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBDbHelper/*.{h,m}'
+  end
+
+  s.subspec 'XBParser' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBParser/*.{h,m}'
+  end
+
+  s.subspec 'XBApi' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBApi/*.{h,m}'
+  end
+
+  s.subspec 'XBCategory' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBCategory/*.{h,m}'
+  end
+
+  s.subspec 'XBHttp' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBHttp/*.{h,m}'
+  end
+
+  s.subspec 'XBUi' do |ss|
+    ss.source_files = 'JXBFramework/XBFramework/XBUi/*/*.{h,m}'
+  end
+
   s.frameworks            = 'UIKit'
   s.dependency            'AFNetworking'
   s.dependency            'jastor'
