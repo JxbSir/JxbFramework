@@ -2,7 +2,7 @@
 //  NSString+Size.h
 //  TZS
 //
-//  Created by Peter on 14-12-17.
+//  Created by Peter Jin @ https://github.com/JxbSir on 14-12-17.
 //  Copyright (c) 2014年 NongFuSpring. All rights reserved.
 //
 

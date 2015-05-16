@@ -2,8 +2,8 @@
 //  XBHttpClient.h
 //  XBHttpClient
 //
-//  Created by Peter on 15/1/30.
-//  Copyright (c) 2015年 Peter. All rights reserved.
+//  Created by Peter Jin @ https://github.com/JxbSir on 15/1/30.
+//  Copyright (c) 2015年 Mail:i@Jxb.name. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

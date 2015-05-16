@@ -2,7 +2,7 @@
 //  UIButton+StringTag.m
 //  Jxb_Sdk
 //
-//  Created by Peter on 15/1/27.
+//  Created by Peter Jin @ https://github.com/JxbSir on 15/1/27.
 //  Copyright (c) 2015年 Peter Jin. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  UIImageView+DotLine.m
 //  Jxb_Sdk
 //
-//  Created by Peter on 15/2/3.
+//  Created by Peter Jin @ https://github.com/JxbSir on 15/2/3.
 //  Copyright (c) 2015年 Peter Jin. All rights reserved.
 //
 

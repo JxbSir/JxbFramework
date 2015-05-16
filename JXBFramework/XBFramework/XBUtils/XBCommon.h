@@ -2,7 +2,7 @@
 //  XBCommon.h
 //  Jxb_Sdk
 //
-//  Created by Peter Jin on 14/12/5.
+//  Created by Peter Jin @ https://github.com/JxbSir Jin on 14/12/5.
 //  Copyright (c) 2014年 Peter Jin. All rights reserved.
 //
 
