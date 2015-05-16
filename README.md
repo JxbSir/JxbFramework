@@ -1,24 +1,24 @@
 #  JxbFramework
-## UI and HTTP request Foundation Class Package
+## It is an iOS Framework for developer.
 
 
-`XBBaseVC：base vc in navigationVC , can quickly set left or right btn in navigationBar.`
-
-`XBHttp：package some code with AFNetwork`
-
-`XBParser：can get object from dic`
-
-#  cocoapods
+##支持CocoaPods引入
+`pod 'JxbFramework'`
 
 
-`platform :ios, "7.0"`
+##Import
+`#import "XBFramework.h"`
 
-`pod 'AFNetworking'`
-
-`pod 'MBProgressHUD'`
-
-`pod 'FMDB'`
-
-`pod 'Jastor'`
-
-`pod 'TouchJSON'`
+##Detail
+     - JxbFramework/XBHeader (1.0)
+     - JxbFramework/XBUtils (1.0)
+     - JxbFramework/XBDbHelper (1.0)
+     - JxbFramework/XBParser (1.0)
+     - JxbFramework/XBHttp (1.0)
+     - JxbFramework/XBApi (1.0)
+     - JxbFramework/XBCategory (1.0)
+     - JxbFramework/XBCategory/UIAlertView (1.0)
+     - JxbFramework/XBUi (1.0)
+     - JxbFramework/XBUi/XBBaseTabVC (1.0)
+     - JxbFramework/XBUi/XBBaseVC (1.0)
+     - JxbFramework/XBUi/XBBaseVC/BaseView (1.0)
