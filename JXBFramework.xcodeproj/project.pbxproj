@@ -41,6 +41,7 @@
 		D0C8E1B01A8A04F2006F2A4E /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E1AF1A8A04F2006F2A4E /* testVC.m */; };
 		D0CAD9B01AA7FD5200D6605B /* XBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAD9AD1AA7FD5200D6605B /* XBCommon.m */; };
 		D0CAD9B11AA7FD5200D6605B /* XBToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */; };
+		D0EE93A11B1F37B900CACD74 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE93A01B1F37B900CACD74 /* UIImage+TintColor.m */; };
 		D0EF6B9F1AB95DC400D30639 /* XBBaseLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,8 @@
 		D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBToastManager.m; path = XBUtils/XBToastManager.m; sourceTree = "<group>"; };
 		D0D9C5181B05CBBD00748274 /* XBFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBFramework.h; sourceTree = "<group>"; };
 		D0D9C5191B05CBBD00748274 /* XBGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBGlobal.h; sourceTree = "<group>"; };
+		D0EE939F1B1F37B900CACD74 /* UIImage+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TintColor.h"; sourceTree = "<group>"; };
+		D0EE93A01B1F37B900CACD74 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
 		D0EF6B9D1AB95DC400D30639 /* XBBaseLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBBaseLoadView.h; path = BaseView/XBBaseLoadView.h; sourceTree = "<group>"; };
 		D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBBaseLoadView.m; path = BaseView/XBBaseLoadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +285,8 @@
 		D0C8E1761A89FD8C006F2A4E /* XBCategory */ = {
 			isa = PBXGroup;
 			children = (
+				D0EE939F1B1F37B900CACD74 /* UIImage+TintColor.h */,
+				D0EE93A01B1F37B900CACD74 /* UIImage+TintColor.m */,
 				D07DC39E1A95CBD400852F5C /* UITableViewCell+SeparatorLine.h */,
 				D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */,
 				D07DC3A01A95CBD400852F5C /* UIView+StringTag.h */,
@@ -555,6 +560,7 @@
 				D0C8E1961A89FD8C006F2A4E /* XBApi.m in Sources */,
 				D0EF6B9F1AB95DC400D30639 /* XBBaseLoadView.m in Sources */,
 				D0C8E1981A89FD8C006F2A4E /* RIButtonItem.m in Sources */,
+				D0EE93A11B1F37B900CACD74 /* UIImage+TintColor.m in Sources */,
 				D06473831ABE6578001DDF47 /* secondVC.m in Sources */,
 				D07DC3A21A95CBD400852F5C /* UITableViewCell+SeparatorLine.m in Sources */,
 				D0C8E1991A89FD8C006F2A4E /* UIAlertView+Blocks.m in Sources */,
