@@ -10,12 +10,12 @@
 #import "XBBaseVC.h"
 
 @interface XBBaseTabItem : NSObject
-@property(nonatomic,copy)NSString   *title;
-@property(nonatomic,copy)NSString   *selectedImage;
-@property(nonatomic,copy)NSString   *unselectedImage;
-@property(nonatomic,strong)XBBaseVC   *rootVC;
+@property(nonatomic,copy)NSString                       *title;
+@property(nonatomic,copy)NSString                       *selectedImage;
+@property(nonatomic,copy)NSString                       *unselectedImage;
+@property(nonatomic,strong)UIViewController             *rootVC;
 @end
 
 @interface XBBaseTabVC : UITabBarController
-- (XBBaseTabVC*)initWithItems:(NSArray*)items;
+- (XBBaseTabVC*)initWithItems:(NSArray*)items btnMiddle:(UIButton*)btnMiddle;
 @end

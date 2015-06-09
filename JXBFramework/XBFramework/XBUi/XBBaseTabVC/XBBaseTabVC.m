@@ -16,7 +16,7 @@
 
 @implementation XBBaseTabVC
 
-- (XBBaseTabVC*)initWithItems:(NSArray *)items
+- (XBBaseTabVC*)initWithItems:(NSArray *)items btnMiddle:(UIButton*)btnMiddle
 {
     self = [super init];
     if(self)
@@ -30,6 +30,10 @@
         }
         self.viewControllers = navVCs;
         self.tabBar.backgroundColor = [UIColor clearColor];
+        
+        if (btnMiddle) {
+            [self.tabBar addSubview:btnMiddle];
+        }
         
         [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:mainColor} forState:UIControlStateSelected];

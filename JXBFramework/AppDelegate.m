@@ -57,6 +57,11 @@
     item2.unselectedImage = @"tab-cart";
     item2.rootVC = v2;
     
+    
+    XBBaseTabItem* itemBig = [[XBBaseTabItem alloc]init];
+    itemBig.title = @"";
+    
+    
     ThirdVC* v3 = [[ThirdVC alloc] init];
     XBBaseTabItem* item3 = [[XBBaseTabItem alloc]init];
     item3.title = @"我的";
@@ -64,7 +69,19 @@
     item3.unselectedImage = @"tab-mine";
     item3.rootVC = v3;
     
-    XBBaseTabVC* tab = [[XBBaseTabVC alloc] initWithItems:@[item1,item2,item3]];
+    ThirdVC* v4 = [[ThirdVC alloc] init];
+    XBBaseTabItem* item4 = [[XBBaseTabItem alloc]init];
+    item4.title = @"我的2";
+    item4.selectedImage = @"tab-mine-s";
+    item4.unselectedImage = @"tab-mine";
+    item4.rootVC = v4;
+    
+    UIButton* btnMid = [[UIButton alloc] initWithFrame:CGRectMake(mainWidth / 2 -50, 0, 100, 100)];
+    [btnMid setImage:[UIImage imageNamed:@"tab-cart-s"] forState:UIControlStateNormal];
+    [btnMid addTarget:self action:@selector(btnMidAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    XBBaseTabVC* tab = [[XBBaseTabVC alloc] initWithItems:@[item1,item2,itemBig,item3,item4] btnMiddle:btnMid];
     
     
     [[self window] setRootViewController:tab];
@@ -77,6 +94,10 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
+}
+
+- (void)btnMidAction {
+    [[[UIAlertView alloc] initWithTitle:@"" message:@"aaa" delegate:self cancelButtonTitle:@"22" otherButtonTitles:@"aa", nil] show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
