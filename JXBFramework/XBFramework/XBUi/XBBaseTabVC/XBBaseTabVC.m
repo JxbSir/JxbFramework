@@ -31,10 +31,6 @@
         self.viewControllers = navVCs;
         self.tabBar.backgroundColor = [UIColor clearColor];
         
-        if (btnMiddle) {
-            [self.tabBar addSubview:btnMiddle];
-        }
-        
         [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:mainColor} forState:UIControlStateSelected];
         
@@ -42,6 +38,15 @@
         [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithRenderColor:mainColor renderSize:CGSizeMake(10., 10.)] forBarMetrics:UIBarMetricsDefault];
         [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16.],NSForegroundColorAttributeName:[UIColor blackColor]}];
         
+        if (btnMiddle) {
+            [[UITabBar appearance] setShadowImage:[UIImage new]];
+            [[UITabBar appearance] setBackgroundImage:[UIImage imageWithRenderColor:RGB(248, 248, 248) renderSize:CGSizeMake(100, 50)]];
+            
+            UIView *viewLineTop = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainWidth, 0.5)];
+            viewLineTop.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+            [self.tabBar addSubview:viewLineTop];
+            [self.tabBar addSubview:btnMiddle];
+        }
     }
     return self;
 }
