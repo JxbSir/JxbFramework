@@ -23,6 +23,11 @@ static char *btnClickAction;
 @implementation XBBaseVC
 @synthesize showBackBtn;
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%@ dealloc", [self class]);
+}
+
 - (id)init {
     if (self = [super init]) {
         if ([self respondsToSelector:@selector(setExtendedLayoutIncludesOpaqueBars:)])
