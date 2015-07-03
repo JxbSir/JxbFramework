@@ -20,10 +20,29 @@
 @property (nonatomic, strong) UIButton *navRightBtn;
 
 
-
+/**
+ *  loading view
+ */
 - (void)showLoadingView;
 - (void)hideLoadingView;
 
+/**
+ *  empty view
+ *
+ *  @param title title
+ *  @param image image name
+ */
+- (void)showEmptyView:(NSString*)title image:(NSString*)image;
+- (void)hideEmpty;
+
+/**
+ *  left or right action
+ *
+ *  @param nrlImage
+ *  @param hltImage
+ *  @param title
+ *  @param btnClickBlock 
+ */
 - (void)actionCustomLeftBtnWithNrlImage:(NSString *)nrlImage htlImage:(NSString *)hltImage
                                   title:(NSString *)title
                                  action:(void(^)())btnClickBlock;

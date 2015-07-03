@@ -7,6 +7,7 @@
 //
 
 #import "XBBaseVC.h"
+#import "XBEmptyView.h"
 #import "XBBaseLoadView.h"
 #import "UIColor+hexColor.h"
 #import "XBGlobal.h"
@@ -17,6 +18,7 @@ static char *btnClickAction;
 @interface XBBaseVC ()<UIGestureRecognizerDelegate>
 {
     XBBaseLoadView  *vLoadView;
+    XBEmptyView     *vEmptyView;
 }
 @end
 
@@ -105,6 +107,20 @@ static char *btnClickAction;
 {
     if (vLoadView)
         [vLoadView removeFromSuperview];
+}
+
+#pragma mark - empty view
+- (void)showEmptyView:(NSString*)title image:(NSString*)image {
+    if (vEmptyView)
+        vEmptyView = nil;
+    vEmptyView = [[XBEmptyView alloc] initWithFrame:self.view.bounds];
+    vEmptyView.backgroundColor = self.view.backgroundColor;
+    [self.view addSubview:vEmptyView];
+}
+
+- (void)hideEmpty {
+    if (vEmptyView)
+        [vEmptyView removeFromSuperview];
 }
 
 

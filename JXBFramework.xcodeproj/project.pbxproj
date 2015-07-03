@@ -11,6 +11,7 @@
 		D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */; };
 		D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */; };
 		D04FB62E1AA5A41300E38C30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */; };
+		D05279F51B46530600992FE6 /* XBEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05279F41B46530600992FE6 /* XBEmptyView.m */; };
 		D064737D1ABE5F33001DDF47 /* XBBaseTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D064737C1ABE5F33001DDF47 /* XBBaseTabVC.m */; };
 		D06473801ABE6567001DDF47 /* firstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D064737F1ABE6567001DDF47 /* firstVC.m */; };
 		D06473831ABE6578001DDF47 /* secondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D06473821ABE6578001DDF47 /* secondVC.m */; };
@@ -65,6 +66,8 @@
 		D04FB6291AA5A2F000E38C30 /* XBDbVersionTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbVersionTable.h; sourceTree = "<group>"; };
 		D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDbVersionTable.m; sourceTree = "<group>"; };
 		D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D05279F31B46530600992FE6 /* XBEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBEmptyView.h; path = BaseView/XBEmptyView.h; sourceTree = "<group>"; };
+		D05279F41B46530600992FE6 /* XBEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBEmptyView.m; path = BaseView/XBEmptyView.m; sourceTree = "<group>"; };
 		D064737B1ABE5F33001DDF47 /* XBBaseTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBBaseTabVC.h; path = XBBaseTabVC/XBBaseTabVC.h; sourceTree = "<group>"; };
 		D064737C1ABE5F33001DDF47 /* XBBaseTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBBaseTabVC.m; path = XBBaseTabVC/XBBaseTabVC.m; sourceTree = "<group>"; };
 		D064737E1ABE6567001DDF47 /* firstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = firstVC.h; path = vc/firstVC.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 		D0EF6B9C1AB95D8B00D30639 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				D05279F31B46530600992FE6 /* XBEmptyView.h */,
+				D05279F41B46530600992FE6 /* XBEmptyView.m */,
 				D0EF6B9D1AB95DC400D30639 /* XBBaseLoadView.h */,
 				D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */,
 			);
@@ -569,6 +574,7 @@
 				D0C8E19B1A89FD8C006F2A4E /* UIColor+hexColor.m in Sources */,
 				D06473861ABE6586001DDF47 /* ThirdVC.m in Sources */,
 				D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */,
+				D05279F51B46530600992FE6 /* XBEmptyView.m in Sources */,
 				D0C8E1AB1A8A00C8006F2A4E /* LoginParser.m in Sources */,
 				D06473801ABE6567001DDF47 /* firstVC.m in Sources */,
 				D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */,
