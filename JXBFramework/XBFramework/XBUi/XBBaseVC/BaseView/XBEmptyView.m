@@ -8,6 +8,7 @@
 
 #import "XBEmptyView.h"
 #import "UIImage+TintColor.h"
+#import "XBGlobal.h"
 
 @interface XBEmptyView()
 {
