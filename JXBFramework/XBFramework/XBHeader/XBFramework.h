@@ -24,4 +24,4 @@
 #import "TouchJSON/NSDictionary_JSONExtensions.h"
 #import "Jastor.h"
 #import "AFNetworkReachabilityManager.h"
-
+#import "ReactiveCocoa/ReactiveCocoa.h"

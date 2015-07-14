@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B6B8FC0B0612A4B4038F3009 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1BD23E9E12E6996D31E73 /* libPods.a */; };
+		D016014B1B54D82A007EE40A /* JxbFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D016014A1B54D82A007EE40A /* JxbFramework.podspec */; };
 		D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */; };
 		D04FB62C1AA5A2F000E38C30 /* XBDbVersionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FB62A1AA5A2F000E38C30 /* XBDbVersionTable.m */; };
 		D04FB62E1AA5A41300E38C30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB62D1AA5A41300E38C30 /* libsqlite3.dylib */; };
@@ -60,6 +61,7 @@
 		182CDE848E102BB206799DFD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		63A1BD23E9E12E6996D31E73 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759E3FF9FF2A7DBBF73E771D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D016014A1B54D82A007EE40A /* JxbFramework.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JxbFramework.podspec; sourceTree = SOURCE_ROOT; };
 		D04FB6261AA5A2F000E38C30 /* XBDbHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbHandler.h; sourceTree = "<group>"; };
 		D04FB6271AA5A2F000E38C30 /* XBDbHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDbHandler.m; sourceTree = "<group>"; };
 		D04FB6281AA5A2F000E38C30 /* XBDbMigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDbMigration.h; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		D0C8E14B1A89FD5D006F2A4E /* JXBFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D016014A1B54D82A007EE40A /* JxbFramework.podspec */,
 				D0C8E1AD1A8A04D3006F2A4E /* vc */,
 				D0C8E1A81A8A00A8006F2A4E /* model */,
 				D0C8E1501A89FD5D006F2A4E /* AppDelegate.h */,
@@ -500,6 +503,7 @@
 			files = (
 				D0C8E1581A89FD5D006F2A4E /* Main.storyboard in Resources */,
 				D0C8E15D1A89FD5D006F2A4E /* LaunchScreen.xib in Resources */,
+				D016014B1B54D82A007EE40A /* JxbFramework.podspec in Resources */,
 				D0C8E15A1A89FD5D006F2A4E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

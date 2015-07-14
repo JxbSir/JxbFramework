@@ -60,4 +60,5 @@ Pod::Spec.new do |s|
   s.dependency            'TouchJSON'
   s.dependency            'MBProgressHUD'
   s.dependency            'FMDB'
+  s.dependency            'ReactiveCocoa'
 end
