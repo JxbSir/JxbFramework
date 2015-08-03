@@ -45,6 +45,7 @@
 		D0CAD9B11AA7FD5200D6605B /* XBToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAD9AF1AA7FD5200D6605B /* XBToastManager.m */; };
 		D0EE93A11B1F37B900CACD74 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE93A01B1F37B900CACD74 /* UIImage+TintColor.m */; };
 		D0EF6B9F1AB95DC400D30639 /* XBBaseLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */; };
+		D0F68DF81B6F15C000F2AB3E /* NSString+PJR.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F68DF71B6F15C000F2AB3E /* NSString+PJR.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,8 @@
 		D0EE93A01B1F37B900CACD74 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
 		D0EF6B9D1AB95DC400D30639 /* XBBaseLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XBBaseLoadView.h; path = BaseView/XBBaseLoadView.h; sourceTree = "<group>"; };
 		D0EF6B9E1AB95DC400D30639 /* XBBaseLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XBBaseLoadView.m; path = BaseView/XBBaseLoadView.m; sourceTree = "<group>"; };
+		D0F68DF61B6F15C000F2AB3E /* NSString+PJR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PJR.h"; sourceTree = "<group>"; };
+		D0F68DF71B6F15C000F2AB3E /* NSString+PJR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJR.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,8 @@
 				D07DC39F1A95CBD400852F5C /* UITableViewCell+SeparatorLine.m */,
 				D07DC3A01A95CBD400852F5C /* UIView+StringTag.h */,
 				D07DC3A11A95CBD400852F5C /* UIView+StringTag.m */,
+				D0F68DF61B6F15C000F2AB3E /* NSString+PJR.h */,
+				D0F68DF71B6F15C000F2AB3E /* NSString+PJR.m */,
 				D07DC3811A95A2F200852F5C /* NSString+MD5.h */,
 				D07DC3821A95A2F200852F5C /* NSString+MD5.m */,
 				D07DC37E1A95A2E100852F5C /* NSString+Size.h */,
@@ -579,6 +584,7 @@
 				D06473861ABE6586001DDF47 /* ThirdVC.m in Sources */,
 				D07DC3831A95A2F200852F5C /* NSString+MD5.m in Sources */,
 				D05279F51B46530600992FE6 /* XBEmptyView.m in Sources */,
+				D0F68DF81B6F15C000F2AB3E /* NSString+PJR.m in Sources */,
 				D0C8E1AB1A8A00C8006F2A4E /* LoginParser.m in Sources */,
 				D06473801ABE6567001DDF47 /* firstVC.m in Sources */,
 				D04FB62B1AA5A2F000E38C30 /* XBDbHandler.m in Sources */,
