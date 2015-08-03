@@ -12,7 +12,8 @@
 
 @interface XBApi : NSObject
 
-+ (instancetype)SharedXBApi:(AFHTTPResponseSerializer*)respone;
++ (instancetype)SharedXBApi;
++ (instancetype)SharedXBApi:(AFHTTPRequestSerializer*)request respone:(AFHTTPResponseSerializer*)respone;
 
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict

@@ -9,6 +9,10 @@
 #import "XBApi.h"
 #import "TouchJSON/NSDictionary_JSONExtensions.h"
 
+
+static XBApi* xb = nil;
+static dispatch_once_t once;
+
 @interface XBApi()
 {
     XBHttpClient *http_common ;
@@ -21,20 +25,24 @@
 
 @implementation XBApi
 
-+ (instancetype)SharedXBApi:(AFHTTPResponseSerializer*)respone
-{
-    static XBApi* xb = nil;
-    static dispatch_once_t once ;
++ (instancetype)SharedXBApi:(AFHTTPRequestSerializer*)request respone:(AFHTTPResponseSerializer*)respone {
     dispatch_once(&once, ^{
-        xb = [[XBApi alloc] initWithRespone:respone];
+        xb = [[XBApi alloc] initWithRespone:request response:respone];
     });
     return xb;
 }
 
-- (instancetype)initWithRespone:(AFHTTPResponseSerializer*)respone {
++ (instancetype)SharedXBApi {
+    dispatch_once(&once, ^{
+        xb = [[XBApi alloc] init];
+    });
+    return xb;
+}
+
+- (instancetype)initWithRespone:(AFHTTPRequestSerializer*)request response:(AFHTTPResponseSerializer*)response {
     self = [super init];
     if (self) {
-        [self initialHttp:respone];
+        [self initialHttp:request respone:response];
     }
     return self;
 }
@@ -43,18 +51,27 @@
     self = [super init];
     if (self)
     {
-        [self initialHttp:nil];
+        [self initialHttp:nil respone:nil];
     }
     return self;
 }
 
-- (void)initialHttp:(AFHTTPResponseSerializer*)respone {
+- (void)initialHttp:(AFHTTPRequestSerializer*)request respone:(AFHTTPResponseSerializer*)respone {
     http_json = [[XBHttpClient alloc] init];
+    
+    AFJSONRequestSerializer* request_json = request ? (AFJSONRequestSerializer*)request : [[AFJSONRequestSerializer alloc] init];
+    [http_json setRequestSerializer:request_json];
     
     AFJSONResponseSerializer* response_json = respone ? (AFJSONResponseSerializer*)respone : [[AFJSONResponseSerializer alloc] init];
     [http_json setResponseSerializer:response_json];
     
+    
+    
     http_common = [[XBHttpClient alloc] init];
+    
+    AFHTTPRequestSerializer* request_common = request ? (AFHTTPRequestSerializer*)request : [[AFHTTPRequestSerializer alloc] init];
+    [http_common setRequestSerializer:request_common];
+    
     AFHTTPResponseSerializer* response_common = respone ? (AFHTTPResponseSerializer*)respone : [[AFHTTPResponseSerializer alloc] init];
     [http_common setResponseSerializer:response_common];
 }
