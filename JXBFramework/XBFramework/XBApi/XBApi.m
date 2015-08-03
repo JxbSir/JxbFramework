@@ -51,12 +51,12 @@
 - (void)initialHttp:(AFHTTPResponseSerializer*)respone {
     http_json = [[XBHttpClient alloc] init];
     
-    AFJSONRequestSerializer* request_json = respone ? (AFJSONRequestSerializer*)respone : [[AFJSONRequestSerializer alloc] init];
-    [http_json setRequestSerializer:request_json];
+    AFJSONResponseSerializer* response_json = respone ? (AFJSONResponseSerializer*)respone : [[AFJSONResponseSerializer alloc] init];
+    [http_json setResponseSerializer:response_json];
     
     http_common = [[XBHttpClient alloc] init];
-    AFHTTPRequestSerializer* request_common = respone ? (AFHTTPRequestSerializer*)respone : [[AFHTTPRequestSerializer alloc] init];
-    [http_common setRequestSerializer:request_common];
+    AFHTTPResponseSerializer* response_common = respone ? (AFHTTPResponseSerializer*)respone : [[AFHTTPResponseSerializer alloc] init];
+    [http_common setResponseSerializer:response_common];
 }
 
 - (void)requestWithURL:(NSString *)url
