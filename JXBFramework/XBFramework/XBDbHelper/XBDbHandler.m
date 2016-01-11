@@ -9,6 +9,8 @@
 #import "XBDbHandler.h"
 #import <objc/runtime.h>
 
+#include "sqlite3.h"
+
 #define db_name @"db.sqlite"
 
 @implementation NSMutableDictionary (SetOperation)

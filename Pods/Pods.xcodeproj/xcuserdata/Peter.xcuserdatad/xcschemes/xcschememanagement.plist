@@ -4,32 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FMDB.xcscheme</key>
+		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TouchJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-jastor.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,40 +24,55 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TouchJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>jastor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2121DF8C1EFC7A7EA0FE0480</key>
+		<key>04B56F222FDD5D016392878740EDE82D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>358A303558393402425E5998</key>
+		<key>49FA5DAFFF876CE85BB9B2EE548DA32A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6BF1FE268321C0826953A3CC</key>
+		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80EE468403C507D0171DC0E2</key>
+		<key>9E89EE7EA10EE4619E42CA1B8EF19553</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C03E9CB6DA28A630289AB549</key>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C56EAB566A15F613FBD449A5</key>
+		<key>DE8AD241401ED938B7AC5B42385A2590</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FFD21DD208CA7318E58ED556</key>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

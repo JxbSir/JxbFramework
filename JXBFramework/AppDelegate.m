@@ -26,18 +26,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    NSString* url = @"http://11.23.11.98:9090/tzs/version/get";
-//    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
+    NSString* url = @"http://42.121.16.186:8888/baseservice/getUserInfo";
+    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
     
     
 //    [[XBApi SharedXBApi:nil] requestSyncWithURL:@"http://json.1yyg.com/android/index?action=getADListForPage&sortID=13" paras:nil type:XBHttpResponseType_Json];
     
-//    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(AFHTTPRequestOperation* operation,NSObject* result){
-//        LoginParser* lm = [[LoginParser alloc] initWithDictionary:(NSDictionary*)result];
-//        NSLog(@"%@",lm);
-//    } failure:^(NSError* error){
-//        NSLog(@"%@",error);
-//    }];
+    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(NSURLSessionDataTask *task, NSObject *resultObject) {
+        
+    } failure:^(NSError *requestErr) {
+        
+    }];
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     

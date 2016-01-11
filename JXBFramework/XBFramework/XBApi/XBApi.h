@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XBHttpClient.h"
 
+@class NSURLSessionDataTask;
 
 @interface XBApi : NSObject
 
@@ -18,10 +19,6 @@
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict
                   type:(XBHttpResponseType)type
-               success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
-               failure:(void(^)(NSError *requestErr))failure ;
-
-- (NSObject*)requestSyncWithURL:(NSString *)url
-                     paras:(NSDictionary *)parasDict
-                      type:(XBHttpResponseType)type;
+               success:(void(^)(NSURLSessionDataTask* task, NSObject *resultObject))success
+               failure:(void(^)(NSError *requestErr))failure;
 @end

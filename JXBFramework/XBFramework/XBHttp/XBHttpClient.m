@@ -9,6 +9,7 @@
 #import "XBHttpClient.h"
 #import "XBHttpCache.h"
 #import "XBGlobal.h"
+
 #import "TouchJSON/NSDictionary_JSONExtensions.h"
 
 @interface XBHttpClient()
@@ -18,11 +19,16 @@
 
 @implementation XBHttpClient
 
+- (id)init {
+    self = [super init];
+    return self;
+}
+
 #pragma mark - request
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict
                   type:(XBHttpResponseType)type
-               success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
+               success:(void(^)(NSURLSessionDataTask* task, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure
 {
     
@@ -92,13 +98,12 @@
         [transferParas setValuesForKeysWithDictionary:baseParas];
     }
     
-    // 开始请求
     __weak typeof(self) wSelf = self;
-    [self POST:requestURL parameters:transferParas success:^(AFHTTPRequestOperation *operation, id responseObject){
+    id successBlock = ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (!wSelf) {
             return ;
         }
-        
+
         if(type == XBHttpResponseType_Common)
         {
             responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -122,17 +127,32 @@
             }
             responseObject = [NSDictionary dictionaryWithJSONString:r error:&error];
         }
-        
+
 #ifdef DEBUG
         NSLog(@"url:%@\r\nbody:%@", url, responseObject);
 #endif
         if (allowSaveCache == XBHttpCacheMemory || allowSaveCache == XBHttpCacheDisk) {
             [[XBHttpCache sharedInstance] storeResponse:responseObject forUrl:requestURL byParam:transferParas toDisk:allowSaveCache == XBHttpCacheMemory? NO:YES];
         }
-        success(operation, responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        success(task, responseObject);
+    };
+    
+    id progressBlock = ^(NSProgress * _Nonnull uploadProgress) {
+        
+    };
+    
+    id failureBlock = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
-    }];
+    };
+    
+    BOOL b = [self respondsToSelector:@selector(POST:parameters:progress:success:failure:)];
+    // 开始请求
+  
+    
+    [self POST:requestURL parameters:transferParas success:successBlock failure:failureBlock];
+    
+//    [self POST:requestURL parameters:transferParas progress:progressBlock success:successBlock failure:failureBlock];
+
 }
 
 

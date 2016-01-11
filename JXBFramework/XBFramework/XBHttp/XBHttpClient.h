@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "AFNetworking.h"
+
+@class NSURLSessionDataTask;
 
 typedef enum
 {
@@ -17,14 +20,14 @@ typedef enum
     XBHttpResponseType_Common
 }XBHttpResponseType;
 
-@interface XBHttpClient : AFHTTPRequestOperationManager
+@interface XBHttpClient : AFHTTPSessionManager
 
 @property(nonatomic,copy)AFHTTPResponseSerializer* myRespnse;
 
 - (void)requestWithURL:(NSString *)url
                  paras:(NSDictionary *)parasDict
                   type:(XBHttpResponseType)type
-               success:(void(^)(AFHTTPRequestOperation* operation, NSObject *resultObject))success
+               success:(void(^)(NSURLSessionDataTask* task, NSObject *resultObject))success
                failure:(void(^)(NSError *requestErr))failure ;
 
 @end
