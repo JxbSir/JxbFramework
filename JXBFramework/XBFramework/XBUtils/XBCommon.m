@@ -15,27 +15,23 @@
 @implementation XBCommon
 
 #pragma mark - Common
-+ (NSString*)urlEncode:(NSString*)str encode:(NSInteger)encode
-{
-    NSString* escapedUrlString= (NSString*) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)str, NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
-    return escapedUrlString;
++ (NSString*)urlEncode:(NSString*)str {
+    NSString* encodeString = [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    return encodeString;
 }
 
-+ (NSString*)urlDecode:(NSString*)str encode:(NSInteger)encode
-{
-    return [str stringByReplacingPercentEscapesUsingEncoding:encode];
++ (NSString*)urlDecode:(NSString*)str {
+    return [str stringByRemovingPercentEncoding];
 }
 
-+ (NSString*)getTimeSecSince1970
-{
++ (NSString*)getTimeSecSince1970 {
     NSDate* date = [NSDate date];
     double tick = [date timeIntervalSince1970];
     NSString* _t = [NSString stringWithFormat:@"%.0f",tick];
     return _t;
 }
 
-+ (NSString*)getTimeMillSince1970
-{
++ (NSString*)getTimeMillSince1970 {
     NSDate* date = [NSDate date];
     double tick = [date timeIntervalSince1970] * 1000;
     NSString* _t = [NSString stringWithFormat:@"%.0f",tick];
@@ -60,7 +56,7 @@
 
 + (CGRect)getMainSceen
 {
-    return [UIScreen mainScreen].applicationFrame;
+    return [[UIScreen mainScreen] bounds];
 }
 
 + (NSString*)getDeviceVersion

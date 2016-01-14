@@ -102,7 +102,6 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24;
     // first convert the response to data
     
     if (![response isKindOfClass:[NSDictionary class]]) {
-#warning  "only support for NSDictionary(JSON) data cache for now"
         return;
     }
     

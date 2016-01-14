@@ -21,7 +21,6 @@
 #import "UITableViewCell+SeparatorLine.h"
 #import "UIImage+RenderedImage.h"
 #import "UIImage+TintColor.h"
-#import "UIAlertView+Blocks.h"
 #import "XBDbHandler.h"
 
 #import "TouchJSON/NSDictionary_JSONExtensions.h"

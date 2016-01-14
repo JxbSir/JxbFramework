@@ -10,8 +10,8 @@
 
 @interface XBCommon : NSObject
 
-+ (NSString*)urlEncode:(NSString*)str encode:(NSInteger)encode;
-+ (NSString*)urlDecode:(NSString*)str encode:(NSInteger)encode;
++ (NSString*)urlEncode:(NSString*)str;
++ (NSString*)urlDecode:(NSString*)str;
 
 + (NSString*)getTimeSecSince1970;
 + (NSString*)getTimeMillSince1970;
