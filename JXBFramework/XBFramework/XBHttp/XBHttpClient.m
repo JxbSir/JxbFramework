@@ -145,13 +145,8 @@
         failure(error);
     };
     
-    BOOL b = [self respondsToSelector:@selector(POST:parameters:progress:success:failure:)];
     // 开始请求
-  
-    
-    [self POST:requestURL parameters:transferParas success:successBlock failure:failureBlock];
-    
-//    [self POST:requestURL parameters:transferParas progress:progressBlock success:successBlock failure:failureBlock];
+    [self POST:requestURL parameters:transferParas progress:progressBlock success:successBlock failure:failureBlock];
 
 }
 
