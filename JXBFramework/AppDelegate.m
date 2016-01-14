@@ -1,23 +1,15 @@
 //
 //  AppDelegate.m
-//  JXBFramework
+//  JxbFramework
 //
-//  Created by Peter Jin @ https://github.com/JxbSir on 15/2/10.
-//  Copyright (c) 2015年 Mail:i@Jxb.name. All rights reserved.
+//  Created by Peter on 16/1/14.
+//  Copyright © 2016年 Peter. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "LoginParser.h"
-#import "testVC.h"
-#import "UIImage+RenderedImage.h"
-#import "firstVC.h"
-#import "secondVC.h"
-#import "ThirdVC.h"
-#import "XBBaseTabVC.h"
+#import "JxbDebugTool.h"
 
-
-
-@interface AppDelegate () <UITabBarControllerDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -26,77 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString* url = @"http://42.121.16.186:8888/baseservice/getUserInfo";
-    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
-    
-    
-//    [[XBApi SharedXBApi:nil] requestSyncWithURL:@"http://json.1yyg.com/android/index?action=getADListForPage&sortID=13" paras:nil type:XBHttpResponseType_Json];
-    
-    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(NSURLSessionDataTask *task, NSObject *resultObject) {
-        
-    } failure:^(NSError *requestErr) {
-        
-    }];
-    
-    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
-    
-    //UIViewController *rootViewController = [self setupRootViewController];
-    
-    firstVC* v1 = [[firstVC alloc] init];
-    XBBaseTabItem* item1 = [[XBBaseTabItem alloc]init];
-    item1.title = @"首页";
-    item1.selectedImage = @"tab-home-s";
-    item1.unselectedImage = @"tab-home";
-    item1.rootVC = v1;
-    
-    secondVC* v2 = [[secondVC alloc] init];
-    XBBaseTabItem* item2 = [[XBBaseTabItem alloc]init];
-    item2.title = @"购物车";
-    item2.selectedImage = @"tab-cart-s";
-    item2.unselectedImage = @"tab-cart";
-    item2.rootVC = v2;
-    
-    
-    XBBaseTabItem* itemBig = [[XBBaseTabItem alloc]init];
-    itemBig.title = @"";
-    
-    
-    ThirdVC* v3 = [[ThirdVC alloc] init];
-    XBBaseTabItem* item3 = [[XBBaseTabItem alloc]init];
-    item3.title = @"我的";
-    item3.selectedImage = @"tab-mine-s";
-    item3.unselectedImage = @"tab-mine";
-    item3.rootVC = v3;
-    
-    ThirdVC* v4 = [[ThirdVC alloc] init];
-    XBBaseTabItem* item4 = [[XBBaseTabItem alloc]init];
-    item4.title = @"我的2";
-    item4.selectedImage = @"tab-mine-s";
-    item4.unselectedImage = @"tab-mine";
-    item4.rootVC = v4;
-    
-    UIButton* btnMid = [[UIButton alloc] initWithFrame:CGRectMake(mainWidth / 2 -50, 0, 100, 100)];
-    [btnMid setImage:[UIImage imageNamed:@"tab-cart-s"] forState:UIControlStateNormal];
-    [btnMid addTarget:self action:@selector(btnMidAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    XBBaseTabVC* tab = [[XBBaseTabVC alloc] initWithItems:@[item1,item2,itemBig,item3,item4] btnMiddle:btnMid];
-    
-    
-    [[self window] setRootViewController:tab];
-    
-    // set  backgroundColor
-    [[self window] setBackgroundColor:[UIColor whiteColor]];
-    // set  makeKeyAndVisible
-    [[self window] makeKeyAndVisible];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+#ifdef DEBUG
+    [[JxbDebugTool shareInstance] enableDebugMode];
+#endif
     
     return YES;
-}
-
-- (void)btnMidAction {
-    [[[UIAlertView alloc] initWithTitle:@"" message:@"aaa" delegate:self cancelButtonTitle:@"22" otherButtonTitles:@"aa", nil] show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

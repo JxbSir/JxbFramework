@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>JXBFramework.xcscheme</key>
+		<key>JxbFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D0C8E1481A89FD5D006F2A4E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0C8E1611A89FD5D006F2A4E</key>
+		<key>D03D0D9D1C47BF1D00D7CE3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,17 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JxbDebugTool.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04B56F222FDD5D016392878740EDE82D</key>
+		<key>06D54485B354FA28C8E41701C9F78FB0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E137417CD5869E7F892F3C92EE0EBFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E966C01B95B04CFB355C51103953CDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,17 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E89EE7EA10EE4619E42CA1B8EF19553</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE8AD241401ED938B7AC5B42385A2590</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,12 +1,13 @@
 //
 //  ViewController.m
-//  JXBFramework
+//  JxbFramework
 //
-//  Created by Peter Jin @ https://github.com/JxbSir on 15/2/10.
-//  Copyright (c) 2015年 Mail:i@Jxb.name. All rights reserved.
+//  Created by Peter on 16/1/14.
+//  Copyright © 2016年 Peter. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "XBFramework.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSString* url = @"http://42.121.16.186:8888/baseservice/getUserInfo";
+    NSDictionary* dicParas = @{@"custVersion":@"1.0.1", @"phoneType":@"ios"};
+   
+    [[XBApi SharedXBApi] requestWithURL:url paras:dicParas type:XBHttpResponseType_Json success:^(NSURLSessionDataTask *task, NSObject *resultObject) {
+        
+    } failure:^(NSError *requestErr) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
