@@ -9,32 +9,37 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FMDB.xcscheme</key>
+		<key>MGJRouter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JxbDebugTool.xcscheme</key>
+		<key>Objection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme</key>
+		<key>Pods-libEncryption.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-libNetwork.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TouchJSON.xcscheme</key>
+		<key>Pods-libObjection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>jastor.xcscheme</key>
+		<key>Pods-libPatch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-libRouter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,22 +47,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06D54485B354FA28C8E41701C9F78FB0</key>
+		<key>251B53173C13EF9B51985010E7BB4B47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E137417CD5869E7F892F3C92EE0EBFD</key>
+		<key>3E3528ED920DE748276C45EB40EADC94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E966C01B95B04CFB355C51103953CDA</key>
+		<key>43199A01A5BE82618EEAE172F8CCFC03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49FA5DAFFF876CE85BB9B2EE548DA32A</key>
+		<key>4DA9F1BD2EB20B44D77A3C29448D177D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>663BF5A07B4BF29BE1196265EA28C71C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F0D0EACAF425A14B65CB4D0051B5C19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<key>D36F72D5776D55CCCD6CE33397201784</key>
 		<dict>
 			<key>primary</key>
 			<true/>

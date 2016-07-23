@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../TestApp/TestApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Business/Business.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Protocols/Protocols.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../UIBase/UIBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../UICommon/UICommon.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libNetwork/libNetwork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libObjection/libObjection.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libPatch/libPatch.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libRouter/libRouter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libUtility/libUtility.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libDBHelper/libDBHelper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libEncryption/libEncryption.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
