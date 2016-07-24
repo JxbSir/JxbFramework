@@ -38,4 +38,23 @@
  *  @return     解密后字符串
  */
 - (NSString*)decrypt:(NSString*)key plainText:(NSString*)text;
+
+/**
+ *  获取MD5加密字符串
+ *
+ *  @param text 源文本
+ *
+ *  @return     MD5
+ */
+- (NSString*)MD5Hash:(NSString*)text;
+
+/**
+ *  获取哈希字符串（最大256）
+ *
+ *  @param text   源文本
+ *  @param length 长度，最大256
+ *
+ *  @return       哈希字符串
+ */
+- (NSString*)sha256:(NSString*)text length:(NSInteger)length;
 @end

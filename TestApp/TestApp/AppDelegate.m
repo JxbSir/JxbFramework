@@ -28,9 +28,9 @@
 //    [[JsPatchManager shareInstance] excuteJsPatch:@[content1,content2]];
     
     
-    NSString* key = @"askdaskldkadalk";
+    NSString* key = @"xiaojinjichabihh";
     NSString* text = @"ni shi bichi";
-    JxbEncryptManager* lib = [[JxbEncryptManager alloc] init];
+    JxbEncryptManager* lib = [[JxbEncryptManager alloc] initWithIV:@"xiaojinjichabihh"];
     NSString* en = [lib encrypt:key plainText:text];
     NSLog(en);
     NSString* de = [lib decrypt:key plainText:en];
