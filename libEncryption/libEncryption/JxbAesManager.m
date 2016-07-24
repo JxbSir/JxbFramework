@@ -1,20 +1,20 @@
 //
-//  JxbEncryptManager.m
+//  JxbAesManager
 //  libEncryption
 //
 //  Created by Peter on 16/7/22.
 //  Copyright © 2016年 Peter. All rights reserved.
 //
 
-#import "JxbEncryptManager.h"
+#import "JxbAesManager.h"
 #import "CryptLib.h"
 
-@interface JxbEncryptManager()
+@interface JxbAesManager()
 @property (nonatomic, strong) StringEncryption  *lib;
 @property (nonatomic, strong) NSString          *iv;
 @end
 
-@implementation JxbEncryptManager
+@implementation JxbAesManager
 
 - (instancetype)initWithIV:(NSString*)iv {
     self = [super init];

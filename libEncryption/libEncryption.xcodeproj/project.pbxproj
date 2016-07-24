@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		A29F04F66BE68D387C18CE7F /* libPods-libEncryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 766C032FA60565C87B96275D /* libPods-libEncryption.a */; };
+		D029CAFD1D44F786004B1E21 /* JxbDesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CAFB1D44F786004B1E21 /* JxbDesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D029CAFE1D44F786004B1E21 /* JxbDesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CAFC1D44F786004B1E21 /* JxbDesManager.m */; };
+		D029CB021D44FB07004B1E21 /* QN_GTM_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB001D44FB07004B1E21 /* QN_GTM_Base64.h */; };
+		D029CB031D44FB07004B1E21 /* QN_GTM_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB011D44FB07004B1E21 /* QN_GTM_Base64.m */; };
 		D0F404C51D42208500686107 /* libEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404C41D42208500686107 /* libEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F404D01D42222800686107 /* CryptLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404CC1D42222800686107 /* CryptLib.h */; };
 		D0F404D11D42222800686107 /* CryptLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404CD1D42222800686107 /* CryptLib.m */; };
 		D0F404D21D42222800686107 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404CE1D42222800686107 /* NSData+Base64.h */; };
 		D0F404D31D42222800686107 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404CF1D42222800686107 /* NSData+Base64.m */; };
-		D0F404D61D42232400686107 /* JxbEncryptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404D41D42232400686107 /* JxbEncryptManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0F404D71D42232400686107 /* JxbEncryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404D51D42232400686107 /* JxbEncryptManager.m */; };
+		D0F404D61D42232400686107 /* JxbAesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404D41D42232400686107 /* JxbAesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0F404D71D42232400686107 /* JxbAesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404D51D42232400686107 /* JxbAesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30FF441ACC49988631E8A3A4 /* Pods-libEncryption.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libEncryption.release.xcconfig"; path = "../Pods/Target Support Files/Pods-libEncryption/Pods-libEncryption.release.xcconfig"; sourceTree = "<group>"; };
 		766C032FA60565C87B96275D /* libPods-libEncryption.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libEncryption.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F424C3AB0775349B6CB44C1 /* Pods-libEncryption.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libEncryption.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-libEncryption/Pods-libEncryption.debug.xcconfig"; sourceTree = "<group>"; };
+		D029CAFB1D44F786004B1E21 /* JxbDesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbDesManager.h; sourceTree = "<group>"; };
+		D029CAFC1D44F786004B1E21 /* JxbDesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbDesManager.m; sourceTree = "<group>"; };
+		D029CB001D44FB07004B1E21 /* QN_GTM_Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QN_GTM_Base64.h; sourceTree = "<group>"; };
+		D029CB011D44FB07004B1E21 /* QN_GTM_Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QN_GTM_Base64.m; sourceTree = "<group>"; };
 		D0F404C11D42208400686107 /* libEncryption.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libEncryption.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F404C41D42208500686107 /* libEncryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libEncryption.h; sourceTree = "<group>"; };
 		D0F404C61D42208500686107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,8 +36,8 @@
 		D0F404CD1D42222800686107 /* CryptLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptLib.m; sourceTree = "<group>"; };
 		D0F404CE1D42222800686107 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		D0F404CF1D42222800686107 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		D0F404D41D42232400686107 /* JxbEncryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbEncryptManager.h; sourceTree = "<group>"; };
-		D0F404D51D42232400686107 /* JxbEncryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbEncryptManager.m; sourceTree = "<group>"; };
+		D0F404D41D42232400686107 /* JxbAesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbAesManager.h; sourceTree = "<group>"; };
+		D0F404D51D42232400686107 /* JxbAesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbAesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D029CAFF1D44FAF6004B1E21 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				D0F404CC1D42222800686107 /* CryptLib.h */,
+				D0F404CD1D42222800686107 /* CryptLib.m */,
+				D0F404CE1D42222800686107 /* NSData+Base64.h */,
+				D0F404CF1D42222800686107 /* NSData+Base64.m */,
+				D029CB001D44FB07004B1E21 /* QN_GTM_Base64.h */,
+				D029CB011D44FB07004B1E21 /* QN_GTM_Base64.m */,
+			);
+			name = Third;
+			sourceTree = "<group>";
+		};
 		D0F404B71D42208400686107 = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +103,12 @@
 		D0F404C31D42208400686107 /* libEncryption */ = {
 			isa = PBXGroup;
 			children = (
+				D029CAFF1D44FAF6004B1E21 /* Third */,
 				D0F404C41D42208500686107 /* libEncryption.h */,
-				D0F404D41D42232400686107 /* JxbEncryptManager.h */,
-				D0F404D51D42232400686107 /* JxbEncryptManager.m */,
-				D0F404CC1D42222800686107 /* CryptLib.h */,
-				D0F404CD1D42222800686107 /* CryptLib.m */,
-				D0F404CE1D42222800686107 /* NSData+Base64.h */,
-				D0F404CF1D42222800686107 /* NSData+Base64.m */,
+				D0F404D41D42232400686107 /* JxbAesManager.h */,
+				D0F404D51D42232400686107 /* JxbAesManager.m */,
+				D029CAFB1D44F786004B1E21 /* JxbDesManager.h */,
+				D029CAFC1D44F786004B1E21 /* JxbDesManager.m */,
 				D0F404C61D42208500686107 /* Info.plist */,
 			);
 			path = libEncryption;
@@ -102,9 +122,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F404C51D42208500686107 /* libEncryption.h in Headers */,
-				D0F404D61D42232400686107 /* JxbEncryptManager.h in Headers */,
+				D029CAFD1D44F786004B1E21 /* JxbDesManager.h in Headers */,
+				D0F404D61D42232400686107 /* JxbAesManager.h in Headers */,
 				D0F404D01D42222800686107 /* CryptLib.h in Headers */,
 				D0F404D21D42222800686107 /* NSData+Base64.h in Headers */,
+				D029CB021D44FB07004B1E21 /* QN_GTM_Base64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F404D71D42232400686107 /* JxbEncryptManager.m in Sources */,
+				D029CB031D44FB07004B1E21 /* QN_GTM_Base64.m in Sources */,
+				D0F404D71D42232400686107 /* JxbAesManager.m in Sources */,
+				D029CAFE1D44F786004B1E21 /* JxbDesManager.m in Sources */,
 				D0F404D11D42222800686107 /* CryptLib.m in Sources */,
 				D0F404D31D42222800686107 /* NSData+Base64.m in Sources */,
 			);

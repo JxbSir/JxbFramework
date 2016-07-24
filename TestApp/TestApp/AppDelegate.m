@@ -29,14 +29,14 @@
     
     
     NSString* key = @"xiaojinjichabihh";
-    NSString* text = @"ni shi bichi";
-    JxbEncryptManager* lib = [[JxbEncryptManager alloc] initWithIV:@"xiaojinjichabihh"];
+    NSString* text = @"asd";
+    JxbAesManager* lib = [[JxbAesManager alloc] initWithIV:@"xiaojinjichabihh"];
     NSString* en = [lib encrypt:key plainText:text];
     NSLog(en);
     NSString* de = [lib decrypt:key plainText:en];
     NSLog(de);
     
-    
+    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
 

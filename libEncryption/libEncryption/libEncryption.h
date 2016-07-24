@@ -6,4 +6,5 @@
 //  Copyright © 2016年 Peter. All rights reserved.
 //
 
-#import <libEncryption/JxbEncryptManager.h>
+#import <libEncryption/JxbAesManager.h>
+#import <libEncryption/JxbDesManager.h>

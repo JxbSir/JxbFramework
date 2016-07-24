@@ -1,5 +1,5 @@
 //
-//  JxbEncryptManager.h
+//  JxbAesManager
 //  libEncryption
 //
 //  Created by Peter on 16/7/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JxbEncryptManager : NSObject
+@interface JxbAesManager : NSObject
 
 /**
  *  初始化（若使用init，则自动随机生成IV）
