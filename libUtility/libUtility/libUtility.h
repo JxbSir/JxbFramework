@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Peter. All rights reserved.
 //
 
+#import <libUtility/JxbTools.h>
+
 #import <libUtility/UIDevice+Extend.h>
 #import <libUtility/NSObject+Extend.h>
 #import <libUtility/NSArray+Swizzling.h>

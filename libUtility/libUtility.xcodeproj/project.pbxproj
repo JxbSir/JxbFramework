@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		D0217B151D4068C50058A73F /* libUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D0217B141D4068C50058A73F /* libUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D029CB061D45F636004B1E21 /* UIColor+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB041D45F636004B1E21 /* UIColor+HexColor.h */; };
+		D026B3001D479E9D00065AD7 /* JxbTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D026B2FE1D479E9D00065AD7 /* JxbTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D026B3011D479E9D00065AD7 /* JxbTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B2FF1D479E9D00065AD7 /* JxbTools.m */; };
+		D026B3041D479EB400065AD7 /* UIView+ViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D026B3021D479EB400065AD7 /* UIView+ViewUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D026B3051D479EB400065AD7 /* UIView+ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B3031D479EB400065AD7 /* UIView+ViewUtils.m */; };
+		D029CB061D45F636004B1E21 /* UIColor+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB041D45F636004B1E21 /* UIColor+HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB071D45F636004B1E21 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB051D45F636004B1E21 /* UIColor+HexColor.m */; };
-		D029CB0A1D45F6E3004B1E21 /* UIImage+Cut.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB081D45F6E3004B1E21 /* UIImage+Cut.h */; };
+		D029CB0A1D45F6E3004B1E21 /* UIImage+Cut.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB081D45F6E3004B1E21 /* UIImage+Cut.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB0B1D45F6E3004B1E21 /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB091D45F6E3004B1E21 /* UIImage+Cut.m */; };
-		D029CB121D45F70F004B1E21 /* UIImage+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB0C1D45F70F004B1E21 /* UIImage+Extend.h */; };
+		D029CB121D45F70F004B1E21 /* UIImage+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB0C1D45F70F004B1E21 /* UIImage+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB131D45F70F004B1E21 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB0D1D45F70F004B1E21 /* UIImage+Extend.m */; };
-		D029CB141D45F70F004B1E21 /* UIImage+FixOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB0E1D45F70F004B1E21 /* UIImage+FixOrientation.h */; };
+		D029CB141D45F70F004B1E21 /* UIImage+FixOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB0E1D45F70F004B1E21 /* UIImage+FixOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB151D45F70F004B1E21 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB0F1D45F70F004B1E21 /* UIImage+FixOrientation.m */; };
-		D029CB161D45F70F004B1E21 /* UIImage+Water.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB101D45F70F004B1E21 /* UIImage+Water.h */; };
+		D029CB161D45F70F004B1E21 /* UIImage+Water.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB101D45F70F004B1E21 /* UIImage+Water.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB171D45F70F004B1E21 /* UIImage+Water.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB111D45F70F004B1E21 /* UIImage+Water.m */; };
-		D029CB1A1D45F779004B1E21 /* UIDevice+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB181D45F779004B1E21 /* UIDevice+Extend.h */; };
+		D029CB1A1D45F779004B1E21 /* UIDevice+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB181D45F779004B1E21 /* UIDevice+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB1B1D45F779004B1E21 /* UIDevice+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB191D45F779004B1E21 /* UIDevice+Extend.m */; };
-		D029CB1E1D45F7A0004B1E21 /* NSObject+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB1C1D45F7A0004B1E21 /* NSObject+Extend.h */; };
+		D029CB1E1D45F7A0004B1E21 /* NSObject+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB1C1D45F7A0004B1E21 /* NSObject+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB1F1D45F7A0004B1E21 /* NSObject+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB1D1D45F7A0004B1E21 /* NSObject+Extend.m */; };
 		D0F405191D4237E200686107 /* NSArray+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404DD1D4237E200686107 /* NSArray+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F4051A1D4237E200686107 /* NSArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404DE1D4237E200686107 /* NSArray+Swizzling.m */; };
@@ -66,14 +70,16 @@
 		D0F405501D4237E200686107 /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F405141D4237E200686107 /* UIView+FindFirstResponder.m */; };
 		D0F405511D4237E200686107 /* UIView+FindUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F405151D4237E200686107 /* UIView+FindUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F405521D4237E200686107 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F405161D4237E200686107 /* UIView+FindUIViewController.m */; };
-		D0F405581D42383400686107 /* UIView+ViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F405561D42383400686107 /* UIView+ViewUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0F405591D42383400686107 /* UIView+ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F405571D42383400686107 /* UIView+ViewUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0217B111D4068C50058A73F /* libUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0217B141D4068C50058A73F /* libUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libUtility.h; sourceTree = "<group>"; };
 		D0217B161D4068C50058A73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D026B2FE1D479E9D00065AD7 /* JxbTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbTools.h; sourceTree = "<group>"; };
+		D026B2FF1D479E9D00065AD7 /* JxbTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbTools.m; sourceTree = "<group>"; };
+		D026B3021D479EB400065AD7 /* UIView+ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewUtils.h"; sourceTree = "<group>"; };
+		D026B3031D479EB400065AD7 /* UIView+ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewUtils.m"; sourceTree = "<group>"; };
 		D029CB041D45F636004B1E21 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		D029CB051D45F636004B1E21 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		D029CB081D45F6E3004B1E21 /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
@@ -132,8 +138,6 @@
 		D0F405141D4237E200686107 /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
 		D0F405151D4237E200686107 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
 		D0F405161D4237E200686107 /* UIView+FindUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindUIViewController.m"; sourceTree = "<group>"; };
-		D0F405561D42383400686107 /* UIView+ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ViewUtils.h"; path = "../Utility/UIView+ViewUtils.h"; sourceTree = "<group>"; };
-		D0F405571D42383400686107 /* UIView+ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ViewUtils.m"; path = "../Utility/UIView+ViewUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,8 +211,8 @@
 				D0F404F41D4237E200686107 /* NSString+Size.m */,
 				D0F404F51D4237E200686107 /* NSString+URLEncode.h */,
 				D0F404F61D4237E200686107 /* NSString+URLEncode.m */,
-				D0F405561D42383400686107 /* UIView+ViewUtils.h */,
-				D0F405571D42383400686107 /* UIView+ViewUtils.m */,
+				D026B3021D479EB400065AD7 /* UIView+ViewUtils.h */,
+				D026B3031D479EB400065AD7 /* UIView+ViewUtils.m */,
 				D0F404FB1D4237E200686107 /* UIButton+Loading.h */,
 				D0F404FC1D4237E200686107 /* UIButton+Loading.m */,
 				D029CB0C1D45F70F004B1E21 /* UIImage+Extend.h */,
@@ -244,6 +248,8 @@
 		D0F405551D42383400686107 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D026B2FE1D479E9D00065AD7 /* JxbTools.h */,
+				D026B2FF1D479E9D00065AD7 /* JxbTools.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -260,9 +266,7 @@
 				D0F4052B1D4237E200686107 /* NSString+QiNiu.h in Headers */,
 				D0F405251D4237E200686107 /* NSString+Equal.h in Headers */,
 				D0F405491D4237E200686107 /* UITextField+ExtentRange.h in Headers */,
-				D0F405581D42383400686107 /* UIView+ViewUtils.h in Headers */,
 				D0217B151D4068C50058A73F /* libUtility.h in Headers */,
-				D029CB121D45F70F004B1E21 /* UIImage+Extend.h in Headers */,
 				D0F405191D4237E200686107 /* NSArray+Swizzling.h in Headers */,
 				D0F4052D1D4237E200686107 /* NSString+RegExp.h in Headers */,
 				D0F405311D4237E200686107 /* NSString+URLEncode.h in Headers */,
@@ -271,19 +275,22 @@
 				D0F4053F1D4237E200686107 /* UIImage+ReverseImage.h in Headers */,
 				D0F405511D4237E200686107 /* UIView+FindUIViewController.h in Headers */,
 				D0F4053B1D4237E200686107 /* UIImage+ImageEffects.h in Headers */,
-				D029CB1A1D45F779004B1E21 /* UIDevice+Extend.h in Headers */,
 				D0F4053D1D4237E200686107 /* UIImage+RenderedImage.h in Headers */,
 				D0F405271D4237E200686107 /* NSString+MD5.h in Headers */,
-				D0F4054F1D4237E200686107 /* UIView+FindFirstResponder.h in Headers */,
-				D0F4052F1D4237E200686107 /* NSString+Size.h in Headers */,
+				D029CB121D45F70F004B1E21 /* UIImage+Extend.h in Headers */,
+				D029CB1A1D45F779004B1E21 /* UIDevice+Extend.h in Headers */,
+				D026B3041D479EB400065AD7 /* UIView+ViewUtils.h in Headers */,
+				D026B3001D479E9D00065AD7 /* JxbTools.h in Headers */,
 				D029CB0A1D45F6E3004B1E21 /* UIImage+Cut.h in Headers */,
 				D029CB141D45F70F004B1E21 /* UIImage+FixOrientation.h in Headers */,
-				D0F4051D1D4237E200686107 /* NSDictionary_JSONExtensions.h in Headers */,
-				D0F405291D4237E200686107 /* NSString+PJR.h in Headers */,
-				D0F405411D4237E200686107 /* UIImage+TintColor.h in Headers */,
 				D029CB161D45F70F004B1E21 /* UIImage+Water.h in Headers */,
 				D029CB061D45F636004B1E21 /* UIColor+HexColor.h in Headers */,
 				D029CB1E1D45F7A0004B1E21 /* NSObject+Extend.h in Headers */,
+				D0F4054F1D4237E200686107 /* UIView+FindFirstResponder.h in Headers */,
+				D0F4052F1D4237E200686107 /* NSString+Size.h in Headers */,
+				D0F4051D1D4237E200686107 /* NSDictionary_JSONExtensions.h in Headers */,
+				D0F405291D4237E200686107 /* NSString+PJR.h in Headers */,
+				D0F405411D4237E200686107 /* UIImage+TintColor.h in Headers */,
 				D0F4051F1D4237E200686107 /* NSDictionary+Swizzling.h in Headers */,
 				D0F405231D4237E200686107 /* NSString+ConvertToColor.h in Headers */,
 			);
@@ -361,7 +368,6 @@
 				D0F4052C1D4237E200686107 /* NSString+QiNiu.m in Sources */,
 				D0F405481D4237E200686107 /* UITableViewCell+Autolayout.m in Sources */,
 				D0F405521D4237E200686107 /* UIView+FindUIViewController.m in Sources */,
-				D0F405591D42383400686107 /* UIView+ViewUtils.m in Sources */,
 				D0F405261D4237E200686107 /* NSString+Equal.m in Sources */,
 				D0F405221D4237E200686107 /* NSMutableDictionary+Swizzling.m in Sources */,
 				D0F405281D4237E200686107 /* NSString+MD5.m in Sources */,
@@ -370,6 +376,7 @@
 				D0F405401D4237E200686107 /* UIImage+ReverseImage.m in Sources */,
 				D0F4051C1D4237E200686107 /* NSArray+Tool.m in Sources */,
 				D0F4052E1D4237E200686107 /* NSString+RegExp.m in Sources */,
+				D026B3011D479E9D00065AD7 /* JxbTools.m in Sources */,
 				D0F405421D4237E200686107 /* UIImage+TintColor.m in Sources */,
 				D029CB1F1D45F7A0004B1E21 /* NSObject+Extend.m in Sources */,
 				D029CB131D45F70F004B1E21 /* UIImage+Extend.m in Sources */,
@@ -384,6 +391,7 @@
 				D0F4053C1D4237E200686107 /* UIImage+ImageEffects.m in Sources */,
 				D029CB1B1D45F779004B1E21 /* UIDevice+Extend.m in Sources */,
 				D029CB171D45F70F004B1E21 /* UIImage+Water.m in Sources */,
+				D026B3051D479EB400065AD7 /* UIView+ViewUtils.m in Sources */,
 				D0F405241D4237E200686107 /* NSString+ConvertToColor.m in Sources */,
 				D0F4051A1D4237E200686107 /* NSArray+Swizzling.m in Sources */,
 			);
