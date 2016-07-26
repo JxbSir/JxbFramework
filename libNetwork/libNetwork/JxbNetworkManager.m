@@ -10,8 +10,11 @@
 #import "AFNetworking.h"
 #import "JxbNetworkConfiguation.h"
 
+#define kStoredTime     @"kStoredTime"
+
 @interface JxbNetworkManager()
 @property (nonatomic, strong) AFHTTPSessionManager  *sessionManager;
+@property (nonatomic, strong) NSURLCache            *urlCache;
 @end
 
 @implementation JxbNetworkManager
@@ -56,8 +59,13 @@
                       success:(JxbNetworkResponse)success
                       failure:(void(^)(NSError *requestErr))failure {
     __weak typeof (self) wSelf = self;
+    
     NSURLSessionDataTask* task = [self.sessionManager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
+        if (cacheDuration > 0 || wSelf.defaultConfig.cacheDuration > 0) {
+            NSData* data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+            [wSelf.urlCache storeCachedResponse:[[NSCachedURLResponse alloc] initWithResponse:task.response data:data userInfo:@{kStoredTime:@([[NSDate date] timeIntervalSince1970])} storagePolicy:NSURLCacheStorageAllowed] forDataTask:task];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure != NULL) {
             failure(error);
@@ -66,6 +74,11 @@
             wSelf.defaultConfig.failureBlock(error);
         }
     }];
+    
+    if (cacheDuration > 0 || _defaultConfig.cacheDuration > 0) {
+        [self cacheOperation:task cacheValidDurtaion:MAX(cacheDuration, _defaultConfig.cacheDuration) success:success];
+    }
+    
     return task;
 }
 
@@ -91,6 +104,10 @@
     __weak typeof (self) wSelf = self;
     NSURLSessionDataTask* task = [self.sessionManager POST:url parameters:[self getPostParams:parasDict] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
           success(responseObject);
+        if (cacheDuration > 0 || wSelf.defaultConfig.cacheDuration > 0) {
+            NSData* data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+            [wSelf.urlCache storeCachedResponse:[[NSCachedURLResponse alloc] initWithResponse:task.response data:data userInfo:@{kStoredTime:@([[NSDate date] timeIntervalSince1970])} storagePolicy:NSURLCacheStorageAllowed] forDataTask:task];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
        if (failure != NULL) {
            failure(error);
@@ -99,7 +116,35 @@
            wSelf.defaultConfig.failureBlock(error);
        }
     }];
+    
+    if (cacheDuration > 0 || _defaultConfig.cacheDuration > 0) {
+        [self cacheOperation:task cacheValidDurtaion:MAX(cacheDuration, _defaultConfig.cacheDuration) success:success];
+    }
+
+    
     return task;
+}
+
+#pragma mark - cache
+- (void)cacheOperation:(NSURLSessionDataTask*)task cacheValidDurtaion:(NSTimeInterval)cacheValidDurtaion success:(JxbNetworkResponse)success {
+    __weak typeof (self) wSelf = self;
+    [self.urlCache getCachedResponseForDataTask:task completionHandler:^(NSCachedURLResponse * _Nullable cachedResponse) {
+        if (cachedResponse) {
+            NSTimeInterval storedTime = [cachedResponse.userInfo[kStoredTime] doubleValue];
+            if (storedTime > 0) {
+                NSTimeInterval nowTime = [[NSDate date] timeIntervalSince1970];
+                if (nowTime - storedTime < cacheValidDurtaion) {
+                    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:cachedResponse.data options:NSJSONReadingMutableContainers error:nil];
+                    if (dictionary) {
+                        success(dictionary);
+                    }
+                }
+                else {
+                    [wSelf.urlCache removeCachedResponseForDataTask:task];
+                }
+            }
+        }
+    }];
 }
 
 #pragma mark - cancel
@@ -126,7 +171,7 @@
         _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:_defaultConfig.baseURL] sessionConfiguration:_defaultConfig.sessionConfig];
         
         _sessionManager.requestSerializer = [[AFJSONRequestSerializer alloc] init];
-        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html"];
+        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html", nil];
         
         //处理头部参数
         if (_defaultConfig.requestHeaders && _defaultConfig.requestHeaders.count > 0) {
@@ -136,5 +181,14 @@
         }
     }
     return _sessionManager;
+}
+
+- (NSURLCache*)urlCache {
+    if (!_urlCache) {
+        NSArray *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *cacheFile = [cachePath[0] stringByAppendingPathComponent:@"url_cache"];
+        _urlCache = [[NSURLCache alloc] initWithMemoryCapacity:_defaultConfig.cacheMemorySize diskCapacity:_defaultConfig.cacheDiskSize diskPath:cacheFile];
+    }
+    return _urlCache;
 }
 @end

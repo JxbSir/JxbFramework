@@ -13,8 +13,10 @@
 + (instancetype)defuatConfigurate {
     JxbNetworkConfiguation* config = [[JxbNetworkConfiguation alloc] init];
     config.maxRequestConcurrent = 4;
-    config.cacheDuration = 0;
     config.sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    config.cacheDuration = 0;
+    config.cacheMemorySize = 1024 * 1024;
+    config.cacheDiskSize = 1024 * 1024 * 5;
     return config;
 }
 

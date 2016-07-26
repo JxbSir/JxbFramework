@@ -50,23 +50,32 @@
     
     
     JxbNetworkConfiguation* config = [JxbNetworkConfiguation defuatConfigurate];
+    config.maxRequestConcurrent = 1;
+    config.cacheDuration = 10;
     config.baseURL = @"http://112.124.40.243:12306/api/";
     config.failureBlock = ^(NSError *error) {
         NSLog(@"%@",error);
     };
     [[JxbNetworkManager sharedInstance] setDefaultConfig:config];
    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[JxbNetworkManager sharedInstance] cancelAllRequest];
-    });
-    
-    while (true) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[JxbNetworkManager sharedInstance] Get:@"sleep.aspx?s=2" success:^(NSDictionary *result) {
             NSLog(@"%@",result);
         }];
-        
-        [[NSRunLoop currentRunLoop] run];
-    }
+    });
+    
+    
+    [[JxbNetworkManager sharedInstance] Get:@"sleep.aspx?s=2" success:^(NSDictionary *result) {
+        NSLog(@"%@",result);
+    }];
+    
+//    while (true) {
+//        [[JxbNetworkManager sharedInstance] Get:@"sleep.aspx?s=2" success:^(NSDictionary *result) {
+//            NSLog(@"%@",result);
+//        }];
+//        
+//        [[NSRunLoop currentRunLoop] run];
+//    }
 
     
     

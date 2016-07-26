@@ -17,6 +17,12 @@
 //默认缓存时间，默认为0不缓存
 @property (nonatomic, assign) NSTimeInterval            cacheDuration;
 
+//url请求缓存在内存中的大小，默认1兆
+@property (nonatomic, assign) double                    cacheMemorySize;
+
+//url请求缓存在磁盘中的大小，默认5兆
+@property (nonatomic, assign) double                    cacheDiskSize;
+
 //如 http://api.xxx.com
 @property (nonatomic, copy  ) NSString                  *baseURL;
 
