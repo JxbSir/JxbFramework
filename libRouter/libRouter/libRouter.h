@@ -6,4 +6,4 @@
 //  Copyright © 2016年 Peter. All rights reserved.
 //
 
-#import <libRouter/libRouterManager.h>
+#import <libRouter/JxbRouterManager.h>

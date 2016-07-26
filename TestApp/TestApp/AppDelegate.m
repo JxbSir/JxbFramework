@@ -11,6 +11,8 @@
 #import <libPatch/libPatch.h>
 #import <libRouter/libRouter.h>
 #import <libEncryption/libEncryption.h>
+#import <libNetwork/libNetwork.h>
+
 
 @interface AppDelegate ()
 
@@ -21,22 +23,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    //libPatch
 //    NSString* path1 = [[NSBundle mainBundle] pathForResource:@"test1" ofType:@".js"];
 //    NSString* content1 = [NSString stringWithContentsOfFile:path1 encoding:NSUTF8StringEncoding error:nil];
 //    NSString* path2 = [[NSBundle mainBundle] pathForResource:@"test2" ofType:@".js"];
 //    NSString* content2 = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
 //    [[JsPatchManager shareInstance] excuteJsPatch:@[content1,content2]];
     
-    
-    NSString* key = @"xiaojinjichabihh";
-    NSString* text = @"asd";
-    JxbAesManager* lib = [[JxbAesManager alloc] initWithIV:@"xiaojinjichabihh"];
-    NSString* en = [lib encrypt:key plainText:text];
-    NSLog(en);
-    NSString* de = [lib decrypt:key plainText:en];
-    NSLog(de);
-    
-    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
+    //aes + des
+//    NSString* key = @"xiaojinjichabihh";
+//    NSString* text = @"asd";
+//    JxbAesManager* lib = [[JxbAesManager alloc] initWithIV:@"xiaojinjichabihh"];
+//    NSString* en = [lib encrypt:key plainText:text];
+//    NSLog(en);
+//    NSString* de = [lib decrypt:key plainText:en];
+//    NSLog(de);
+//    
+//    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
 
@@ -44,6 +47,28 @@
     self.window.rootViewController = nav;
     [self.window makeKeyWindow];
     [self.window makeKeyAndVisible];
+    
+    
+    JxbNetworkConfiguation* config = [JxbNetworkConfiguation defuatConfigurate];
+    config.baseURL = @"http://112.124.40.243:12306/api/";
+    config.failureBlock = ^(NSError *error) {
+        NSLog(@"%@",error);
+    };
+    [[JxbNetworkManager sharedInstance] setDefaultConfig:config];
+   
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[JxbNetworkManager sharedInstance] cancelAllRequest];
+    });
+    
+    while (true) {
+        [[JxbNetworkManager sharedInstance] Get:@"sleep.aspx?s=2" success:^(NSDictionary *result) {
+            NSLog(@"%@",result);
+        }];
+        
+        [[NSRunLoop currentRunLoop] run];
+    }
+
+    
     
     
     return YES;
@@ -72,6 +97,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [libRouterManager openUrl:url];
+    return [JxbRouterManager openUrl:url];
 }
 @end

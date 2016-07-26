@@ -22,7 +22,7 @@
     [self.view addGestureRecognizer:tap];
     
     
-    [libRouterManager registerCommonPush:@"testApp"];
+    [JxbRouterManager registerCommonPush:@"testApp"];
 }
 
 - (void)tapAction {

@@ -1,5 +1,5 @@
 //
-//  libRouterManager.m
+//  JxbRouterManager
 //  libRouter
 //
 //  Created by Peter on 16/7/22.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "libRouterManager.h"
+#import "JxbRouterManager.h"
 #import "JxbPushManager.h"
 #import "MGJRouter.h"
 
 #define schemaController    @"SchemaController"
 
-@implementation libRouterManager
+@implementation JxbRouterManager
 
 + (NSString *)p_patternUrl:(NSString*)appSchema url:(NSString*)url {
     NSString *_url = [NSString stringWithFormat:@"%@://%@",appSchema,url];

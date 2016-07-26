@@ -1,5 +1,5 @@
 //
-//  libRouterManager.h
+//  JxbRouterManager
 //  libRouter
 //
 //  Created by Peter on 16/7/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface libRouterManager : NSObject
+@interface JxbRouterManager : NSObject
 
 /**
  *  注册一个通用解耦的导航控制器Push

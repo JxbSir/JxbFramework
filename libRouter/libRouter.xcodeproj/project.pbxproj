@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D0217B001D4068760058A73F /* libRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = D0217AFF1D4068760058A73F /* libRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0F404A71D4201E800686107 /* libRouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404A51D4201E800686107 /* libRouterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0F404A81D4201E800686107 /* libRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404A61D4201E800686107 /* libRouterManager.m */; };
+		D0F404A71D4201E800686107 /* JxbRouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404A51D4201E800686107 /* JxbRouterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0F404A81D4201E800686107 /* JxbRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404A61D4201E800686107 /* JxbRouterManager.m */; };
 		D0F404AB1D42065A00686107 /* JxbPushManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404A91D42065A00686107 /* JxbPushManager.h */; };
 		D0F404AC1D42065A00686107 /* JxbPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404AA1D42065A00686107 /* JxbPushManager.m */; };
 		D6DADF3A550F455C1CEB653A /* libPods-libRouter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 291BB50C045BA4F2D4FD6870 /* libPods-libRouter.a */; };
@@ -22,8 +22,8 @@
 		D0217AFC1D4068760058A73F /* libRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0217AFF1D4068760058A73F /* libRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libRouter.h; sourceTree = "<group>"; };
 		D0217B011D4068760058A73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0F404A51D4201E800686107 /* libRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libRouterManager.h; sourceTree = "<group>"; };
-		D0F404A61D4201E800686107 /* libRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = libRouterManager.m; sourceTree = "<group>"; };
+		D0F404A51D4201E800686107 /* JxbRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbRouterManager.h; sourceTree = "<group>"; };
+		D0F404A61D4201E800686107 /* JxbRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbRouterManager.m; sourceTree = "<group>"; };
 		D0F404A91D42065A00686107 /* JxbPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbPushManager.h; sourceTree = "<group>"; };
 		D0F404AA1D42065A00686107 /* JxbPushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbPushManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				D0217AFF1D4068760058A73F /* libRouter.h */,
-				D0F404A51D4201E800686107 /* libRouterManager.h */,
-				D0F404A61D4201E800686107 /* libRouterManager.m */,
+				D0F404A51D4201E800686107 /* JxbRouterManager.h */,
+				D0F404A61D4201E800686107 /* JxbRouterManager.m */,
 				D0F404A91D42065A00686107 /* JxbPushManager.h */,
 				D0F404AA1D42065A00686107 /* JxbPushManager.m */,
 				D0217B011D4068760058A73F /* Info.plist */,
@@ -96,7 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0217B001D4068760058A73F /* libRouter.h in Headers */,
-				D0F404A71D4201E800686107 /* libRouterManager.h in Headers */,
+				D0F404A71D4201E800686107 /* JxbRouterManager.h in Headers */,
 				D0F404AB1D42065A00686107 /* JxbPushManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F404AC1D42065A00686107 /* JxbPushManager.m in Sources */,
-				D0F404A81D4201E800686107 /* libRouterManager.m in Sources */,
+				D0F404A81D4201E800686107 /* JxbRouterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
