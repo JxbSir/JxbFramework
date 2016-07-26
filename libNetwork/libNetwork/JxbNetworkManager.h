@@ -109,4 +109,25 @@
                  cacheDuration:(NSTimeInterval)cacheDuration
                        success:(JxbNetworkResponse _Nonnull)success
                        failure:(void(^ _Nullable)(NSError  * _Nonnull requestErr))failure;
+
+/**
+ *  Post上传文件
+ *
+ *  @param url            接口地址或名称
+ *  @param parasDict      接口请求入参
+ *  @param data           文件data
+ *  @param mimeType       mineType
+ *  @param fileName       文件名称
+ *  @param uploadProgress 上传进度
+ *  @param success        接口请求返回
+ *  @param failure        接口请求错误
+ */
+- (NSURLSessionDataTask * _Nonnull)POST:(NSString * _Nonnull)url
+                                  paras:(NSDictionary * _Nonnull)parasDict
+                             uploadData:(NSData * _Nonnull)data
+                               mimeType:(NSString * _Nonnull)mimeType
+                               fileName:(NSString * _Nonnull)fileName
+                               progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
+                                success:(JxbNetworkResponse _Nonnull)success
+                                failure:(void (^ _Nullable)(NSError * _Nonnull error))failure;
 @end

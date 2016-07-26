@@ -62,7 +62,7 @@
     
     NSURLSessionDataTask* task = [self.sessionManager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
-        if (cacheDuration > 0 || wSelf.defaultConfig.cacheDuration > 0) {
+        if (MAX(cacheDuration, _defaultConfig.cacheDuration) > 0) {
             NSData* data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
             [wSelf.urlCache storeCachedResponse:[[NSCachedURLResponse alloc] initWithResponse:task.response data:data userInfo:@{kStoredTime:@([[NSDate date] timeIntervalSince1970])} storagePolicy:NSURLCacheStorageAllowed] forDataTask:task];
         }
@@ -75,7 +75,7 @@
         }
     }];
     
-    if (cacheDuration > 0 || _defaultConfig.cacheDuration > 0) {
+    if (MAX(cacheDuration, _defaultConfig.cacheDuration) > 0) {
         [self cacheOperation:task cacheValidDurtaion:MAX(cacheDuration, _defaultConfig.cacheDuration) success:success];
     }
     
@@ -104,7 +104,7 @@
     __weak typeof (self) wSelf = self;
     NSURLSessionDataTask* task = [self.sessionManager POST:url parameters:[self getPostParams:parasDict] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
           success(responseObject);
-        if (cacheDuration > 0 || wSelf.defaultConfig.cacheDuration > 0) {
+        if (MAX(cacheDuration, _defaultConfig.cacheDuration) > 0) {
             NSData* data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
             [wSelf.urlCache storeCachedResponse:[[NSCachedURLResponse alloc] initWithResponse:task.response data:data userInfo:@{kStoredTime:@([[NSDate date] timeIntervalSince1970])} storagePolicy:NSURLCacheStorageAllowed] forDataTask:task];
         }
@@ -117,11 +117,36 @@
        }
     }];
     
-    if (cacheDuration > 0 || _defaultConfig.cacheDuration > 0) {
+    if (MAX(cacheDuration, _defaultConfig.cacheDuration) > 0) {
         [self cacheOperation:task cacheValidDurtaion:MAX(cacheDuration, _defaultConfig.cacheDuration) success:success];
     }
 
     
+    return task;
+}
+
+#pragma mark - Post Data
+- (NSURLSessionDataTask *)POST:(NSString *)url
+                         paras:(NSDictionary *)parasDict
+                    uploadData:(NSData *)data
+                      mimeType:(NSString *)mimeType
+                      fileName:(NSString *)fileName
+                      progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
+                       success:(JxbNetworkResponse)success
+                       failure:(void (^)(NSError *error))failure {
+    __weak typeof (self) wSelf = self;
+    NSURLSessionDataTask* task = [self.sessionManager POST:url parameters:parasDict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:mimeType];
+    } progress:uploadProgress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure != NULL) {
+            failure(error);
+        }
+        else if (wSelf.defaultConfig.failureBlock != NULL) {
+            wSelf.defaultConfig.failureBlock(error);
+        }
+    }];
     return task;
 }
 
