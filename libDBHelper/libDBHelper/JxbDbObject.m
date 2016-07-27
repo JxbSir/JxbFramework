@@ -12,13 +12,13 @@
 
 @implementation JxbDbObject
 
-+ (id)registerForRealmObject:(NSString *)className withProtocol:(Protocol *)protocol {
++ (id)registerForRealmObject:(NSString *)className {
     //注册一个继承RLMObject的类
     Class c = objc_allocateClassPair([RLMObject class], [className UTF8String], 0);
 
     //获取协议中的所有属性
     unsigned int count = 0;
-    objc_property_t *list = protocol_copyPropertyList(protocol, &count);
+    objc_property_t *list = class_copyPropertyList([self class], &count);
     for (uint i = 0; i < count; i++) {
         objc_property_t property = list[i];
         const char *propertyName = property_getName(property);

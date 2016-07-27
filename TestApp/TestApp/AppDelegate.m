@@ -43,9 +43,9 @@
 //    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
     
-    JxbDbObject<TestDBProtol>* db = [TestDB registerForRealmObject:@"TestDBClass" withProtocol:@protocol(TestDBProtol)];
-    db.aaa = @"aaa111";
-    db.bbb = @"bbb222";
+    TestDB* db = [TestDB registerForRealmObject:@"TestDBClass"];
+    db.aaa = @"caoa";
+    db.bbb = @"caob";
     [[JxbDbManager sharedInstance] add2Db:db];
     
     

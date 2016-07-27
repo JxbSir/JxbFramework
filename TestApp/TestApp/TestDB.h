@@ -9,13 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <libDBHelper/libDBHelper.h>
 
-@protocol TestDBProtol <NSObject>
-
+@interface TestDB : JxbDbObject
 @property (nonatomic, strong) NSString  *aaa;
 @property (nonatomic, strong) NSString  *bbb;
-
-@end
-
-@interface TestDB : JxbDbObject
-
 @end
