@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D0217AB21D3F7DC90058A73F /* test2.js in Resources */ = {isa = PBXBuildFile; fileRef = D0217AB11D3F7DC90058A73F /* test2.js */; };
+		D026B31F1D487FC500065AD7 /* Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026B31E1D487FC500065AD7 /* Business.framework */; };
+		D026B3231D487FE200065AD7 /* libDBHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D026B3221D487FE200065AD7 /* libDBHelper.framework */; };
+		D026B3261D48801800065AD7 /* TestDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B3251D48801800065AD7 /* TestDB.m */; };
 		D02A99911D3F28F900240D5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02A99901D3F28F900240D5F /* main.m */; };
 		D02A99941D3F28F900240D5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D02A99931D3F28F900240D5F /* AppDelegate.m */; };
 		D02A99971D3F28F900240D5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02A99961D3F28F900240D5F /* ViewController.m */; };
@@ -53,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		D0217AB11D3F7DC90058A73F /* test2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test2.js; sourceTree = "<group>"; };
+		D026B31E1D487FC500065AD7 /* Business.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Business.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/Business.framework"; sourceTree = "<group>"; };
+		D026B3221D487FE200065AD7 /* libDBHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libDBHelper.framework; path = "../libDBHelper/build/Debug-iphoneos/libDBHelper.framework"; sourceTree = "<group>"; };
+		D026B3241D48801800065AD7 /* TestDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDB.h; sourceTree = "<group>"; };
+		D026B3251D48801800065AD7 /* TestDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDB.m; sourceTree = "<group>"; };
 		D02A998C1D3F28F900240D5F /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02A99901D3F28F900240D5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D02A99921D3F28F900240D5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D026B3231D487FE200065AD7 /* libDBHelper.framework in Frameworks */,
+				D026B31F1D487FC500065AD7 /* Business.framework in Frameworks */,
 				D0F405811D431D2F00686107 /* UIBase.framework in Frameworks */,
 				D0F4057F1D431D2C00686107 /* UICommon.framework in Frameworks */,
 				D0F4057C1D431CEC00686107 /* libUtility.framework in Frameworks */,
@@ -125,6 +134,8 @@
 				D02A998F1D3F28F900240D5F /* Supporting Files */,
 				D0F404B01D4209A400686107 /* Test1ViewController.h */,
 				D0F404B11D4209A400686107 /* Test1ViewController.m */,
+				D026B3241D48801800065AD7 /* TestDB.h */,
+				D026B3251D48801800065AD7 /* TestDB.m */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -149,6 +160,8 @@
 		D0F4057D1D431D0800686107 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				D026B3221D487FE200065AD7 /* libDBHelper.framework */,
+				D026B31E1D487FC500065AD7 /* Business.framework */,
 				D0F405801D431D2F00686107 /* UIBase.framework */,
 				D0F4057E1D431D2C00686107 /* UICommon.framework */,
 				D0F4057B1D431CEC00686107 /* libUtility.framework */,
@@ -235,6 +248,7 @@
 			files = (
 				D0F404B21D4209A400686107 /* Test1ViewController.m in Sources */,
 				D02A99971D3F28F900240D5F /* ViewController.m in Sources */,
+				D026B3261D48801800065AD7 /* TestDB.m in Sources */,
 				D02A99941D3F28F900240D5F /* AppDelegate.m in Sources */,
 				D02A99911D3F28F900240D5F /* main.m in Sources */,
 			);

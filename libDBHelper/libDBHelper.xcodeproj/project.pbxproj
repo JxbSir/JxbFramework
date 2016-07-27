@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1149C5ED77BF89AE23DB47 /* libPods-libDBHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8685477486011B6B62FDBDA6 /* libPods-libDBHelper.a */; };
+		D026B3131D487D1200065AD7 /* JxbDbManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D026B3111D487D1200065AD7 /* JxbDbManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D026B3141D487D1200065AD7 /* JxbDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B3121D487D1200065AD7 /* JxbDbManager.m */; };
+		D026B3291D4880B700065AD7 /* JxbDbObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D026B3271D4880B700065AD7 /* JxbDbObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D026B32A1D4880B700065AD7 /* JxbDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B3281D4880B700065AD7 /* JxbDbObject.m */; };
 		D0F405681D43166500686107 /* libDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F405671D43166500686107 /* libDBHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F34867CFB0ADBEF12BD6E66 /* Pods-libDBHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libDBHelper.release.xcconfig"; path = "../Pods/Target Support Files/Pods-libDBHelper/Pods-libDBHelper.release.xcconfig"; sourceTree = "<group>"; };
+		4666758181F74294387B8C9C /* Pods-libDBHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libDBHelper.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-libDBHelper/Pods-libDBHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		8685477486011B6B62FDBDA6 /* libPods-libDBHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libDBHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D026B3111D487D1200065AD7 /* JxbDbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbDbManager.h; sourceTree = "<group>"; };
+		D026B3121D487D1200065AD7 /* JxbDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbDbManager.m; sourceTree = "<group>"; };
+		D026B3271D4880B700065AD7 /* JxbDbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbDbObject.h; sourceTree = "<group>"; };
+		D026B3281D4880B700065AD7 /* JxbDbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbDbObject.m; sourceTree = "<group>"; };
 		D0F405641D43166500686107 /* libDBHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libDBHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F405671D43166500686107 /* libDBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libDBHelper.h; sourceTree = "<group>"; };
 		D0F405691D43166500686107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -21,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1149C5ED77BF89AE23DB47 /* libPods-libDBHelper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EB14932FC5EE16BD38F356D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8685477486011B6B62FDBDA6 /* libPods-libDBHelper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0F4055A1D43166500686107 = {
 			isa = PBXGroup;
 			children = (
 				D0F405661D43166500686107 /* libDBHelper */,
 				D0F405651D43166500686107 /* Products */,
+				DE40FE92B3C070D816A4A91E /* Pods */,
+				2EB14932FC5EE16BD38F356D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,9 +70,22 @@
 			isa = PBXGroup;
 			children = (
 				D0F405671D43166500686107 /* libDBHelper.h */,
+				D026B3271D4880B700065AD7 /* JxbDbObject.h */,
+				D026B3281D4880B700065AD7 /* JxbDbObject.m */,
+				D026B3111D487D1200065AD7 /* JxbDbManager.h */,
+				D026B3121D487D1200065AD7 /* JxbDbManager.m */,
 				D0F405691D43166500686107 /* Info.plist */,
 			);
 			path = libDBHelper;
+			sourceTree = "<group>";
+		};
+		DE40FE92B3C070D816A4A91E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4666758181F74294387B8C9C /* Pods-libDBHelper.debug.xcconfig */,
+				1F34867CFB0ADBEF12BD6E66 /* Pods-libDBHelper.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F405681D43166500686107 /* libDBHelper.h in Headers */,
+				D026B3131D487D1200065AD7 /* JxbDbManager.h in Headers */,
+				D026B3291D4880B700065AD7 /* JxbDbObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F4056C1D43166500686107 /* Build configuration list for PBXNativeTarget "libDBHelper" */;
 			buildPhases = (
+				66A54C502EBE058F24F06BAE /* Check Pods Manifest.lock */,
 				D0F4055F1D43166500686107 /* Sources */,
 				D0F405601D43166500686107 /* Frameworks */,
 				D0F405611D43166500686107 /* Headers */,
 				D0F405621D43166500686107 /* Resources */,
+				9592CF855E184FAC773D5365 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,11 +165,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66A54C502EBE058F24F06BAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9592CF855E184FAC773D5365 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-libDBHelper/Pods-libDBHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0F4055F1D43166500686107 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D026B3141D487D1200065AD7 /* JxbDbManager.m in Sources */,
+				D026B32A1D4880B700065AD7 /* JxbDbObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +303,7 @@
 		};
 		D0F4056D1D43166500686107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4666758181F74294387B8C9C /* Pods-libDBHelper.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -244,6 +320,7 @@
 		};
 		D0F4056E1D43166500686107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F34867CFB0ADBEF12BD6E66 /* Pods-libDBHelper.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -277,6 +354,7 @@
 				D0F4056E1D43166500686107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

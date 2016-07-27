@@ -1,4 +1,4 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/MGJRouter" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JSPatchSDK" "${PODS_ROOT}/Headers/Public/MGJRouter" "${PODS_ROOT}/Headers/Public/Objection"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/MGJRouter" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JSPatchSDK" "${PODS_ROOT}/Headers/Public/MGJRouter" "${PODS_ROOT}/Headers/Public/Objection" "${PODS_ROOT}/Headers/Public/Realm"
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-libDBHelper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-libEncryption.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -40,6 +45,11 @@
 			<false/>
 		</dict>
 		<key>Pods-libRouter.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,6 +82,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>86F7D8AE00272B6B56B7D2321D35933C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F0D0EACAF425A14B65CB4D0051B5C19</key>
 		<dict>
 			<key>primary</key>
@@ -83,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>D36F72D5776D55CCCD6CE33397201784</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF9E3F3A081A590D21E750025355D72D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

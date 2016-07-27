@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JSPatchSDK" "${PODS_ROOT}/Headers/Public/MGJRouter" "${PODS_ROOT}/Headers/Public/Objection"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/JSPatchSDK" -isystem "${PODS_ROOT}/Headers/Public/MGJRouter" -isystem "${PODS_ROOT}/Headers/Public/Objection"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JSPatchSDK" "${PODS_ROOT}/Headers/Public/MGJRouter" "${PODS_ROOT}/Headers/Public/Objection" "${PODS_ROOT}/Headers/Public/Realm"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/JSPatchSDK" -isystem "${PODS_ROOT}/Headers/Public/MGJRouter" -isystem "${PODS_ROOT}/Headers/Public/Objection" -isystem "${PODS_ROOT}/Headers/Public/Realm"
 OTHER_LDFLAGS = $(inherited) -ObjC -l"MGJRouter"
 PODS_ROOT = ${SRCROOT}/../Pods

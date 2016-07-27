@@ -17,17 +17,22 @@ PODS:
   - JSPatchSDK (1.5.2)
   - MGJRouter (0.9.1)
   - Objection (1.6.1)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - JSPatchSDK (~> 1.5.2)
   - MGJRouter (~> 0.9.1)
   - Objection (~> 1.6.1)
+  - Realm (~> 1.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSPatchSDK: d0455b7db2d82df6bee9f3522b5a68e91a6a7072
   MGJRouter: 73b7d7f9329186d670068888e56e095084208b4c
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
 
 COCOAPODS: 0.39.0

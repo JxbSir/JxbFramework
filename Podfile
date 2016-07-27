@@ -51,4 +51,5 @@ end
 
 target "libDBHelper" do
 	xcodeproj 'libDBHelper/libDBHelper.xcodeproj'
+	pod 'Realm', '~> 1.0.2'
 end
