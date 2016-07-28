@@ -33,7 +33,7 @@
     [arrCell addObject:cell1];
     
     JxbTableViewSectionModel* section1 = [[JxbTableViewSectionModel alloc] init];
-    section1.cellModelArray = arrCell;
+    section1.arrCells = arrCell;
     
     JxbTableHeadorFootModel* head = [[JxbTableHeadorFootModel alloc] init];
     head.height = 20;

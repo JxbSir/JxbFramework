@@ -56,7 +56,7 @@
     [self.window makeKeyWindow];
     [self.window makeKeyAndVisible];
     
-    
+
 //    JxbNetworkConfiguation* config = [JxbNetworkConfiguation defuatConfigurate];
 //    config.maxRequestConcurrent = 1;
 //    config.cacheDuration = 10;
