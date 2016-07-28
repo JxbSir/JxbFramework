@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D02A99DE1D3F2A6A00240D5F /* UIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D02A99DD1D3F2A6A00240D5F /* UIBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E9AB701D499FB100D83BA0 /* JxbTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E9AB6E1D499FB100D83BA0 /* JxbTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E9AB711D499FB100D83BA0 /* JxbTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E9AB6F1D499FB100D83BA0 /* JxbTableView.m */; };
 		D0F404B51D421A9B00686107 /* JxbBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404B31D421A9B00686107 /* JxbBaseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F404B61D421A9B00686107 /* JxbBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404B41D421A9B00686107 /* JxbBaseVC.m */; };
 /* End PBXBuildFile section */
@@ -16,6 +18,8 @@
 		D02A99DA1D3F2A6A00240D5F /* UIBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02A99DD1D3F2A6A00240D5F /* UIBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBase.h; sourceTree = "<group>"; };
 		D02A99DF1D3F2A6A00240D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E9AB6E1D499FB100D83BA0 /* JxbTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbTableView.h; sourceTree = "<group>"; };
+		D0E9AB6F1D499FB100D83BA0 /* JxbTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbTableView.m; sourceTree = "<group>"; };
 		D0F404B31D421A9B00686107 /* JxbBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbBaseVC.h; sourceTree = "<group>"; };
 		D0F404B41D421A9B00686107 /* JxbBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbBaseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,12 +54,22 @@
 		D02A99DC1D3F2A6A00240D5F /* UIBase */ = {
 			isa = PBXGroup;
 			children = (
+				D0E9AB6D1D499F9200D83BA0 /* TableView */,
 				D02A99DD1D3F2A6A00240D5F /* UIBase.h */,
 				D0F404B31D421A9B00686107 /* JxbBaseVC.h */,
 				D0F404B41D421A9B00686107 /* JxbBaseVC.m */,
 				D02A99DF1D3F2A6A00240D5F /* Info.plist */,
 			);
 			path = UIBase;
+			sourceTree = "<group>";
+		};
+		D0E9AB6D1D499F9200D83BA0 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0E9AB6E1D499FB100D83BA0 /* JxbTableView.h */,
+				D0E9AB6F1D499FB100D83BA0 /* JxbTableView.m */,
+			);
+			name = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02A99DE1D3F2A6A00240D5F /* UIBase.h in Headers */,
+				D0E9AB701D499FB100D83BA0 /* JxbTableView.h in Headers */,
 				D0F404B51D421A9B00686107 /* JxbBaseVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E9AB711D499FB100D83BA0 /* JxbTableView.m in Sources */,
 				D0F404B61D421A9B00686107 /* JxbBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

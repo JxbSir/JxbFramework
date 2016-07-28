@@ -43,10 +43,10 @@
 //    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
     
-    TestDB* db = [TestDB registerForRealmObject:@"TestDBClass"];
-    db.aaa = @"caoa";
-    db.bbb = @"caob";
-    [[JxbDbManager sharedInstance] add2Db:db];
+//    TestDB* db = [TestDB registerForRealmObject:@"TestDBClass"];
+//    db.aaa = @"caoa";
+//    db.bbb = @"caob";
+//    [[JxbDbManager sharedInstance] add2Db:db];
     
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];

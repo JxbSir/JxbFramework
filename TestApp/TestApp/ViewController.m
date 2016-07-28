@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <libRouter/libRouter.h>
+#import <UIBase/UIBase.h>
 
 @interface ViewController ()
 
@@ -17,12 +18,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    NSMutableArray* arrSection = [NSMutableArray array];
+   
+    NSMutableArray* arrCell = [NSMutableArray array];
     
-    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [self.view addGestureRecognizer:tap];
+    JxbTableViewCellModel* cell1 = [[JxbTableViewCellModel alloc] init];
+    cell1.height = 100;
+    cell1.BlockCell = ^(NSIndexPath*  indexPath, UITableView*  table) {
+        UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
+        cell.textLabel.text = @"测试";
+        return cell;
+    };
+    [arrCell addObject:cell1];
+    
+    JxbTableViewSectionModel* section1 = [[JxbTableViewSectionModel alloc] init];
+    section1.cellModelArray = arrCell;
+    
+    JxbTableHeadorFootModel* head = [[JxbTableHeadorFootModel alloc] init];
+    head.height = 20;
+    head.block = ^(NSInteger section, UITableView *table) {
+        UIView* vvv = [[UIView alloc] init];
+        vvv.backgroundColor = [UIColor greenColor];
+        return vvv;
+    };
+    section1.header = head;
+    
+    [arrSection addObject:section1];
     
     
-    [JxbRouterManager registerCommonPush:@"testApp"];
+    JxbTableView* tableview = [JxbTableView createTableView];
+    tableview.backgroundColor = [UIColor redColor];
+    tableview.frame = self.view.bounds;
+    tableview.arraySections = arrSection;
+    [self.view addSubview:tableview];
+    
+//    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+//    [self.view addGestureRecognizer:tap];
+//    
+//    
+//    [JxbRouterManager registerCommonPush:@"testApp"];
 }
 
 - (void)tapAction {
@@ -31,7 +66,7 @@
     //[self.navigationController pushViewController:[ViewController new] animated:YES];
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"testApp://NaviPush/Test1ViewController?sid=123"]];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"testApp://NaviPush/Test1ViewController?sid=123"]];
     
 }
 

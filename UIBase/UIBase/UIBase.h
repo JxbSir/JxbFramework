@@ -7,5 +7,5 @@
 //
 
 #import <UIBase/JxbBaseVC.h>
-
+#import <UIBase/JxbTableView.h>
 
