@@ -13,8 +13,12 @@
 @implementation JxbDbObject
 
 + (id)registerForRealmObject:(NSString *)className {
+    Class class = NSClassFromString(className);
+    if (class) {
+        return [class new];
+    }
     //注册一个继承RLMObject的类
-    Class c = objc_allocateClassPair([RLMObject class], [className UTF8String], 0);
+    class = objc_allocateClassPair([RLMObject class], [className UTF8String], 0);
 
     //获取协议中的所有属性
     unsigned int count = 0;
@@ -29,14 +33,14 @@
         objc_property_attribute_t ownership2 = { "C", "" };
         objc_property_attribute_t backingivar  = { "V", [_proName UTF8String] };
         objc_property_attribute_t attrs[] = { type, ownership1, ownership2, backingivar };
-        if (class_addProperty(c, propertyName, attrs, 4)) {
+        if (class_addProperty(class, propertyName, attrs, 4)) {
             NSLog(@"class_addProperty success");
         }
         else {
             NSLog(@"class_addProperty failure");
         }
       
-        class_addIvar(c, [_proName UTF8String],sizeof(NSString *), 0, "@");
+        class_addIvar(class, [_proName UTF8String],sizeof(NSString *), 0, "@");
         
         NSString* methodName_setter = [NSString stringWithFormat:@"set%@%@:",[[proName substringToIndex:1] uppercaseString], [proName substringFromIndex:1]];
         SEL sel_setter = NSSelectorFromString(methodName_setter);
@@ -46,7 +50,7 @@
             if (oldValue != string)
                 object_setIvar(_self, ivar, [string copy]);
         });
-        class_addMethod(c, sel_setter, imp_setter, nil);
+        class_addMethod(class, sel_setter, imp_setter, nil);
         
         NSString* methodName_getter = proName;
         SEL sel_getter = NSSelectorFromString(methodName_getter);
@@ -55,7 +59,7 @@
             id oldValue = object_getIvar(_self, ivar);
             return oldValue;
         });
-        class_addMethod(c, sel_getter, imp_getter, nil);
+        class_addMethod(class, sel_getter, imp_getter, nil);
         
         NSString* methodName_kvc = @"valueForKey:";
         SEL sel_kvc = NSSelectorFromString(methodName_kvc);
@@ -64,11 +68,11 @@
             id oldValue = object_getIvar(_self, ivar);
             return oldValue;
         });
-        class_addMethod(c, sel_kvc, imp_kvc, nil);
+        class_addMethod(class, sel_kvc, imp_kvc, nil);
     }
     free(list);
-    objc_registerClassPair(c);
-    id obj = [c new];
+    objc_registerClassPair(class);
+    id obj = [class new];
     return obj;
 }
 
