@@ -40,7 +40,7 @@ typedef UITableViewCell * _Nonnull   (^JxbTableCellBlock)(NSIndexPath * _Nonnull
  *  Section的模型
  */
 @interface JxbTableViewSectionModel : NSObject
-@property (nonatomic, strong, nonnull)  NSMutableArray           *cellModelArray;
+@property (nonatomic, strong, nonnull ) NSMutableArray           *arrCells;
 @property (nonatomic, strong, nullable) JxbTableHeadorFootModel  *header;
 @property (nonatomic, strong, nullable) JxbTableHeadorFootModel  *footer;
 @end
@@ -58,7 +58,7 @@ typedef UITableViewCell * _Nonnull   (^JxbTableCellBlock)(NSIndexPath * _Nonnull
 /**
  *  tableview的datasource
  */
-@property (nonatomic, strong, nonnull) NSMutableArray *arraySections;
+@property (nonatomic, strong, nonnull) NSMutableArray             *arraySections;
 
 /**
  *  构造一个TableView

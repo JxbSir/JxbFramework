@@ -46,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     JxbTableViewSectionModel* sectionModel = self.arraySections[section];
-    return sectionModel.cellModelArray.count;
+    return sectionModel.arrCells.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -70,7 +70,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
-    JxbTableViewCellModel* cellModel = sectionModel.cellModelArray[indexPath.row];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
     if (cellModel && cellModel.height > 0) {
         return cellModel.height;
     }
@@ -95,7 +95,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
-    JxbTableViewCellModel* cellModel = sectionModel.cellModelArray[indexPath.row];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
     UITableViewCell *cell = cellModel.BlockCell(indexPath, tableView);
     return cell;
 }
