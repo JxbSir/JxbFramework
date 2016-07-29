@@ -42,12 +42,22 @@
 //    
 //    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
+    [JxbDbObject registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
     
-    TestDB* db = [TestDB registerForRealmObject:@"TestDBClass"];
-    db.aaa = @"caoa";
-    db.bbb = @"caob";
-    [[JxbDbManager sharedInstance] add2Db:db];
+    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
+//    NSMutableArray* arr = [NSMutableArray array];
+//    for(int i = 0; i<1000000;i++) {
+//        TestDB* db = [TestDB registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
+//        db.pid = [NSString stringWithFormat:@"%d",i];
+//        db.aaa = @"caoa";
+//        db.bbb = @"caob";
+//        [arr addObject:db];
+//    }
+//    [[JxbDbManager sharedInstance] inserts:arr];
+    [[JxbDbManager sharedInstance] select:@"TestDBClass" where:nil];
+    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
     
+//    [[JxbDbManager sharedInstance] select:@"TestDBClass" where:@"pid='2'"];
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
 

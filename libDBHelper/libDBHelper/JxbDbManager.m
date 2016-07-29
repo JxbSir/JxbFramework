@@ -28,24 +28,72 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        RLMRealmConfiguration *configuration = [RLMRealmConfiguration defaultConfiguration];
         NSString* dir = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/JxbDb"];
         if (![[NSFileManager defaultManager] fileExistsAtPath:dir]) {
             [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
         }
         NSURL* url = [NSURL URLWithString:[dir stringByAppendingPathComponent:@"db.realm"]];
         NSLog(@"%@",url.absoluteString);
-        configuration.fileURL = url;
-        [RLMRealmConfiguration setDefaultConfiguration:configuration];
         _realm = [RLMRealm realmWithURL:url];
     }
     return self;
 }
 
-- (void)add2Db:(NSObject*)obj {
+- (void)insert:(id)obj {
+   [self update:obj];
+}
+
+- (void)inserts:(NSArray *)objs {
+    [self updates:objs];
+}
+
+- (void)update:(id)obj {
     __weak typeof (self) wSelf = self;
     [self.realm transactionWithBlock:^{
-        [wSelf.realm addObject:obj];
+        [wSelf.realm addOrUpdateObject:(RLMObject*)obj];
     }];
+}
+
+- (void)updates:(NSArray *)objs {
+    __weak typeof (self) wSelf = self;
+    [self.realm transactionWithBlock:^{
+        [wSelf.realm addOrUpdateObjectsFromArray:objs];
+    }];
+}
+
+- (void)remove:(NSString *)tableName primaryValue:(NSString *)primaryValue {
+    __weak typeof (self) wSelf = self;
+    Class cls = NSClassFromString(tableName);
+    NSString* pk = [cls performSelector:@selector(primaryKey)];
+    RLMResults* result = [cls objectsInRealm:wSelf.realm where:[NSString stringWithFormat:@"%@='%@'",pk,primaryValue]];
+    [self.realm transactionWithBlock:^{
+        [wSelf.realm deleteObject:result.firstObject];
+    }];
+}
+
+- (void)select:(NSString *)tableName where:(NSString *)where {
+    __weak typeof (self) wSelf = self;
+    Class cls = NSClassFromString(tableName);
+    RLMResults* result = nil;
+    if (where && where.length > 0) {
+        result = [cls objectsInRealm:wSelf.realm where:where];
+    }
+    else {
+        result = [cls allObjectsInRealm:wSelf.realm];
+    }
+    
+}
+
+- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate {
+    __weak typeof (self) wSelf = self;
+    Class cls = NSClassFromString(tableName);
+    RLMResults* result = nil;
+    if (predicate) {
+        result = [cls objectsInRealm:wSelf.realm withPredicate:predicate];
+    }
+    else {
+        result = [cls allObjectsInRealm:wSelf.realm];
+    }
+    
 }
 @end

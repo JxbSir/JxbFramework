@@ -10,6 +10,8 @@
 #import <libDBHelper/libDBHelper.h>
 
 @interface TestDB : JxbDbObject
+
+@property (nonatomic, strong) NSString  *pid;
 @property (nonatomic, strong) NSString  *aaa;
 @property (nonatomic, strong) NSString  *bbb;
 @end

@@ -10,4 +10,7 @@
 
 @implementation TestDB
 
++ (NSString *)primaryKey {
+    return @"pid";
+}
 @end

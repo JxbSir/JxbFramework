@@ -15,8 +15,9 @@
  *  切记，初始化对象的属性都必须为NSString类型，一个属性相对于一个数据库字段名
  *
  *  @param className 动态注册类名，相当于数据库表名
+ *  @param fromClass 外部类型，用于将方法指针指向此类
  *
  *  @return 类
  */
-+ (id)registerForRealmObject:(NSString*)className;
++ (id)registerForRealmObject:(NSString *)className fromClass:(Class)fromClass;
 @end

@@ -52,7 +52,7 @@
 
 #pragma mark - 自己下载逻辑
 - (dispatch_queue_t)queueDownload {
-    if (_queueDownload) {
+    if (!_queueDownload) {
         _queueDownload = dispatch_queue_create("com.Jspatch.manager.download.creation", DISPATCH_QUEUE_SERIAL);
     }
     return _queueDownload;
