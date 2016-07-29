@@ -72,6 +72,14 @@
 }
 
 - (void)select:(NSString *)tableName where:(NSString *)where {
+    [self select:tableName where:where sortProperty:nil ascending:false];
+}
+
+- (void)select:(NSString *)tableName where:(NSString *)where sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
+    [self select:tableName where:where propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
+}
+
+- (void)select:(NSString *)tableName where:(NSString *)where propertys:(NSArray *)propertys {
     __weak typeof (self) wSelf = self;
     Class cls = NSClassFromString(tableName);
     RLMResults* result = nil;
@@ -81,10 +89,20 @@
     else {
         result = [cls allObjectsInRealm:wSelf.realm];
     }
-    
+    if (propertys && propertys.count > 0) {
+        result = [result sortedResultsUsingDescriptors:propertys];
+    }
 }
 
 - (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate {
+    [self select:tableName predicate:predicate propertys:nil];
+}
+
+- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
+    [self select:tableName predicate:predicate propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
+}
+
+- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate propertys:(NSArray *)propertys {
     __weak typeof (self) wSelf = self;
     Class cls = NSClassFromString(tableName);
     RLMResults* result = nil;
@@ -94,6 +112,8 @@
     else {
         result = [cls allObjectsInRealm:wSelf.realm];
     }
-    
+    if (propertys && propertys.count > 0) {
+        result = [result sortedResultsUsingDescriptors:propertys];
+    }
 }
 @end

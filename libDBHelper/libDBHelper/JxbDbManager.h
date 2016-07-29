@@ -52,8 +52,28 @@
 /**
  *  查询数据
  *
+ *  @param tableName    表名
+ *  @param where        where查询条件，例如：pid='1' or pid='2'
+ *  @param sortProperty 排序字段名
+ *  @param ascending    升序
+ */
+- (void)select:(NSString *)tableName where:(NSString *)where sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending;
+
+/**
+ *  查询数据
+ *
  *  @param tableName 表名
  *  @param predicate 谓词
  */
 - (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate;
+
+/**
+ *  查询数据
+ *
+ *  @param tableName    表名
+ *  @param predicate    谓词
+ *  @param sortProperty 排序字段名称
+ *  @param ascending    升序
+ */
+- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending;
 @end
