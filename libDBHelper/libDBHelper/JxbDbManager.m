@@ -71,15 +71,15 @@
     }];
 }
 
-- (void)select:(NSString *)tableName where:(NSString *)where {
-    [self select:tableName where:where sortProperty:nil ascending:false];
+- (NSArray *)select:(NSString *)tableName where:(NSString *)where {
+    return [self select:tableName where:where propertys:nil];
 }
 
-- (void)select:(NSString *)tableName where:(NSString *)where sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
-    [self select:tableName where:where propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
+- (NSArray *)select:(NSString *)tableName where:(NSString *)where sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
+    return [self select:tableName where:where propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
 }
 
-- (void)select:(NSString *)tableName where:(NSString *)where propertys:(NSArray *)propertys {
+- (NSArray *)select:(NSString *)tableName where:(NSString *)where propertys:(NSArray *)propertys {
     __weak typeof (self) wSelf = self;
     Class cls = NSClassFromString(tableName);
     RLMResults* result = nil;
@@ -92,17 +92,23 @@
     if (propertys && propertys.count > 0) {
         result = [result sortedResultsUsingDescriptors:propertys];
     }
+    if (result.count == 0) return nil;
+    NSMutableArray* array = [NSMutableArray array];
+    for(int i =0;i<result.count;i++) {
+        [array addObject:[result objectAtIndex:i]];
+    }
+    return array;
 }
 
-- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate {
-    [self select:tableName predicate:predicate propertys:nil];
+- (NSArray *)select:(NSString *)tableName predicate:(NSPredicate *)predicate {
+    return [self select:tableName predicate:predicate propertys:nil];
 }
 
-- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
-    [self select:tableName predicate:predicate propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
+- (NSArray *)select:(NSString *)tableName predicate:(NSPredicate *)predicate sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending {
+    return [self select:tableName predicate:predicate propertys:@[[RLMSortDescriptor sortDescriptorWithProperty:sortProperty ascending:ascending]]];
 }
 
-- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate propertys:(NSArray *)propertys {
+- (NSArray *)select:(NSString *)tableName predicate:(NSPredicate *)predicate propertys:(NSArray *)propertys {
     __weak typeof (self) wSelf = self;
     Class cls = NSClassFromString(tableName);
     RLMResults* result = nil;
@@ -115,5 +121,25 @@
     if (propertys && propertys.count > 0) {
         result = [result sortedResultsUsingDescriptors:propertys];
     }
+    if (result.count == 0) return nil;
+    NSMutableArray* array = [NSMutableArray array];
+    for(int i =0;i<result.count;i++) {
+        [array addObject:[result objectAtIndex:i]];
+    }
+    return array;
+}
+
+- (NSArray *)getResutsForObjects:(NSString *)tableName result:(RLMResults *)result {
+    Class cls = NSClassFromString(tableName);
+    unsigned int count = 0;
+    objc_property_t *list = class_copyPropertyList(cls, &count);
+    for (uint i = 0; i < count; i++) {
+        objc_property_t property = list[i];
+        const char *propertyName = property_getName(property);
+        NSString* proName = [NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding];
+        
+    }
+    free(list);
+    return nil;
 }
 @end

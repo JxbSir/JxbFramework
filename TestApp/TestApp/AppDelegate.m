@@ -42,9 +42,9 @@
 //    
 //    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
-    [JxbDbObject registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
+//    [JxbDbObject registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
     
-    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
+//    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
 //    NSMutableArray* arr = [NSMutableArray array];
 //    for(int i = 0; i<1000000;i++) {
 //        TestDB* db = [TestDB registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
@@ -54,13 +54,14 @@
 //        [arr addObject:db];
 //    }
 //    [[JxbDbManager sharedInstance] inserts:arr];
-    [[JxbDbManager sharedInstance] select:@"TestDBClass" where:nil];
-    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
+//    [[JxbDbManager sharedInstance] select:@"TestDBClass" where:nil];
+//    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
     
-//    [[JxbDbManager sharedInstance] select:@"TestDBClass" where:@"pid='2'"];
+//    NSArray* arr = [[JxbDbManager sharedInstance] select:@"TestDBClass" where:@"pid='2'"];
+//    TestDB* db = arr[0];
+//    NSLog(@"%@",db.aaa);
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
-
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nav;
     [self.window makeKeyWindow];

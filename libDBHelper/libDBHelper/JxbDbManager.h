@@ -16,30 +16,30 @@
  *
  *  @return 实例
  */
-+ (instancetype)sharedInstance;
++ (instancetype _Nonnull)sharedInstance;
 
 /**
  *  插入数据（切记，obj的模型属性全为NSString）
  *
  *  @param obj
  */
-- (void)insert:(id)obj;
-- (void)inserts:(NSArray *)objs;
+- (void)insert:(id _Nonnull)obj;
+- (void)inserts:(NSArray * _Nonnull)objs;
 
 /**
  *  更新数据（切记，obj的模型属性全为NSString）
  *
  *  @param obj
  */
-- (void)update:(id)obj;
-- (void)updates:(NSArray *)objs;
+- (void)update:(id _Nonnull)obj;
+- (void)updates:(NSArray * _Nonnull)objs;
 /**
  *  删除数据
  *
  *  @param tableName    表名
  *  @param primaryValue 主键字段值
  */
-- (void)remove:(NSString *)tableName primaryValue:(NSString *)primaryValue;
+- (void)remove:(NSString * _Nonnull)tableName primaryValue:(NSString * _Nonnull)primaryValue;
 
 /**
  *  查询数据
@@ -47,7 +47,7 @@
  *  @param tableName 表名
  *  @param where     where查询条件，例如：pid='1' or pid='2'
  */
-- (void)select:(NSString *)tableName where:(NSString *)where;
+- (NSArray * _Nullable)select:(NSString * _Nonnull)tableName where:(NSString * _Nullable)where;
 
 /**
  *  查询数据
@@ -57,7 +57,7 @@
  *  @param sortProperty 排序字段名
  *  @param ascending    升序
  */
-- (void)select:(NSString *)tableName where:(NSString *)where sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending;
+- (NSArray * _Nullable)select:(NSString * _Nonnull)tableName where:(NSString * _Nullable)where sortProperty:(NSString * _Nonnull)sortProperty ascending:(BOOL)ascending;
 
 /**
  *  查询数据
@@ -65,7 +65,7 @@
  *  @param tableName 表名
  *  @param predicate 谓词
  */
-- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate;
+- (NSArray * _Nullable)select:(NSString * _Nonnull)tableName predicate:(NSPredicate * _Nullable)predicate;
 
 /**
  *  查询数据
@@ -75,5 +75,5 @@
  *  @param sortProperty 排序字段名称
  *  @param ascending    升序
  */
-- (void)select:(NSString *)tableName predicate:(NSPredicate *)predicate sortProperty:(NSString *)sortProperty ascending:(BOOL)ascending;
+- (NSArray * _Nullable)select:(NSString * _Nonnull)tableName predicate:(NSPredicate * _Nullable)predicate sortProperty:(NSString * _Nonnull)sortProperty ascending:(BOOL)ascending;
 @end
