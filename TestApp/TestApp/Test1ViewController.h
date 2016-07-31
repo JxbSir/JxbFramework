@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Test1ViewController : UIViewController
+
+@protocol testProtocol <NSObject>
+
+@end
+
+@interface Test1ViewController : UIViewController<testProtocol>
 
 @property (nonatomic, strong) NSString  *sid;
 

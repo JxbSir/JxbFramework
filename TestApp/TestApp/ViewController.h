@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol test222Protocol <NSObject>
+
+
+@end
+
+@interface ViewController : UIViewController<test222Protocol>
 
 
 @end

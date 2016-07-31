@@ -137,13 +137,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../TestApp/TestApp/AppDelegate.m"
-            timestampString = "491620787.401248"
+            filePath = "../Pods/Objection/Source/JSObjectionModule.m"
+            timestampString = "491642572.719108"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-bind:toProtocol:named:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

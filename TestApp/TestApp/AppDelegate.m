@@ -14,6 +14,8 @@
 #import <libEncryption/libEncryption.h>
 #import <libNetwork/libNetwork.h>
 #import <libDBHelper/libDBHelper.h>
+#import <libObjection/libObjection.h>
+#import "Test1ViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,14 +26,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    //libPatch
+    //libPatch，JSPatch热修复
 //    NSString* path1 = [[NSBundle mainBundle] pathForResource:@"test1" ofType:@".js"];
 //    NSString* content1 = [NSString stringWithContentsOfFile:path1 encoding:NSUTF8StringEncoding error:nil];
 //    NSString* path2 = [[NSBundle mainBundle] pathForResource:@"test2" ofType:@".js"];
 //    NSString* content2 = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
 //    [[JsPatchManager shareInstance] excuteJsPatch:@[content1,content2]];
     
-    //aes + des
+    //aes + des 加密
 //    NSString* key = @"xiaojinjichabihh";
 //    NSString* text = @"{\"User\":\"Test11\",\"Pass\":\"111111\",\"Platform\":\"iOS\"}";
 //    JxbAesManager* lib = [[JxbAesManager alloc] initWithIV:@"xiaojinjichabihh"];
@@ -42,6 +44,7 @@
 //    
 //    NSString* des_en = [JxbDesManager encrypt:@"asd" plainText:@"asd"];
     
+    //Realm数据库测试
 //    [JxbDbObject registerForRealmObject:@"TestDBClass" fromClass:[TestDB class]];
     
 //    NSLog(@"%f",[[NSDate date] timeIntervalSince1970]);
@@ -61,13 +64,19 @@
 //    TestDB* db = arr[0];
 //    NSLog(@"%@",db.aaa);
     
+    //绑定实例或到到协议，用协议解耦模块化
+//    [[JxbObjectionManager shareInstance] bindClass:[Test1ViewController class] toProtocol:@protocol(testProtocol)];
+//    [[JxbObjectionManager shareInstance] bindClass:[ViewController class] toProtocol:@protocol(test222Protocol)];
+//    Class cls = [[JxbObjectionManager shareInstance] getObject:@protocol(testProtocol)];
+//    Class cls2 = [[JxbObjectionManager shareInstance] getObject:@protocol(test222Protocol)];
+    
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nav;
     [self.window makeKeyWindow];
     [self.window makeKeyAndVisible];
-    
 
+    //网络库接口
 //    JxbNetworkConfiguation* config = [JxbNetworkConfiguation defuatConfigurate];
 //    config.maxRequestConcurrent = 1;
 //    config.cacheDuration = 10;

@@ -18,6 +18,8 @@
 		D02A999C1D3F28F900240D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02A999B1D3F28F900240D5F /* Assets.xcassets */; };
 		D02A999F1D3F28F900240D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02A999D1D3F28F900240D5F /* LaunchScreen.storyboard */; };
 		D02A9A721D3F790A00240D5F /* test1.js in Resources */ = {isa = PBXBuildFile; fileRef = D02A9A711D3F790A00240D5F /* test1.js */; };
+		D0F12CDC1D4D8BC300AAE005 /* libObjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */; };
+		D0F12CDD1D4D8BD100AAE005 /* libObjection.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0F404B21D4209A400686107 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404B11D4209A400686107 /* Test1ViewController.m */; };
 		D0F405701D431C9C00686107 /* libEncryption.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4056F1D431C9C00686107 /* libEncryption.framework */; };
 		D0F405741D431CA500686107 /* libPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F405731D431CA500686107 /* libPatch.framework */; };
@@ -42,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D0F12CDD1D4D8BD100AAE005 /* libObjection.framework in CopyFiles */,
 				D0F405821D431D3900686107 /* UIBase.framework in CopyFiles */,
 				D0F405831D431D3900686107 /* UICommon.framework in CopyFiles */,
 				D0F405841D431D3900686107 /* libUtility.framework in CopyFiles */,
@@ -71,6 +74,7 @@
 		D02A999E1D3F28F900240D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02A99A01D3F28F900240D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02A9A711D3F790A00240D5F /* test1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test1.js; sourceTree = "<group>"; };
+		D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libObjection.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libObjection.framework"; sourceTree = "<group>"; };
 		D0F404B01D4209A400686107 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
 		D0F404B11D4209A400686107 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
 		D0F4056F1D431C9C00686107 /* libEncryption.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libEncryption.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libEncryption.framework"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F12CDC1D4D8BC300AAE005 /* libObjection.framework in Frameworks */,
 				D026B3231D487FE200065AD7 /* libDBHelper.framework in Frameworks */,
 				D026B31F1D487FC500065AD7 /* Business.framework in Frameworks */,
 				D0F405811D431D2F00686107 /* UIBase.framework in Frameworks */,
@@ -160,6 +165,7 @@
 		D0F4057D1D431D0800686107 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */,
 				D026B3221D487FE200065AD7 /* libDBHelper.framework */,
 				D026B31E1D487FC500065AD7 /* Business.framework */,
 				D0F405801D431D2F00686107 /* UIBase.framework */,
