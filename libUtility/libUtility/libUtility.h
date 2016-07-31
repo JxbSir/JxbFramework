@@ -7,6 +7,8 @@
 //
 
 #import <libUtility/JxbTools.h>
+#import <libUtility/JxbAesManager.h>
+#import <libUtility/JxbDesManager.h>
 
 #import <libUtility/UIDevice+Extend.h>
 #import <libUtility/NSObject+Extend.h>

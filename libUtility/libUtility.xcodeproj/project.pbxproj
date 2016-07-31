@@ -26,6 +26,18 @@
 		D029CB1B1D45F779004B1E21 /* UIDevice+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB191D45F779004B1E21 /* UIDevice+Extend.m */; };
 		D029CB1E1D45F7A0004B1E21 /* NSObject+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = D029CB1C1D45F7A0004B1E21 /* NSObject+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D029CB1F1D45F7A0004B1E21 /* NSObject+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D029CB1D1D45F7A0004B1E21 /* NSObject+Extend.m */; };
+		D0D8ABC11D4DE7DB00C96621 /* CryptLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABB51D4DE7DB00C96621 /* CryptLib.h */; };
+		D0D8ABC21D4DE7DB00C96621 /* CryptLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8ABB61D4DE7DB00C96621 /* CryptLib.m */; };
+		D0D8ABC31D4DE7DB00C96621 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0D8ABB71D4DE7DB00C96621 /* Info.plist */; };
+		D0D8ABC41D4DE7DB00C96621 /* JxbAesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABB81D4DE7DB00C96621 /* JxbAesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D8ABC51D4DE7DB00C96621 /* JxbAesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8ABB91D4DE7DB00C96621 /* JxbAesManager.m */; };
+		D0D8ABC61D4DE7DB00C96621 /* JxbDesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABBA1D4DE7DB00C96621 /* JxbDesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D8ABC71D4DE7DB00C96621 /* JxbDesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8ABBB1D4DE7DB00C96621 /* JxbDesManager.m */; };
+		D0D8ABC81D4DE7DB00C96621 /* libEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABBC1D4DE7DB00C96621 /* libEncryption.h */; };
+		D0D8ABC91D4DE7DB00C96621 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABBD1D4DE7DB00C96621 /* NSData+Base64.h */; };
+		D0D8ABCA1D4DE7DB00C96621 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8ABBE1D4DE7DB00C96621 /* NSData+Base64.m */; };
+		D0D8ABCB1D4DE7DB00C96621 /* QN_GTM_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D8ABBF1D4DE7DB00C96621 /* QN_GTM_Base64.h */; };
+		D0D8ABCC1D4DE7DB00C96621 /* QN_GTM_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8ABC01D4DE7DB00C96621 /* QN_GTM_Base64.m */; };
 		D0F405191D4237E200686107 /* NSArray+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404DD1D4237E200686107 /* NSArray+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F4051A1D4237E200686107 /* NSArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404DE1D4237E200686107 /* NSArray+Swizzling.m */; };
 		D0F4051B1D4237E200686107 /* NSArray+Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404DF1D4237E200686107 /* NSArray+Tool.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,6 +106,18 @@
 		D029CB191D45F779004B1E21 /* UIDevice+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extend.m"; sourceTree = "<group>"; };
 		D029CB1C1D45F7A0004B1E21 /* NSObject+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extend.h"; sourceTree = "<group>"; };
 		D029CB1D1D45F7A0004B1E21 /* NSObject+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extend.m"; sourceTree = "<group>"; };
+		D0D8ABB51D4DE7DB00C96621 /* CryptLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptLib.h; sourceTree = "<group>"; };
+		D0D8ABB61D4DE7DB00C96621 /* CryptLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptLib.m; sourceTree = "<group>"; };
+		D0D8ABB71D4DE7DB00C96621 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D8ABB81D4DE7DB00C96621 /* JxbAesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbAesManager.h; sourceTree = "<group>"; };
+		D0D8ABB91D4DE7DB00C96621 /* JxbAesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbAesManager.m; sourceTree = "<group>"; };
+		D0D8ABBA1D4DE7DB00C96621 /* JxbDesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbDesManager.h; sourceTree = "<group>"; };
+		D0D8ABBB1D4DE7DB00C96621 /* JxbDesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbDesManager.m; sourceTree = "<group>"; };
+		D0D8ABBC1D4DE7DB00C96621 /* libEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libEncryption.h; sourceTree = "<group>"; };
+		D0D8ABBD1D4DE7DB00C96621 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		D0D8ABBE1D4DE7DB00C96621 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		D0D8ABBF1D4DE7DB00C96621 /* QN_GTM_Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QN_GTM_Base64.h; sourceTree = "<group>"; };
+		D0D8ABC01D4DE7DB00C96621 /* QN_GTM_Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QN_GTM_Base64.m; sourceTree = "<group>"; };
 		D0F404DD1D4237E200686107 /* NSArray+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Swizzling.h"; sourceTree = "<group>"; };
 		D0F404DE1D4237E200686107 /* NSArray+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Swizzling.m"; sourceTree = "<group>"; };
 		D0F404DF1D4237E200686107 /* NSArray+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tool.h"; sourceTree = "<group>"; };
@@ -178,6 +202,25 @@
 			path = libUtility;
 			sourceTree = "<group>";
 		};
+		D0D8ABB41D4DE7DB00C96621 /* libEncryption */ = {
+			isa = PBXGroup;
+			children = (
+				D0D8ABB51D4DE7DB00C96621 /* CryptLib.h */,
+				D0D8ABB61D4DE7DB00C96621 /* CryptLib.m */,
+				D0D8ABB71D4DE7DB00C96621 /* Info.plist */,
+				D0D8ABB81D4DE7DB00C96621 /* JxbAesManager.h */,
+				D0D8ABB91D4DE7DB00C96621 /* JxbAesManager.m */,
+				D0D8ABBA1D4DE7DB00C96621 /* JxbDesManager.h */,
+				D0D8ABBB1D4DE7DB00C96621 /* JxbDesManager.m */,
+				D0D8ABBC1D4DE7DB00C96621 /* libEncryption.h */,
+				D0D8ABBD1D4DE7DB00C96621 /* NSData+Base64.h */,
+				D0D8ABBE1D4DE7DB00C96621 /* NSData+Base64.m */,
+				D0D8ABBF1D4DE7DB00C96621 /* QN_GTM_Base64.h */,
+				D0D8ABC01D4DE7DB00C96621 /* QN_GTM_Base64.m */,
+			);
+			path = libEncryption;
+			sourceTree = "<group>";
+		};
 		D0F404DC1D42379C00686107 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +291,7 @@
 		D0F405551D42383400686107 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D0D8ABB41D4DE7DB00C96621 /* libEncryption */,
 				D026B2FE1D479E9D00065AD7 /* JxbTools.h */,
 				D026B2FF1D479E9D00065AD7 /* JxbTools.m */,
 			);
@@ -269,6 +313,7 @@
 				D0217B151D4068C50058A73F /* libUtility.h in Headers */,
 				D0F405191D4237E200686107 /* NSArray+Swizzling.h in Headers */,
 				D0F4052D1D4237E200686107 /* NSString+RegExp.h in Headers */,
+				D0D8ABC11D4DE7DB00C96621 /* CryptLib.h in Headers */,
 				D0F405311D4237E200686107 /* NSString+URLEncode.h in Headers */,
 				D0F405471D4237E200686107 /* UITableViewCell+Autolayout.h in Headers */,
 				D0F4051B1D4237E200686107 /* NSArray+Tool.h in Headers */,
@@ -276,19 +321,24 @@
 				D0F405511D4237E200686107 /* UIView+FindUIViewController.h in Headers */,
 				D0F4053B1D4237E200686107 /* UIImage+ImageEffects.h in Headers */,
 				D0F4053D1D4237E200686107 /* UIImage+RenderedImage.h in Headers */,
+				D0D8ABC91D4DE7DB00C96621 /* NSData+Base64.h in Headers */,
 				D0F405271D4237E200686107 /* NSString+MD5.h in Headers */,
 				D029CB121D45F70F004B1E21 /* UIImage+Extend.h in Headers */,
 				D029CB1A1D45F779004B1E21 /* UIDevice+Extend.h in Headers */,
 				D026B3041D479EB400065AD7 /* UIView+ViewUtils.h in Headers */,
 				D026B3001D479E9D00065AD7 /* JxbTools.h in Headers */,
+				D0D8ABCB1D4DE7DB00C96621 /* QN_GTM_Base64.h in Headers */,
 				D029CB0A1D45F6E3004B1E21 /* UIImage+Cut.h in Headers */,
 				D029CB141D45F70F004B1E21 /* UIImage+FixOrientation.h in Headers */,
 				D029CB161D45F70F004B1E21 /* UIImage+Water.h in Headers */,
+				D0D8ABC41D4DE7DB00C96621 /* JxbAesManager.h in Headers */,
+				D0D8ABC61D4DE7DB00C96621 /* JxbDesManager.h in Headers */,
 				D029CB061D45F636004B1E21 /* UIColor+HexColor.h in Headers */,
 				D029CB1E1D45F7A0004B1E21 /* NSObject+Extend.h in Headers */,
 				D0F4054F1D4237E200686107 /* UIView+FindFirstResponder.h in Headers */,
 				D0F4052F1D4237E200686107 /* NSString+Size.h in Headers */,
 				D0F4051D1D4237E200686107 /* NSDictionary_JSONExtensions.h in Headers */,
+				D0D8ABC81D4DE7DB00C96621 /* libEncryption.h in Headers */,
 				D0F405291D4237E200686107 /* NSString+PJR.h in Headers */,
 				D0F405411D4237E200686107 /* UIImage+TintColor.h in Headers */,
 				D0F4051F1D4237E200686107 /* NSDictionary+Swizzling.h in Headers */,
@@ -353,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D8ABC31D4DE7DB00C96621 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,13 +428,18 @@
 				D0F4051C1D4237E200686107 /* NSArray+Tool.m in Sources */,
 				D0F4052E1D4237E200686107 /* NSString+RegExp.m in Sources */,
 				D026B3011D479E9D00065AD7 /* JxbTools.m in Sources */,
+				D0D8ABC21D4DE7DB00C96621 /* CryptLib.m in Sources */,
 				D0F405421D4237E200686107 /* UIImage+TintColor.m in Sources */,
 				D029CB1F1D45F7A0004B1E21 /* NSObject+Extend.m in Sources */,
+				D0D8ABCA1D4DE7DB00C96621 /* NSData+Base64.m in Sources */,
 				D029CB131D45F70F004B1E21 /* UIImage+Extend.m in Sources */,
+				D0D8ABC51D4DE7DB00C96621 /* JxbAesManager.m in Sources */,
+				D0D8ABCC1D4DE7DB00C96621 /* QN_GTM_Base64.m in Sources */,
 				D0F4052A1D4237E200686107 /* NSString+PJR.m in Sources */,
 				D0F4051E1D4237E200686107 /* NSDictionary_JSONExtensions.m in Sources */,
 				D029CB071D45F636004B1E21 /* UIColor+HexColor.m in Sources */,
 				D029CB151D45F70F004B1E21 /* UIImage+FixOrientation.m in Sources */,
+				D0D8ABC71D4DE7DB00C96621 /* JxbDesManager.m in Sources */,
 				D0F4054A1D4237E200686107 /* UITextField+ExtentRange.m in Sources */,
 				D029CB0B1D45F6E3004B1E21 /* UIImage+Cut.m in Sources */,
 				D0F405201D4237E200686107 /* NSDictionary+Swizzling.m in Sources */,

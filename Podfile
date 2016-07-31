@@ -39,11 +39,6 @@ target "libPatch" do
 	pod 'JSPatchSDK', '~> 1.5.2'
 end
 
-target "libEncryption" do
-	xcodeproj 'libEncryption/libEncryption.xcodeproj'
-	pod 'JSPatchSDK', '~> 1.5.2'
-end
-
 target "libNetwork" do
 	xcodeproj 'libNetwork/libNetwork.xcodeproj'
 	pod 'AFNetworking', '~> 3.1.0'

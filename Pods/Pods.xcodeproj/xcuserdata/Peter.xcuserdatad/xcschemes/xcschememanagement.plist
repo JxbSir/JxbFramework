@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-libEncryption.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-libNetwork.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,11 +52,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>251B53173C13EF9B51985010E7BB4B47</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3E3528ED920DE748276C45EB40EADC94</key>
 		<dict>
 			<key>primary</key>

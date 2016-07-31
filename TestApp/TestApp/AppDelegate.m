@@ -11,7 +11,7 @@
 #import "TestDB.h"
 #import <libPatch/libPatch.h>
 #import <libRouter/libRouter.h>
-#import <libEncryption/libEncryption.h>
+#import <libUtility/libUtility.h>
 #import <libNetwork/libNetwork.h>
 #import <libDBHelper/libDBHelper.h>
 #import <libObjection/libObjection.h>

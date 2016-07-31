@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
+    <FileRef
       location = "group:../TestApp/TestApp.xcodeproj">
    </FileRef>
    <FileRef
@@ -17,6 +17,9 @@
       location = "group:../UICommon/UICommon.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../libDBHelper/libDBHelper.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../libNetwork/libNetwork.xcodeproj">
    </FileRef>
    <FileRef
@@ -30,12 +33,6 @@
    </FileRef>
    <FileRef
       location = "group:../libUtility/libUtility.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../libDBHelper/libDBHelper.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../libEncryption/libEncryption.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../Pods/Pods.xcodeproj">

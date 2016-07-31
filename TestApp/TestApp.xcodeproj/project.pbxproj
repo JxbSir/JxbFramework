@@ -21,7 +21,6 @@
 		D0F12CDC1D4D8BC300AAE005 /* libObjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */; };
 		D0F12CDD1D4D8BD100AAE005 /* libObjection.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0F404B21D4209A400686107 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404B11D4209A400686107 /* Test1ViewController.m */; };
-		D0F405701D431C9C00686107 /* libEncryption.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4056F1D431C9C00686107 /* libEncryption.framework */; };
 		D0F405741D431CA500686107 /* libPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F405731D431CA500686107 /* libPatch.framework */; };
 		D0F405761D431CAB00686107 /* libRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F405751D431CAB00686107 /* libRouter.framework */; };
 		D0F4057A1D431CE800686107 /* libNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F405791D431CE800686107 /* libNetwork.framework */; };
@@ -34,7 +33,6 @@
 		D0F405851D431D3A00686107 /* libNetwork.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F405791D431CE800686107 /* libNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0F405861D431D3A00686107 /* libRouter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F405751D431CAB00686107 /* libRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0F405871D431D3A00686107 /* libPatch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F405731D431CA500686107 /* libPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D0F405881D431D3A00686107 /* libEncryption.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0F4056F1D431C9C00686107 /* libEncryption.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,7 +49,6 @@
 				D0F405851D431D3A00686107 /* libNetwork.framework in CopyFiles */,
 				D0F405861D431D3A00686107 /* libRouter.framework in CopyFiles */,
 				D0F405871D431D3A00686107 /* libPatch.framework in CopyFiles */,
-				D0F405881D431D3A00686107 /* libEncryption.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +74,6 @@
 		D0F12CDB1D4D8BC300AAE005 /* libObjection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libObjection.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libObjection.framework"; sourceTree = "<group>"; };
 		D0F404B01D4209A400686107 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
 		D0F404B11D4209A400686107 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		D0F4056F1D431C9C00686107 /* libEncryption.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libEncryption.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libEncryption.framework"; sourceTree = "<group>"; };
 		D0F405731D431CA500686107 /* libPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPatch.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libPatch.framework"; sourceTree = "<group>"; };
 		D0F405751D431CAB00686107 /* libRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libRouter.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libRouter.framework"; sourceTree = "<group>"; };
 		D0F405791D431CE800686107 /* libNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libNetwork.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JxbApp-feojafjlnsscnoghhxtksecvkqds/Build/Products/Debug-iphonesimulator/libNetwork.framework"; sourceTree = "<group>"; };
@@ -100,7 +96,6 @@
 				D0F4057A1D431CE800686107 /* libNetwork.framework in Frameworks */,
 				D0F405761D431CAB00686107 /* libRouter.framework in Frameworks */,
 				D0F405741D431CA500686107 /* libPatch.framework in Frameworks */,
-				D0F405701D431C9C00686107 /* libEncryption.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +169,6 @@
 				D0F405791D431CE800686107 /* libNetwork.framework */,
 				D0F405751D431CAB00686107 /* libRouter.framework */,
 				D0F405731D431CA500686107 /* libPatch.framework */,
-				D0F4056F1D431C9C00686107 /* libEncryption.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
