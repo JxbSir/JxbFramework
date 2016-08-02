@@ -9,7 +9,7 @@
 #import "JxbWebVC.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@protocol JxbWebProtocol <NSObject>
+@protocol JxbWebProtocol <JSExport>
 /**
  *  JS与OC桥接协议
  *
