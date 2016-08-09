@@ -17,10 +17,16 @@ static char *btnClickAction;
 
 @implementation JxbBaseVC
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    id viewController = [super allocWithZone:zone];
+    return viewController;
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"%@ dealloc", NSStringFromClass([self class]));
 }
+
 
 - (id)init {
     if (self = [super init]) {
@@ -52,6 +58,12 @@ static char *btnClickAction;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    if ([self respondsToSelector:@selector(Jxb_InitalUI)]) {
+        [self Jxb_InitalUI];
+    }
+    if ([self respondsToSelector:@selector(Jxb_Loaddata)]) {
+        [self Jxb_Loaddata];
+    }
 }
 
 #pragma mark - gesture delegate

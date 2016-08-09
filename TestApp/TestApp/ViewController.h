@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIBase/UIBase.h>
+
 
 @protocol test222Protocol <NSObject>
 
 
 @end
 
-@interface ViewController : UIViewController<test222Protocol>
+@interface ViewController : JxbBaseVC<test222Protocol>
 
 
 @end

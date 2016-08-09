@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JxbBaseVC : UIViewController
+@protocol JxbBaseUIProtocol <NSObject>
+@optional
+/**
+ *  初始化UI
+ */
+- (void)Jxb_InitalUI;
 
+/**
+ *  加载数据
+ */
+- (void)Jxb_Loaddata;
+@end
+
+@interface JxbBaseVC : UIViewController<JxbBaseUIProtocol>
 
 #pragma mark UI related properties & functions
 @property (nonatomic, assign) BOOL     showBackBtn;

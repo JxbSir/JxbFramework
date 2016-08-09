@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <libRouter/libRouter.h>
-#import <UIBase/UIBase.h>
+
 
 @interface ViewController ()
 
@@ -59,6 +59,8 @@
 //    
 //    [JxbRouterManager registerCommonPush:@"testApp"];
 }
+
+
 
 - (void)tapAction {
 //    [[[UIAlertView alloc] initWithTitle:@"1" message:@"2" delegate:nil cancelButtonTitle:@"3" otherButtonTitles:@"4", nil] show];
