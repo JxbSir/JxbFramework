@@ -7,14 +7,17 @@
 //
 
 #import "JxbNetworkManager.h"
-#import "AFNetworking.h"
 #import "JxbNetworkConfiguation.h"
+
+#import "AFNetworking.h"
+#import "AFNetworkReachabilityManager.h"
 
 #define kStoredTime     @"kStoredTime"
 
 @interface JxbNetworkManager()
-@property (nonatomic, strong) AFHTTPSessionManager  *sessionManager;
-@property (nonatomic, strong) NSURLCache            *urlCache;
+@property (nonatomic, assign, readwrite) JxbNetStatus         netStatus;
+@property (nonatomic, strong           ) AFHTTPSessionManager *sessionManager;
+@property (nonatomic, strong           ) NSURLCache           *urlCache;
 @end
 
 @implementation JxbNetworkManager
@@ -32,8 +35,22 @@
     self = [super init];
     if (self) {
         _defaultConfig = [JxbNetworkConfiguation defuatConfigurate];
+        
+        __weak typeof (self) wSelf = self;
+        [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            wSelf.netStatus = status;
+        }];
     }
     return self;
+}
+
+#pragma mark - Net monitor
+- (void)startMonitor {
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+}
+
+- (void)stopMonitor {
+    [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
 }
 
 #pragma mark - Get
@@ -215,5 +232,9 @@
         _urlCache = [[NSURLCache alloc] initWithMemoryCapacity:_defaultConfig.cacheMemorySize diskCapacity:_defaultConfig.cacheDiskSize diskPath:cacheFile];
     }
     return _urlCache;
+}
+
+- (JxbNetStatus)netStatus {
+    return _netStatus;
 }
 @end

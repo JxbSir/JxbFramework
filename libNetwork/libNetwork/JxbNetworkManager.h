@@ -9,11 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "JxbNetworkBlocks.h"
 
+typedef NS_ENUM(NSInteger, JxbNetStatus) {
+    JxbNetStatusUnknown          = -1,
+    JxbNetStatusNotReachable     = 0,
+    JxbNetStatusReachableViaWWAN = 1,
+    JxbNetStatusStatusReachableViaWiFi = 2,
+};
+
 @class JxbNetworkConfiguation;
 
 @interface JxbNetworkManager : NSObject
 
+/**
+ *  网络状态
+ */
+@property (nonatomic, assign, readonly) JxbNetStatus   netStatus;
+
+/**
+ *  网络配置
+ */
 @property (nonatomic, strong) JxbNetworkConfiguation    * _Nonnull defaultConfig;
+
 
 /**
  *  单例
