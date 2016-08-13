@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, JxbNetStatus) {
     JxbNetStatusStatusReachableViaWiFi = 2,
 };
 
+extern NSString * _Nonnull const JxbNetworkDidChangeNotification;
+
 @class JxbNetworkConfiguation;
 
 @interface JxbNetworkManager : NSObject
@@ -23,7 +25,12 @@ typedef NS_ENUM(NSInteger, JxbNetStatus) {
 /**
  *  网络状态
  */
-@property (nonatomic, assign, readonly) JxbNetStatus   netStatus;
+@property (nonatomic, assign, readonly) JxbNetStatus       netStatus;
+
+/**
+ *  网络是否可用
+ */
+@property (nonatomic, assign, readonly) BOOL               isReachable;
 
 /**
  *  网络变化回调
@@ -42,6 +49,16 @@ typedef NS_ENUM(NSInteger, JxbNetStatus) {
  *  @return
  */
 + (instancetype _Nonnull)sharedInstance;
+
+/**
+ *  监控网络
+ */
+- (void)startMonitor;
+
+/**
+ *  停止监控
+ */
+- (void)stopMonitor;
 
 /**
  *  取消正在执行的所有请求

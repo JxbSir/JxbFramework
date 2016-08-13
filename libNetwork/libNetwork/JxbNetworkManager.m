@@ -12,7 +12,9 @@
 #import "AFNetworking.h"
 #import "AFNetworkReachabilityManager.h"
 
-#define kStoredTime     @"kStoredTime"
+
+NSString * const kStoredTime                     = @"kStoredTime";
+NSString * const JxbNetworkDidChangeNotification = @"com.alamofire.networking.reachability.change";
 
 @interface JxbNetworkManager()
 @property (nonatomic, assign, readwrite) JxbNetStatus         netStatus;
@@ -240,5 +242,9 @@
 
 - (JxbNetStatus)netStatus {
     return _netStatus;
+}
+
+- (BOOL)isReachable {
+    return self.netStatus == JxbNetStatusReachableViaWWAN || self.netStatus == JxbNetStatusStatusReachableViaWiFi;
 }
 @end
