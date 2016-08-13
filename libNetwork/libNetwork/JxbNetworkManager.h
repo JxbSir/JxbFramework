@@ -26,7 +26,12 @@ typedef NS_ENUM(NSInteger, JxbNetStatus) {
 @property (nonatomic, assign, readonly) JxbNetStatus   netStatus;
 
 /**
- *  网络配置
+ *  网络变化回调
+ */
+@property (nonatomic, copy  ) void (^ _Nullable netStatusBlock) (JxbNetStatus status);
+
+/**
+ *  网络请求配置
  */
 @property (nonatomic, strong) JxbNetworkConfiguation    * _Nonnull defaultConfig;
 

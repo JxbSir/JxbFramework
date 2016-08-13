@@ -38,7 +38,11 @@
         
         __weak typeof (self) wSelf = self;
         [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            wSelf.netStatus = status;
+            __strong typeof (wSelf) sSelf = wSelf;
+            sSelf.netStatus = status;
+            if (sSelf.netStatusBlock != NULL) {
+                sSelf.netStatusBlock(status);
+            }
         }];
     }
     return self;
