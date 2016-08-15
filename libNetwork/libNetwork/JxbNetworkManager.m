@@ -212,7 +212,14 @@ NSString * const JxbNetworkDidChangeNotification = @"com.alamofire.networking.re
     return dicParam;
 }
 
-#pragma mark - lazy init
+#pragma mark - getter or setter
+- (void)setDefaultConfig:(JxbNetworkConfiguation *)defaultConfig {
+    _defaultConfig = defaultConfig;
+    if (_sessionManager && ![defaultConfig.baseURL isEqualToString:_sessionManager.baseURL.absoluteString]) {
+        _sessionManager = nil;
+    }
+}
+
 - (AFHTTPSessionManager*)sessionManager {
     if (!_sessionManager) {
         _defaultConfig.sessionConfig.HTTPMaximumConnectionsPerHost = _defaultConfig.maxRequestConcurrent;
