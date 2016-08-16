@@ -35,20 +35,32 @@
 }
 
 + (void)startPatch:(NSString*)appKey publicKey:(NSString*)publicKey bDevelopment:(BOOL)bDevelopment {
+    [self startPatch:appKey publicKey:publicKey bDevelopment:bDevelopment bTest:NO];
+}
+
++ (void)startPatch:(NSString *)appKey publicKey:(NSString *)publicKey bDevelopment:(BOOL)bDevelopment bTest:(BOOL)bTest {
     [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
         //回调
     }];
-    [JSPatch startWithAppKey:appKey];
-    if (publicKey && publicKey.length > 0) {
-        [JSPatch setupRSAPublicKey:publicKey];
-    }
-    if (bDevelopment) {
+    if (bTest) {
 #if DEBUG
-        [JSPatch setupDevelopment];
+        [JSPatch testScriptInBundle];
 #endif
     }
-    [JSPatch sync];
+    else {
+        [JSPatch startWithAppKey:appKey];
+        if (publicKey && publicKey.length > 0) {
+            [JSPatch setupRSAPublicKey:publicKey];
+        }
+        if (bDevelopment) {
+    #if DEBUG
+            [JSPatch setupDevelopment];
+    #endif
+        }
+        [JSPatch sync];
+    }
 }
+
 
 #pragma mark - 自己下载逻辑
 - (dispatch_queue_t)queueDownload {
