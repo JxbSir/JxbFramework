@@ -8,6 +8,18 @@
 
 #import "JxbNetworkConfiguation.h"
 
+@implementation JxbSecurityPolicy
+
++ (instancetype)defaultPolicy {
+    JxbSecurityPolicy* policy = [[JxbSecurityPolicy alloc] init];
+    policy.policy = JxbSSLPolicy_None;
+    policy.allowInvalidCertificates = NO;
+    policy.validatesDomainName = YES;
+    return policy;
+}
+
+@end
+
 @implementation JxbNetworkConfiguation
 
 + (instancetype)defuatConfigurate {
@@ -17,7 +29,7 @@
     config.cacheDuration = 0;
     config.cacheMemorySize = 1024 * 1024;
     config.cacheDiskSize = 1024 * 1024 * 5;
-    config.policy = JxbSSLPolicy_None;
+    config.securityPolicy = [JxbSecurityPolicy defaultPolicy];
     return config;
 }
 

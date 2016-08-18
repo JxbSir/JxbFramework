@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "JxbNetworkBlocks.h"
 
+@class JxbNetworkConfiguation;
+
+extern NSString * _Nonnull const JxbNetworkDidChangeNotification;
+
 typedef NS_ENUM(NSInteger, JxbNetStatus) {
     JxbNetStatusUnknown          = -1,
     JxbNetStatusNotReachable     = 0,
     JxbNetStatusReachableViaWWAN = 1,
     JxbNetStatusStatusReachableViaWiFi = 2,
 };
-
-extern NSString * _Nonnull const JxbNetworkDidChangeNotification;
-
-@class JxbNetworkConfiguation;
 
 @interface JxbNetworkManager : NSObject
 

@@ -16,6 +16,40 @@ typedef NS_ENUM(NSInteger, JxbSSLPolicy) {
     JxbSSLPolicy_Certificate    //双向验证，客户端需存放证书，完全匹配
 };
 
+@interface JxbSecurityPolicy : NSObject
+
+/**
+ *  SSL安全策略模式(默认不开启SSL)
+ */
+@property (nonatomic, assign) JxbSSLPolicy              policy;
+
+/**
+ *  SSL双向验证时，需要提供证书地址（本地）
+ */
+@property (nonatomic, strong) NSString                  *sslCertificateFile;
+
+/**
+ *  allowInvalidCertificates 是否允许无效证书（也就是自建的证书），默认为NO
+ *  如果是需要验证自建证书，需要设置为YES
+ */
+@property (nonatomic, assign) BOOL                      allowInvalidCertificates;
+
+/**
+ *  validatesDomainName 是否需要验证域名，默认为YES；
+ *  假如证书的域名与你请求的域名不一致，需把该项设置为NO；如设成NO的话，即服务器使用其他可信任机构颁发的证书，也可以建立连接，这个非常危险，建议打开。
+ *  置为NO，主要用于这种情况：客户端请求的是子域名，而证书上的是另外一个域名。因为SSL证书上的域名是独立的，假如证书上注册的域名是www.google.com，那么mail.google.com是无法验证通过的；当然，有钱可以注册通配符的域名*.google.com，但这个还是比较贵的。
+ *  如置为NO，建议自己添加对应域名的校验逻辑。
+ */
+@property (nonatomic, assign) BOOL                      validatesDomainName;
+
+/**
+ *  默认策略
+ *
+ *  @return 
+ */
++ (instancetype)defaultPolicy;
+@end
+
 @interface JxbNetworkConfiguation : NSObject
 
 //最大并发数，AFN最大默认是4，若为0则不触发请求
@@ -45,11 +79,7 @@ typedef NS_ENUM(NSInteger, JxbSSLPolicy) {
 //全局定义api请求错误时的统一处理block
 @property (nonatomic, copy  ) JxbNetworkFailure         failureBlock;
 
-//SSL安全策略
-@property (nonatomic, assign) JxbSSLPolicy              policy;
-
-//SSL双向验证时，需要提供证书地址（本地）
-@property (nonatomic, strong) NSString                  *sslCertificateFile;
+@property (nonatomic, strong) JxbSecurityPolicy         *securityPolicy;
 
 /**
  *  返回默认配置
