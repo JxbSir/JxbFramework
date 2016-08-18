@@ -17,6 +17,7 @@
     config.cacheDuration = 0;
     config.cacheMemorySize = 1024 * 1024;
     config.cacheDiskSize = 1024 * 1024 * 5;
+    config.policy = JxbSSLPolicy_None;
     return config;
 }
 

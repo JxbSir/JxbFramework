@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "JxbNetworkBlocks.h"
 
+typedef NS_ENUM(NSInteger, JxbSSLPolicy) {
+    JxbSSLPolicy_None,          //不开启SSL
+    JxbSSLPolicy_Oneway,        //单向验证，客户端无证书
+    JxbSSLPolicy_PublicKey,     //双向验证，客户端需存放证书，只匹配publicKey是否一致
+    JxbSSLPolicy_Certificate    //双向验证，客户端需存放证书，完全匹配
+};
+
 @interface JxbNetworkConfiguation : NSObject
 
 //最大并发数，AFN最大默认是4，若为0则不触发请求
@@ -37,6 +44,12 @@
 
 //全局定义api请求错误时的统一处理block
 @property (nonatomic, copy  ) JxbNetworkFailure         failureBlock;
+
+//SSL安全策略
+@property (nonatomic, assign) JxbSSLPolicy              policy;
+
+//SSL双向验证时，需要提供证书地址（本地）
+@property (nonatomic, strong) NSString                  *sslCertificateFile;
 
 /**
  *  返回默认配置
