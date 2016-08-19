@@ -9,4 +9,4 @@
 #import <UIBase/JxbBaseVC.h>
 #import <UIBase/JxbWebVC.h>
 #import <UIBase/JxbTableView.h>
-
+#import <UIBase/JxbWKWebView.h>

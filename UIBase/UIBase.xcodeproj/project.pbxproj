@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D02A99DE1D3F2A6A00240D5F /* UIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D02A99DD1D3F2A6A00240D5F /* UIBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0EBFE491D4F4CDB00A96EE0 /* JxbTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBFE451D4F4CDB00A96EE0 /* JxbTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0EBFE4A1D4F4CDB00A96EE0 /* JxbTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBFE461D4F4CDB00A96EE0 /* JxbTableView.m */; };
-		D0EBFE4B1D4F4CDB00A96EE0 /* JxbWebVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBFE471D4F4CDB00A96EE0 /* JxbWebVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0EBFE4C1D4F4CDB00A96EE0 /* JxbWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBFE481D4F4CDB00A96EE0 /* JxbWebVC.m */; };
+		D0E486D01D66FDF5009CF707 /* JxbWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E486CE1D66FDF5009CF707 /* JxbWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E486D11D66FDF5009CF707 /* JxbWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E486CF1D66FDF5009CF707 /* JxbWKWebView.m */; };
+		D0E486D51D66FE36009CF707 /* JxbTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E486D31D66FE36009CF707 /* JxbTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E486D61D66FE36009CF707 /* JxbTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E486D41D66FE36009CF707 /* JxbTableView.m */; };
+		D0E486D91D66FE6F009CF707 /* JxbWebVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E486D71D66FE6F009CF707 /* JxbWebVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E486DA1D66FE6F009CF707 /* JxbWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E486D81D66FE6F009CF707 /* JxbWebVC.m */; };
 		D0F404B51D421A9B00686107 /* JxbBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F404B31D421A9B00686107 /* JxbBaseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F404B61D421A9B00686107 /* JxbBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F404B41D421A9B00686107 /* JxbBaseVC.m */; };
 /* End PBXBuildFile section */
@@ -20,10 +22,12 @@
 		D02A99DA1D3F2A6A00240D5F /* UIBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02A99DD1D3F2A6A00240D5F /* UIBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBase.h; sourceTree = "<group>"; };
 		D02A99DF1D3F2A6A00240D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0EBFE451D4F4CDB00A96EE0 /* JxbTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbTableView.h; sourceTree = "<group>"; };
-		D0EBFE461D4F4CDB00A96EE0 /* JxbTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbTableView.m; sourceTree = "<group>"; };
-		D0EBFE471D4F4CDB00A96EE0 /* JxbWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbWebVC.h; sourceTree = "<group>"; };
-		D0EBFE481D4F4CDB00A96EE0 /* JxbWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbWebVC.m; sourceTree = "<group>"; };
+		D0E486CE1D66FDF5009CF707 /* JxbWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbWKWebView.h; sourceTree = "<group>"; };
+		D0E486CF1D66FDF5009CF707 /* JxbWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbWKWebView.m; sourceTree = "<group>"; };
+		D0E486D31D66FE36009CF707 /* JxbTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbTableView.h; sourceTree = "<group>"; };
+		D0E486D41D66FE36009CF707 /* JxbTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbTableView.m; sourceTree = "<group>"; };
+		D0E486D71D66FE6F009CF707 /* JxbWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbWebVC.h; sourceTree = "<group>"; };
+		D0E486D81D66FE6F009CF707 /* JxbWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbWebVC.m; sourceTree = "<group>"; };
 		D0F404B31D421A9B00686107 /* JxbBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbBaseVC.h; sourceTree = "<group>"; };
 		D0F404B41D421A9B00686107 /* JxbBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbBaseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,15 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				D02A99DD1D3F2A6A00240D5F /* UIBase.h */,
+				D0E486D21D66FE36009CF707 /* TableView */,
+				D0E486CD1D66FDF5009CF707 /* WebView */,
 				D0F404B31D421A9B00686107 /* JxbBaseVC.h */,
 				D0F404B41D421A9B00686107 /* JxbBaseVC.m */,
-				D0EBFE451D4F4CDB00A96EE0 /* JxbTableView.h */,
-				D0EBFE461D4F4CDB00A96EE0 /* JxbTableView.m */,
-				D0EBFE471D4F4CDB00A96EE0 /* JxbWebVC.h */,
-				D0EBFE481D4F4CDB00A96EE0 /* JxbWebVC.m */,
 				D02A99DF1D3F2A6A00240D5F /* Info.plist */,
 			);
 			path = UIBase;
+			sourceTree = "<group>";
+		};
+		D0E486CD1D66FDF5009CF707 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D0E486D71D66FE6F009CF707 /* JxbWebVC.h */,
+				D0E486D81D66FE6F009CF707 /* JxbWebVC.m */,
+				D0E486CE1D66FDF5009CF707 /* JxbWKWebView.h */,
+				D0E486CF1D66FDF5009CF707 /* JxbWKWebView.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		D0E486D21D66FE36009CF707 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0E486D31D66FE36009CF707 /* JxbTableView.h */,
+				D0E486D41D66FE36009CF707 /* JxbTableView.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,8 +100,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02A99DE1D3F2A6A00240D5F /* UIBase.h in Headers */,
-				D0EBFE491D4F4CDB00A96EE0 /* JxbTableView.h in Headers */,
-				D0EBFE4B1D4F4CDB00A96EE0 /* JxbWebVC.h in Headers */,
+				D0E486D01D66FDF5009CF707 /* JxbWKWebView.h in Headers */,
+				D0E486D91D66FE6F009CF707 /* JxbWebVC.h in Headers */,
+				D0E486D51D66FE36009CF707 /* JxbTableView.h in Headers */,
 				D0F404B51D421A9B00686107 /* JxbBaseVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EBFE4A1D4F4CDB00A96EE0 /* JxbTableView.m in Sources */,
-				D0EBFE4C1D4F4CDB00A96EE0 /* JxbWebVC.m in Sources */,
+				D0E486DA1D66FE6F009CF707 /* JxbWebVC.m in Sources */,
+				D0E486D61D66FE36009CF707 /* JxbTableView.m in Sources */,
+				D0E486D11D66FDF5009CF707 /* JxbWKWebView.m in Sources */,
 				D0F404B61D421A9B00686107 /* JxbBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
