@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, JxbSSLPolicy) {
 /**
  *  SSL双向验证时，需要提供证书地址（本地）
  */
-@property (nonatomic, strong) NSString                  *sslCertificateFile;
+@property (nonatomic, strong) NSBundle                  *sslCertificateFile;
 
 /**
  *  allowInvalidCertificates 是否允许无效证书（也就是自建的证书），默认为NO
