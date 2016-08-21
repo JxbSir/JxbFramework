@@ -29,6 +29,14 @@ typedef UIView * _Nullable           (^JxbTableHeadorFootBlock)(NSInteger sectio
 typedef UITableViewCell * _Nonnull   (^JxbTableCellBlock)(NSIndexPath * _Nonnull indexPath, UITableView * _Nonnull tableView);
 
 /**
+ *  设置Cell点击block
+ *
+ *  @param indexPath indexPath索引
+ *  @param tableView tableView
+ */
+typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITableView * _Nonnull tableView);
+
+/**
  *  Header或者Footer的模型
  */
 @interface JxbTableHeadorFootModel : NSObject
@@ -50,6 +58,7 @@ typedef UITableViewCell * _Nonnull   (^JxbTableCellBlock)(NSIndexPath * _Nonnull
  */
 @interface JxbTableViewCellModel : NSObject
 @property (nonatomic, copy  , nonnull)  JxbTableCellBlock         BlockCell;
+@property (nonatomic, copy  , nonnull)  JxbTableCellActionBlock   BlockAction;
 @property (nonatomic, assign)           CGFloat                   height;
 @end
 

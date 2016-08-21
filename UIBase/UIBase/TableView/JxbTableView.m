@@ -15,6 +15,9 @@
 @end
 
 @implementation JxbTableViewCellModel
+- (instancetype)copyWithZone {
+    return nil;
+}
 @end
 
 @interface JxbTableView()<UITableViewDelegate,UITableViewDataSource>
@@ -98,5 +101,14 @@
     JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
     UITableViewCell *cell = cellModel.BlockCell(indexPath, tableView);
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
+    if (cellModel.BlockAction != NULL) {
+        cellModel.BlockAction(indexPath, tableView);
+    }
 }
 @end
