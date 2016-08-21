@@ -42,6 +42,12 @@
     return tableView;
 }
 
+#pragma mark - setter
+- (void)setArraySections:(NSMutableArray *)arraySections {
+    _arraySections = arraySections;
+    [self reloadData];
+}
+
 #pragma mark - UITableView Delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.arraySections.count;
