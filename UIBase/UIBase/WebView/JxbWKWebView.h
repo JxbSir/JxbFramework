@@ -8,6 +8,14 @@
 
 #import <WebKit/WebKit.h>
 
+@class JxbWKWebView;
+
+@protocol JxbWKWebViewDelegate <NSObject>
+@optional
+- (void)didFinishLoad:(JxbWKWebView * _Nonnull)webView;
+- (void)didFailureLoad:(JxbWKWebView * _Nonnull)webView error:(NSError * _Nonnull)error;
+@end
+
 typedef void(^JxbWkAction)(id _Nullable body);
 
 @interface JxbWKWebView : WKWebView
@@ -34,5 +42,19 @@ typedef void(^JxbWkAction)(id _Nullable body);
  *  执行block:JxbWkAction，入参为id，自行转需要的数据
  */
 @property (nonatomic, strong) NSDictionary * _Nullable dicActions;
+
+/**
+ *  设置代理
+ */
+@property (nonatomic, weak  ) id<JxbWKWebViewDelegate> _Nullable delegate;
+
+/**
+ *  初始化一个WKWebView
+ *
+ *  @param appSchema
+ *
+ *  @return 
+ */
++ (instancetype _Nonnull)getWKWebView:(NSString * _Nullable)appSchema;
 
 @end

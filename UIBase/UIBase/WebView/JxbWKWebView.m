@@ -8,11 +8,18 @@
 
 #import "JxbWKWebView.h"
 
-@interface JxbWKWebView()
+@interface JxbWKWebView()<WKNavigationDelegate>
 @property (nonatomic, strong) UIView        *webProgress;
+@property (nonatomic, assign) CGFloat       valueProgress;
 @end
 
 @implementation JxbWKWebView
+
++ (instancetype)getWKWebView:(NSString *)appSchema {
+    JxbWKWebView* web = [[JxbWKWebView alloc] init];
+    web.scheme = appSchema;
+    return web;
+}
 
 #pragma mark - Life cycle        / 生命周期
 - (void)dealloc {
@@ -37,6 +44,10 @@
 #pragma mark - Loading data      / 加载数据
 #pragma mark - UITableViewModel  / 创建TableView模型
 #pragma mark - SystemDelegate    / 系统代理
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    [self startLoadingAnimation];
+}
+
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
     decisionHandler(WKNavigationResponsePolicyAllow);
 }
@@ -48,6 +59,18 @@
     }
     else {
         decisionHandler(WKNavigationActionPolicyAllow);
+    }
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didFinishLoad:)]) {
+        [self.delegate didFinishLoad:self];
+    }
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didFailureLoad:error:)]) {
+        [self.delegate didFailureLoad:self error:error];
     }
 }
 
@@ -69,15 +92,8 @@
         if ([change[@"new"] floatValue] < [change[@"old"] floatValue]) {
             return;
         }
-        self.webProgress.frame = CGRectMake(0, 0, self.bounds.size.width * [change[@"new"] floatValue], wSelf.heightOfProcess);
-        if ([change[@"new"] floatValue] == 1) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                wSelf.webProgress.alpha = 0;
-            });
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                wSelf.webProgress.frame = CGRectMake(0, 0, 0, wSelf.heightOfProcess);
-            });
-        }
+        CGFloat new = [change[@"new"] floatValue];
+        self.valueProgress = new;
     }else{
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -85,6 +101,35 @@
 
 #pragma mark - Enent response    / 事件响应
 #pragma mark - Private methods   / 私有函数
+- (void)startLoadingAnimation {
+    self.valueProgress = 0;
+    self.webProgress.frame = CGRectMake(0, 0, 0, self.heightOfProcess);
+    [self webViewProcessAnimation:0];
+}
+
+- (void)webViewProcessAnimation:(NSInteger)time {
+    __weak typeof (self) wSelf = self;
+    time++;
+    CGFloat duration = self.valueProgress == 1.0 ? 0.1 : 0.5;
+    [UIView animateWithDuration:duration animations:^{
+        CGFloat progress = 1.0 * time / (time+1);
+        if (progress < wSelf.valueProgress) {
+            progress = wSelf.valueProgress;
+        }
+        if (progress > 0.9 && wSelf.valueProgress < 0.9) {
+            progress = 0.9;
+        }
+        CGFloat w =  wSelf.bounds.size.width * progress;
+        wSelf.webProgress.frame = CGRectMake(0, 0, w, wSelf.heightOfProcess);
+    } completion:^(BOOL finished) {
+        if (wSelf.valueProgress == 1.0 && wSelf.webProgress.frame.size.width == wSelf.bounds.size.width) {
+            wSelf.webProgress.frame = CGRectMake(0, 0, 0, wSelf.heightOfProcess);
+        }
+        else {
+            [wSelf webViewProcessAnimation:time];
+        }
+    }];
+}
 #pragma mark - Setter and getter / get与set函数
 - (WKWebViewConfiguration *)getWKConfiguration {
     WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc] init];
