@@ -16,6 +16,16 @@
 - (void)Jxb_InitalUI;
 
 /**
+ *  初始化AutoLayout or Frame
+ */
+- (void)Jxb_SetLayouts;
+
+/**
+ *  初始化Kvo监控
+ */
+- (void)Jxb_BeginKvo;
+
+/**
  *  加载数据
  */
 - (void)Jxb_Loaddata;

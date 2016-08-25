@@ -61,6 +61,12 @@ static char *btnClickAction;
     if ([self respondsToSelector:@selector(Jxb_InitalUI)]) {
         [self Jxb_InitalUI];
     }
+    if ([self respondsToSelector:@selector(Jxb_SetLayouts)]) {
+        [self Jxb_SetLayouts];
+    }
+    if ([self respondsToSelector:@selector(Jxb_BeginKvo)]) {
+        [self Jxb_BeginKvo];
+    }
     if ([self respondsToSelector:@selector(Jxb_Loaddata)]) {
         [self Jxb_Loaddata];
     }
