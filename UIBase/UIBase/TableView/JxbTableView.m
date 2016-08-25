@@ -9,14 +9,31 @@
 #import "JxbTableView.h"
 
 @implementation JxbTableHeadorFootModel
++(instancetype)createModel:(CGFloat)height viewForBlock:(JxbTableHeadorFootBlock)block {
+    JxbTableHeadorFootModel* model = [[JxbTableHeadorFootModel alloc] init];
+    model.height = height;
+    model.block = block;
+    return model;
+}
 @end
 
 @implementation JxbTableViewSectionModel
++(instancetype)createModel:(NSMutableArray *)arrCelss headerModel:(JxbTableHeadorFootModel *)headerModel footerModel:(JxbTableHeadorFootModel *)footerModel {
+    JxbTableViewSectionModel* section = [[JxbTableViewSectionModel alloc] init];
+    section.arrCells = arrCelss;
+    section.header = headerModel;
+    section.footer = footerModel;
+    return section;
+}
 @end
 
 @implementation JxbTableViewCellModel
-- (instancetype)copyWithZone {
-    return nil;
++ (instancetype _Nonnull)createModel:(CGFloat)heigth viewForBlock:(JxbTableCellBlock _Nonnull)viewForBlock actionForBlock:(JxbTableCellActionBlock _Nullable)actionForBlock {
+    JxbTableViewCellModel* cell = [[JxbTableViewCellModel alloc] init];
+    cell.height = heigth;
+    cell.BlockCell = viewForBlock;
+    cell.BlockAction = actionForBlock;
+    return cell;
 }
 @end
 

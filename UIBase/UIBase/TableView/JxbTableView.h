@@ -42,6 +42,16 @@ typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITabl
 @interface JxbTableHeadorFootModel : NSObject
 @property (nonatomic, assign)           CGFloat                  height;
 @property (nonatomic, copy, nullable)   JxbTableHeadorFootBlock  block;
+
+/**
+ *  创建模型
+ *
+ *  @param height header或footer的高度
+ *  @param block  返回view的block
+ *
+ *  @return       实例
+ */
++ (instancetype _Nonnull)createModel:(CGFloat)height viewForBlock:(JxbTableHeadorFootBlock _Nullable)block;
 @end
 
 /**
@@ -51,6 +61,17 @@ typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITabl
 @property (nonatomic, strong, nonnull ) NSMutableArray           *arrCells;
 @property (nonatomic, strong, nullable) JxbTableHeadorFootModel  *header;
 @property (nonatomic, strong, nullable) JxbTableHeadorFootModel  *footer;
+
+/**
+ *  创建模型
+ *
+ *  @param arrCelss    JxbTableViewCellModel模型的数组
+ *  @param headerModel JxbTableHeadorFootModel模型，设置section的header
+ *  @param footerModel JxbTableHeadorFootModel模型，设置section的footer
+ *
+ *  @return            实例
+ */
++ (instancetype _Nonnull)createModel:(NSMutableArray* _Nonnull)arrCelss headerModel:(JxbTableHeadorFootModel* _Nullable)headerModel footerModel:(JxbTableHeadorFootModel* _Nullable)footerModel;
 @end
 
 /**
@@ -60,6 +81,17 @@ typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITabl
 @property (nonatomic, copy  , nonnull)  JxbTableCellBlock         BlockCell;
 @property (nonatomic, copy  , nonnull)  JxbTableCellActionBlock   BlockAction;
 @property (nonatomic, assign)           CGFloat                   height;
+
+/**
+ *  创建模型
+ *
+ *  @param heigth         表格cell的高度
+ *  @param viewForBlock   设置cell样式的block，返回UITableViewCell类型
+ *  @param actionForBlock 设置cell的点击事件
+ *
+ *  @return               实例
+ */
++ (instancetype _Nonnull)createModel:(CGFloat)heigth viewForBlock:(JxbTableCellBlock _Nonnull)viewForBlock actionForBlock:(JxbTableCellActionBlock _Nullable)actionForBlock;
 @end
 
 @interface JxbTableView : UITableView
