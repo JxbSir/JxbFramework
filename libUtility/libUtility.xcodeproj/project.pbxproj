@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D014F1BE1D7008F700DC6AF6 /* JxbSafeAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = D014F1BC1D7008F700DC6AF6 /* JxbSafeAsync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D014F1BF1D7008F700DC6AF6 /* JxbSafeAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = D014F1BD1D7008F700DC6AF6 /* JxbSafeAsync.m */; };
 		D0217B151D4068C50058A73F /* libUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D0217B141D4068C50058A73F /* libUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D026B3001D479E9D00065AD7 /* JxbTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D026B2FE1D479E9D00065AD7 /* JxbTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D026B3011D479E9D00065AD7 /* JxbTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D026B2FF1D479E9D00065AD7 /* JxbTools.m */; };
@@ -85,6 +87,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D014F1BC1D7008F700DC6AF6 /* JxbSafeAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JxbSafeAsync.h; sourceTree = "<group>"; };
+		D014F1BD1D7008F700DC6AF6 /* JxbSafeAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JxbSafeAsync.m; sourceTree = "<group>"; };
 		D0217B111D4068C50058A73F /* libUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0217B141D4068C50058A73F /* libUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libUtility.h; sourceTree = "<group>"; };
 		D0217B161D4068C50058A73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D014F1BB1D7008F700DC6AF6 /* SafeAync */ = {
+			isa = PBXGroup;
+			children = (
+				D014F1BC1D7008F700DC6AF6 /* JxbSafeAsync.h */,
+				D014F1BD1D7008F700DC6AF6 /* JxbSafeAsync.m */,
+			);
+			path = SafeAync;
+			sourceTree = "<group>";
+		};
 		D0217B071D4068C50058A73F = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +207,7 @@
 		D0217B131D4068C50058A73F /* libUtility */ = {
 			isa = PBXGroup;
 			children = (
+				D014F1BB1D7008F700DC6AF6 /* SafeAync */,
 				D0F405551D42383400686107 /* Utility */,
 				D0F404DC1D42379C00686107 /* Category */,
 				D0217B141D4068C50058A73F /* libUtility.h */,
@@ -338,6 +352,7 @@
 				D0F4054F1D4237E200686107 /* UIView+FindFirstResponder.h in Headers */,
 				D0F4052F1D4237E200686107 /* NSString+Size.h in Headers */,
 				D0F4051D1D4237E200686107 /* NSDictionary_JSONExtensions.h in Headers */,
+				D014F1BE1D7008F700DC6AF6 /* JxbSafeAsync.h in Headers */,
 				D0D8ABC81D4DE7DB00C96621 /* libEncryption.h in Headers */,
 				D0F405291D4237E200686107 /* NSString+PJR.h in Headers */,
 				D0F405411D4237E200686107 /* UIImage+TintColor.h in Headers */,
@@ -421,6 +436,7 @@
 				D0F405521D4237E200686107 /* UIView+FindUIViewController.m in Sources */,
 				D0F405261D4237E200686107 /* NSString+Equal.m in Sources */,
 				D0F405221D4237E200686107 /* NSMutableDictionary+Swizzling.m in Sources */,
+				D014F1BF1D7008F700DC6AF6 /* JxbSafeAsync.m in Sources */,
 				D0F405281D4237E200686107 /* NSString+MD5.m in Sources */,
 				D0F405301D4237E200686107 /* NSString+Size.m in Sources */,
 				D0F405321D4237E200686107 /* NSString+URLEncode.m in Sources */,

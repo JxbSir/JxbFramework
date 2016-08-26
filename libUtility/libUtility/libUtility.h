@@ -7,6 +7,7 @@
 //
 
 #import <libUtility/JxbTools.h>
+#import <libUtility/JxbSafeAsync.h>
 #import <libUtility/JxbAesManager.h>
 #import <libUtility/JxbDesManager.h>
 
