@@ -8,9 +8,9 @@
 
 #import "JxbTableView.h"
 
-@implementation JxbTableHeadorFootModel
+@implementation JxbTableHeadFootModel
 +(instancetype)createModel:(CGFloat)height viewForBlock:(JxbTableHeadorFootBlock)block {
-    JxbTableHeadorFootModel* model = [[JxbTableHeadorFootModel alloc] init];
+    JxbTableHeadFootModel* model = [[JxbTableHeadFootModel alloc] init];
     model.height = height;
     model.block = block;
     return model;
@@ -18,7 +18,7 @@
 @end
 
 @implementation JxbTableViewSectionModel
-+(instancetype)createModel:(NSMutableArray *)arrCelss headerModel:(JxbTableHeadorFootModel *)headerModel footerModel:(JxbTableHeadorFootModel *)footerModel {
++(instancetype)createModel:(NSMutableArray *)arrCelss headerModel:(JxbTableHeadFootModel *)headerModel footerModel:(JxbTableHeadFootModel *)footerModel {
     JxbTableViewSectionModel* section = [[JxbTableViewSectionModel alloc] init];
     section.arrCells = arrCelss;
     section.header = headerModel;
@@ -34,6 +34,15 @@
     cell.BlockCell = viewForBlock;
     cell.BlockAction = actionForBlock;
     return cell;
+}
+@end
+
+@implementation JxbTableViewEditModel
++ (instancetype)createModel:(NSString *)titleOfEdit actionForBlock:(JxbTableCellActionBlock)actionForBlock {
+    JxbTableViewEditModel* edit = [[JxbTableViewEditModel alloc] init];
+    edit.titleOfEdit = titleOfEdit;
+    edit.BlockOfEdit = actionForBlock;
+    return edit;
 }
 @end
 
@@ -77,7 +86,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     JxbTableViewSectionModel* sectionModel = self.arraySections[section];
-    JxbTableHeadorFootModel* header = sectionModel.header;
+    JxbTableHeadFootModel* header = sectionModel.header;
     if (header && header.height > 0) {
         return header.height;
     }
@@ -86,7 +95,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     JxbTableViewSectionModel* sectionModel = self.arraySections[section];
-    JxbTableHeadorFootModel* footer = sectionModel.footer;
+    JxbTableHeadFootModel* footer = sectionModel.footer;
     if (footer && footer.height > 0) {
         return footer.height;
     }
@@ -132,6 +141,20 @@
     JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
     if (cellModel.BlockAction != NULL) {
         cellModel.BlockAction(indexPath, tableView);
+    }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.editModel.titleOfEdit;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.editModel && self.editModel.BlockOfEdit) {
+        self.editModel.BlockOfEdit(indexPath,tableView);
     }
 }
 @end
