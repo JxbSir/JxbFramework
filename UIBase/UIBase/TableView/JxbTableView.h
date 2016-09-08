@@ -74,26 +74,6 @@ typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITabl
 + (instancetype _Nonnull)createModel:(NSMutableArray* _Nonnull)arrCelss headerModel:(JxbTableHeadFootModel* _Nullable)headerModel footerModel:(JxbTableHeadFootModel* _Nullable)footerModel;
 @end
 
-/**
- *  Cell的模型
- */
-@interface JxbTableViewCellModel : NSObject
-@property (nonatomic, copy  , nonnull)  JxbTableCellBlock         BlockCell;
-@property (nonatomic, copy  , nonnull)  JxbTableCellActionBlock   BlockAction;
-@property (nonatomic, assign)           CGFloat                   height;
-
-/**
- *  创建模型
- *
- *  @param heigth         表格cell的高度
- *  @param viewForBlock   设置cell样式的block，返回UITableViewCell类型
- *  @param actionForBlock 设置cell的点击事件
- *
- *  @return               实例
- */
-+ (instancetype _Nonnull)createModel:(CGFloat)heigth viewForBlock:(JxbTableCellBlock _Nonnull)viewForBlock actionForBlock:(JxbTableCellActionBlock _Nullable)actionForBlock;
-@end
-
 @interface JxbTableViewEditModel : NSObject
 @property (nonatomic, copy  , nonnull)  NSString                 *titleOfEdit;
 @property (nonatomic, copy  , nonnull)  JxbTableCellActionBlock  BlockOfEdit;
@@ -110,17 +90,33 @@ typedef void (^JxbTableCellActionBlock)(NSIndexPath * _Nonnull indexPath, UITabl
 
 @end
 
+/**
+ *  Cell的模型
+ */
+@interface JxbTableViewCellModel : NSObject
+@property (nonatomic, copy  , nonnull)  JxbTableCellBlock         BlockCell;
+@property (nonatomic, copy  , nonnull)  JxbTableCellActionBlock   BlockAction;
+@property (nonatomic, strong, nullable) JxbTableViewEditModel     *editModel;
+@property (nonatomic, assign)           CGFloat                   height;
+
+/**
+ *  创建模型
+ *
+ *  @param heigth         表格cell的高度
+ *  @param viewForBlock   设置cell样式的block，返回UITableViewCell类型
+ *  @param actionForBlock 设置cell的点击事件
+ *
+ *  @return               实例
+ */
++ (instancetype _Nonnull)createModel:(CGFloat)heigth viewForBlock:(JxbTableCellBlock _Nonnull)viewForBlock actionForBlock:(JxbTableCellActionBlock _Nullable)actionForBlock;
+@end
+
 @interface JxbTableView : UITableView
 
 /**
  *  tableview的datasource
  */
 @property (nonatomic, strong, nonnull)  NSMutableArray           *arraySections;
-
-/**
- *  可以设置左滑
- */
-@property (nonatomic, strong, nullable) JxbTableViewEditModel    *editModel;
 
 /**
  *  构造一个TableView

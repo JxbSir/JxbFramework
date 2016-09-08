@@ -27,6 +27,15 @@
 }
 @end
 
+@implementation JxbTableViewEditModel
++ (instancetype)createModel:(NSString *)titleOfEdit actionForBlock:(JxbTableCellActionBlock)actionForBlock {
+    JxbTableViewEditModel* edit = [[JxbTableViewEditModel alloc] init];
+    edit.titleOfEdit = titleOfEdit;
+    edit.BlockOfEdit = actionForBlock;
+    return edit;
+}
+@end
+
 @implementation JxbTableViewCellModel
 + (instancetype _Nonnull)createModel:(CGFloat)heigth viewForBlock:(JxbTableCellBlock _Nonnull)viewForBlock actionForBlock:(JxbTableCellActionBlock _Nullable)actionForBlock {
     JxbTableViewCellModel* cell = [[JxbTableViewCellModel alloc] init];
@@ -34,15 +43,6 @@
     cell.BlockCell = viewForBlock;
     cell.BlockAction = actionForBlock;
     return cell;
-}
-@end
-
-@implementation JxbTableViewEditModel
-+ (instancetype)createModel:(NSString *)titleOfEdit actionForBlock:(JxbTableCellActionBlock)actionForBlock {
-    JxbTableViewEditModel* edit = [[JxbTableViewEditModel alloc] init];
-    edit.titleOfEdit = titleOfEdit;
-    edit.BlockOfEdit = actionForBlock;
-    return edit;
 }
 @end
 
@@ -145,16 +145,25 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+    JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
+    if (cellModel.editModel) {
+        return YES;
+    }
+    return NO;
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.editModel.titleOfEdit;
+    JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
+    return cellModel.editModel.titleOfEdit;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.editModel && self.editModel.BlockOfEdit) {
-        self.editModel.BlockOfEdit(indexPath,tableView);
+    JxbTableViewSectionModel* sectionModel = self.arraySections[indexPath.section];
+    JxbTableViewCellModel* cellModel = sectionModel.arrCells[indexPath.row];
+    if (cellModel.editModel && cellModel.editModel.BlockOfEdit) {
+        cellModel.editModel.BlockOfEdit(indexPath,tableView);
     }
 }
 @end
